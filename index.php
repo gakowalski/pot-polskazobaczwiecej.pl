@@ -3,6 +3,8 @@ defined('_JEXEC') or die;
 
 $app      = JFactory::getApplication();
 $user     = JFactory::getUser();
+$doc      = JFactory::getDocument();
+$menu     = $app->getMenu();
 $option   = $app->input->getCmd('option', '');
 $view     = $app->input->getCmd('view', '');
 $layout   = $app->input->getCmd('layout', '');
@@ -10,7 +12,15 @@ $task     = $app->input->getCmd('task', '');
 $itemid   = $app->input->getCmd('Itemid', '');
 $sitename = $app->get('sitename');
 
+$template_path = $this->baseurl.'/templates/'.$this->template;
+
+$this->setGenerator(null);
 $this->setHtml5(true);
+
+// $doc->addScript($template_path . '/js/.js');
+
+$doc->addStyleSheet($template_path . '/css/normalize.css');
+$doc->addStyleSheet($template_path . '/css/style.css');
 
 $body_classes =
   'site '
@@ -19,7 +29,7 @@ $body_classes =
 	. ($layout ? ' layout-' . $layout : ' no-layout')
 	. ($task ? ' task-' . $task : ' no-task')
 	. ($itemid ? ' itemid-' . $itemid : '')
-  . ($this->direction === 'rtl' ? ' rtl' : '';
+  . ($this->direction === 'rtl' ? ' rtl' : '');
 
 ?>
 <!DOCTYPE html>
