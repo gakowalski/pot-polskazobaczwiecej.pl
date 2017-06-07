@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "https://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>Polska Zobacz Więcej 2017</name>
+	<version>1.0</version>
+	<creationDate>2017/06/07</creationDate>
+	<author>Grzegorz Kowalski</author>
+	<authorEmail>grzegorz.kowalski@pot.gov.pl</authorEmail>
+	<copyright></copyright>
+	<description></description>
+	<files>
+    <filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+	<positions>
+		<position>banner</position>
+		<position>debug</position>
+    <position>header</position>
+		<position>footer</position>
+	</positions>
+</extension>
