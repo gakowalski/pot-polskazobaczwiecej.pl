@@ -39,5 +39,43 @@ $body_classes =
 	<jdoc:include type="head" />
 </head>
 <body class="<?php echo $body_classes; ?>">
+
+  <?php if ($this->countModules('header')): ?>
+  <header>
+    <jdoc:include type="modules" name="header" style="none" />
+  </header>
+  <?php endif; ?>
+
+  <?php if ($this->countModules('nav')): ?>
+  <nav role="navigation">
+    <jdoc:include type="modules" name="nav" style="none" />
+  </nav>
+  <?php endif; ?>
+
+  <?php if ($this->countModules('banner')): ?>
+  <section id="banner" role="banner">
+    <jdoc:include type="modules" name="banner" style="xhtml" />
+  </section>
+  <?php endif; ?>
+
+  <main role="main">
+    <jdoc:include type="message" />
+		<jdoc:include type="component" />
+  </main>
+
+  <?php if ($this->countModules('aside')): ?>
+  <aside>
+    <jdoc:include type="modules" name="aside" style="none" />
+  </aside>
+  <?php endif; ?>
+
+  <?php if ($this->countModules('footer')): ?>
+  <footer role="contentinfo">
+    <jdoc:include type="modules" name="footer" style="none" />
+  </footer>
+  <?php endif; ?>
+
+  <jdoc:include type="modules" name="debug" style="none" />
+
 </body>
 </html>
