@@ -11,6 +11,23 @@ html, body {
   padding: 0;
 }
 
+a:link, a:visited {
+  font-style: normal;
+  color: #000;
+  text-decoration: underline;
+}
+
+h3 {
+  font-family: 'Lato',sans-serif;
+  font-size: 1.4em;
+  line-height: 1.3em;
+  font-weight: normal;
+  color: #000;
+  text-align: left;
+  padding: 0;
+  margin: 0 0 0.5em 0;
+}
+
 header {
   position: relative;
   display: block;
@@ -35,6 +52,66 @@ header {
   z-index: 0;
   opacity: 0.5;
   transition-duration: 1s;
+}
+
+#header-logo {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: 431px;
+  height: 99px;
+  z-index: 2;
+  border: 0;
+  cursor: pointer;
+}
+
+#header-logo a {
+  display: block;
+  padding: 0;
+  text-indent: -1000em;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/pzw-logo.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  white-space: nowrap;
+}
+
+#header-modules {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 3em 0 0 0;
+  height: 42px;
+  text-align: right;
+  z-index: 1;
+}
+
+#header-modules > div {
+  float: right;
+  margin: 0;
+  width: auto;
+  margin: 0.3em 1em 0 0;
+}
+
+#contrast a,
+#contrast a:visited {
+  font-family: "Lato",sans-serif;
+  font-size: 1em;
+  line-height: 1em;
+  color: #000;
+  text-decoration: none;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: left;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  display: block;
 }
 
 nav {
@@ -70,7 +147,8 @@ nav li {
   z-index: 1;
 }
 
-nav a {
+nav a:link,
+nav a:visited {
   display: block;
   padding: 0;
   margin: 0;
@@ -90,3 +168,190 @@ nav a {
   display: block;
   font-weight: bold;
 }
+
+nav a:hover,
+nav li.active > a {
+  border-bottom: 2px solid #fff;
+}
+
+.pzw-template-inside {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+header .pzw-template-inside {
+  height: 120px;
+}
+
+h1 {
+  font-family: 'Lato',sans-serif;
+  font-size: 1.8em;
+  line-height: 1em;
+  font-weight: normal;
+  color: #000;
+  text-align: left;
+  text-transform: none;
+  padding: 0;
+  margin: 0 0 0.5em 0;
+  position: relative;
+}
+
+/* mod_search */
+
+.search {
+
+}
+
+
+#facebook-logo {
+  width: 29px;
+  height: 29px;
+  background-image: url(../images/facebook-blue.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+main .page-header,
+main .icons,
+main .article-info,
+.element-invisible,
+.muted
+{
+  display: none;
+}
+
+footer {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+  width: auto;
+  background: #eee;
+  border-top: 6px solid #d42128;
+}
+
+#footer-content {
+  position: relative;
+  padding: 1em;
+  margin: 0 auto;
+  width: 50%;
+  float: left;
+  min-height: 100px;
+  z-index: 1;
+}
+
+#footer-content {
+  font-size: 1.1em;
+  line-height: 1em;
+  color: #000000;
+  font-weight: 600;
+  text-align: center;
+  display: block;
+  margin: 0 0 0.8em 0;
+}
+
+#footer-bottom-menu,
+#footer-right-menu {
+  position: relative;
+  padding: 0.5em;
+  margin: 0;
+  border-top: 3px solid #d42128;
+  text-align: center;
+  z-index: 1;
+  background: #fff;
+}
+
+#footer-bottom-menu {
+  clear: both;
+}
+
+#footer-right-menu {
+  width: 30%;
+  float: right;
+  border-top: 0;
+  background: #717171;
+  text-align: left;
+}
+
+#footer-bottom-menu .menu,
+#footer-right-menu .menu
+ {
+  position: relative;
+  top: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  float: none;
+  list-style-type: none;
+  list-style-image: none;
+  text-align: center;
+  width: auto;
+}
+
+#footer-right-menu .menu {
+  text-align: left;
+}
+
+#footer-bottom-menu .menu > li,
+#footer-right-menu .menu > li {
+  text-align: left;
+  margin: 1em;
+  border: 0;
+  padding: 0;
+  float: none;
+  display: inline-block;
+  list-style: none;
+  position: relative;
+}
+
+#footer-bottom-menu .menu > li > a::before,
+#footer-right-menu .menu > li > a::before {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  background-image: url(../images/double-arrows-red.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 16px;
+  padding: 2px;
+  content: "\00a0"
+}
+
+#footer-right-menu .menu > li > a::before {
+  background-image: url(../images/double-arrows-white.png);
+}
+
+#footer-bottom-menu .menu > li > a:link,
+#footer-bottom-menu .menu > li > a:visited,
+#footer-right-menu .menu > li > a:link,
+#footer-right-menu .menu > li > a:visited {
+  font-size: 1em;
+  padding: 0 0 0 2em;
+
+  font-family: "Lato",sans-serif;
+  line-height: 1em;
+  color: #000;
+  text-decoration: none;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: left;
+  position: relative;
+  margin: 0;
+  display: block;
+ }
+
+ #footer-right-menu .menu > li > a:link,
+ #footer-right-menu .menu > li > a:visited {
+   color: #fff;
+ }
+
+
+ #footer-bottom-menu .menu > li > a:hover,
+ #footer-bottom-menu .menu > li > a:active {
+  color: #d42128;
+  text-decoration: underline;
+  transition-duration: 0.6s;
+ }

@@ -21,6 +21,8 @@
 		<position>banner</position>
     <position>header</position>
     <position>nav</position>
-		<position>footer</position>
+		<position>footer-content</position>
+		<position>footer-bottom-menu</position>
+		<position>footer-right-menu</position>
 	</positions>
 </extension>

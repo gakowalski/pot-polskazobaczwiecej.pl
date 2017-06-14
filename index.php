@@ -42,14 +42,36 @@ $body_classes =
 
   <?php // if ($this->countModules('header')): ?>
   <header>
-    <jdoc:include type="modules" name="header" style="none" />
+    <div class="pzw-template-inside">
+      <h1 id="header-logo">
+        <a href="/" title="Strona główna"><?php echo $sitename; ?></a>
+      </h1>
+      <div id="header-modules">
+
+        <div>
+          <a href="https://www.facebook.com/WeekendNizszychCen/">
+            <div id="facebook-logo" alt="Polska Zobacz Więcej na Facebooku"></div>
+          </a>
+        </div>
+
+        <?php /* mod_search */ ?>
+        <jdoc:include type="modules" name="header" style="none" />
+
+        <div id="contrast">
+          <a href="">Wersja kontrastowa</a>
+        </div>
+
+      </div>
+    </div>
     <div id="header-separator"></div>
   </header>
   <?php // endif; ?>
 
   <?php if ($this->countModules('nav')): ?>
   <nav role="navigation">
-    <jdoc:include type="modules" name="nav" style="none" />
+    <div class="pzw-template-inside">
+      <jdoc:include type="modules" name="nav" style="none" />
+    </div>
   </nav>
   <?php endif; ?>
 
@@ -70,9 +92,30 @@ $body_classes =
   </aside>
   <?php endif; ?>
 
-  <?php if ($this->countModules('footer')): ?>
+  <?php if ($this->countModules('footer-content') + $this->countModules('footer-right-menu') + $this->countModules('footer-bottom-menu')): ?>
   <footer role="contentinfo">
-    <jdoc:include type="modules" name="footer" style="none" />
+    <div class="pzw-template-inside">
+      <div id="footer-content">
+        <?php if ($this->countModules('footer-content')): ?>
+        <jdoc:include type="modules" name="footer-content" style="none" />
+        <?php else: ?>
+        <h3>ORGANIZATOR AKCJI:</h3>
+        <div class="logo"><a href="https://pot.gov.pl/"><span>Strona główna Polskiej Organizacji Turystycznej</span></a></div>
+        <p>
+        <strong>Polska Organizacja Turystyczna</strong>
+        ul. Chałubińskiego 8, 00-613 Warszawa<br>
+        tel. 22 536 70 53<br>
+        <a href="#"><span>Kontakt do nas</span></a>
+        </p>
+        <?php endif; ?>
+      </div>
+      <div id="footer-right-menu">
+        <jdoc:include type="modules" name="footer-right-menu" style="none" />
+      </div>
+    </div>
+    <div id="footer-bottom-menu">
+      <jdoc:include type="modules" name="footer-bottom-menu" style="none" />
+    </div>
   </footer>
   <?php endif; ?>
 
