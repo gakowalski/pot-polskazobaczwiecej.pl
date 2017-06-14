@@ -40,11 +40,12 @@ $body_classes =
 </head>
 <body class="<?php echo $body_classes; ?>">
 
-  <?php if ($this->countModules('header')): ?>
+  <?php // if ($this->countModules('header')): ?>
   <header>
     <jdoc:include type="modules" name="header" style="none" />
+    <div id="header-separator"></div>
   </header>
-  <?php endif; ?>
+  <?php // endif; ?>
 
   <?php if ($this->countModules('nav')): ?>
   <nav role="navigation">
