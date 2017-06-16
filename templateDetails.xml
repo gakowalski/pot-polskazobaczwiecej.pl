@@ -26,6 +26,6 @@
 		<position>footer-right-menu</position>
 	</positions>
 	<updateservers>
-		<server type="extension" name=">polskazobaczwiecej-2017" priority="1">https://github.com/gakowalski/pot-polskazobaczwiecej.pl/blob/master/updates.xml</server>
+		<server type="extension" name=">polskazobaczwiecej-2017" priority="1">https://raw.githubusercontent.com/gakowalski/pot-polskazobaczwiecej.pl/master/updates.xml</server>
 	</updateservers>
 </extension>
