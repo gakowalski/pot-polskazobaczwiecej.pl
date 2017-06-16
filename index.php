@@ -63,7 +63,7 @@ $body_classes =
 
       </div>
     </div>
-    <div id="header-separator"></div>
+    <!-- <div id="header-separator"></div> -->
   </header>
   <?php // endif; ?>
 
