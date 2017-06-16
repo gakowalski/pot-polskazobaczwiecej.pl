@@ -39,6 +39,7 @@ $body_classes =
 	<jdoc:include type="head" />
 </head>
 <body class="<?php echo $body_classes; ?>">
+  <a id="page"></a>
 
   <?php // if ($this->countModules('header')): ?>
   <header>
@@ -83,7 +84,9 @@ $body_classes =
 
   <main role="main">
     <jdoc:include type="message" />
-		<jdoc:include type="component" />
+    <div class="pzw-template-inside">
+		    <jdoc:include type="component" />
+    </div>
   </main>
 
   <?php if ($this->countModules('aside')): ?>
@@ -96,18 +99,7 @@ $body_classes =
   <footer role="contentinfo">
     <div class="pzw-template-inside">
       <div id="footer-content">
-        <?php if ($this->countModules('footer-content')): ?>
         <jdoc:include type="modules" name="footer-content" style="none" />
-        <?php else: ?>
-        <h3>ORGANIZATOR AKCJI:</h3>
-        <div class="logo"><a href="https://pot.gov.pl/"><span>Strona główna Polskiej Organizacji Turystycznej</span></a></div>
-        <p>
-        <strong>Polska Organizacja Turystyczna</strong>
-        ul. Chałubińskiego 8, 00-613 Warszawa<br>
-        tel. 22 536 70 53<br>
-        <a href="#"><span>Kontakt do nas</span></a>
-        </p>
-        <?php endif; ?>
       </div>
       <div id="footer-right-menu">
         <jdoc:include type="modules" name="footer-right-menu" style="none" />
@@ -118,6 +110,8 @@ $body_classes =
     </div>
   </footer>
   <?php endif; ?>
+
+  <div id="back-to-top"><a href="#page"><i></i><span>do góry</span></a></div>
 
   <jdoc:include type="modules" name="debug" style="none" />
 
