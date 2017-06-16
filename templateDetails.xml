@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "https://www.joomla.org/xml/dtd/2.5/template-install.dtd">
-<extension version="3.1" type="template" client="site">
+<extension version="3.1" type="template" client="site" method="upgrade">
 	<name>polskazobaczwiecej-2017</name>
 	<version>0.0.2</version>
 	<creationDate>2017/06/07</creationDate>
@@ -26,6 +26,6 @@
 		<position>footer-right-menu</position>
 	</positions>
 	<updateservers>
-		<server type="extension" name=">polskazobaczwiecej-2017" priority="1">https://raw.githubusercontent.com/gakowalski/pot-polskazobaczwiecej.pl/master/updates.xml</server>
+		<server type="extension" name="Polska Zobacz Więcej 2017" priority="1">https://raw.githubusercontent.com/gakowalski/pot-polskazobaczwiecej.pl/master/updates.xml</server>
 	</updateservers>
 </extension>
