@@ -246,7 +246,12 @@ main .item-page strong {
   font-weight: 700;
 }
 
-main .page-header {
+main .page-header a {
+  text-decoration: none;
+}
+
+main .item-page > .page-header,
+main .blog > .page-header {
   position: relative;
   margin: 1em 0;
   padding: 0;
@@ -280,6 +285,93 @@ main .page-header h3 {
   padding: 0;
   margin: 0 0 0.5em 0;
   border: 0;
+}
+
+main .page-header time {
+  position: relative;
+  background: #d42128;
+  display: inline-block;
+  width: auto;
+  text-align: left;
+  padding: 0.2em;
+  margin: 0.3em 0;
+  height: 1%;
+  font-weight: normal;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-size: 0.9em;
+  line-height: 1em;
+}
+
+main .blog .item {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 2em;
+  overflow: hidden;
+  list-style: none;
+  text-align: left;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+main .blog .item h3 {
+  margin: 0 0 0.3em 0;
+  font-family: "Lato",sans-serif !important;
+  color: #000;
+  font-weight: 700;
+  text-align: left;
+  text-decoration: none;
+  font-size: 1.6em;
+  line-height: 1em;
+
+  display: inline-block;
+  vertical-align: text-top;
+  padding-left: 1em;
+}
+
+main .blog .item p {
+  display: block;
+  font-family: "Lato",sans-serif;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  color: #000;
+  margin: 1em 0 0.5em;
+}
+
+main .blog .item .readmore a:link,
+main .blog .item .readmore a:visited {
+  display: block;
+  color: #010101;
+  text-decoration: none;
+  line-height: 1.1em;
+  font-style: italic;
+}
+
+main .blog .item .readmore-arrow {
+  position: relative;
+  display: inline-block;
+  float: right;
+  margin: 1em 0 0 0;
+  color: #d42128;
+  border: 1px solid #d42128;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+main .blog .item .readmore-arrow::after {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+  margin: 0 0 0 0.1em;
+  padding: 0.3em;
+  overflow: visible;
+  content: ">";
+  font-size: 1em;
+  line-height: 1em;
+  color: #d42128;
+  text-decoration: none;
 }
 
 main .icons {
@@ -333,9 +425,14 @@ main .icons .dropdown-menu > li > a {
 
 main .item-pagefrontpage > .page-header,
 main .item-pagefrontpage > .icons,
-main .article-info,
+main .item-pagefrontpage > .article-info,
+main .item-page > .article-info,
 .element-invisible,
-.muted,
+main .article-info-term,
+main .createdby,
+main .category-name,
+main .published,
+main .hits,
 main .pager
 {
   display: none;

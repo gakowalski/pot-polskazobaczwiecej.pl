@@ -18,6 +18,8 @@ $info    = $params->get('info_block_position', 0);
 // Check if associations are implemented. If they are, define the parameter.
 $assocParam = (JLanguageAssociations::isEnabled() && $params->get('show_associations'));
 
+$useDefList = ($params->get('show_modify_date') || $params->get('show_publish_date') || $params->get('show_create_date')
+	|| $params->get('show_hits') || $params->get('show_category') || $params->get('show_parent_category') || $params->get('show_author') || $assocParam);
 ?>
 <?php if ($this->item->state == 0 || strtotime($this->item->publish_up) > strtotime(JFactory::getDate())
 	|| ((strtotime($this->item->publish_down) < strtotime(JFactory::getDate())) && $this->item->publish_down != JFactory::getDbo()->getNullDate())) : ?>
@@ -33,10 +35,6 @@ $assocParam = (JLanguageAssociations::isEnabled() && $params->get('show_associat
 <?php if ($params->get('show_tags') && !empty($this->item->tags->itemTags)) : ?>
 	<?php echo JLayoutHelper::render('joomla.content.tags', $this->item->tags->itemTags); ?>
 <?php endif; ?>
-
-<?php // Todo Not that elegant would be nice to group the params ?>
-<?php $useDefList = ($params->get('show_modify_date') || $params->get('show_publish_date') || $params->get('show_create_date')
-	|| $params->get('show_hits') || $params->get('show_category') || $params->get('show_parent_category') || $params->get('show_author') || $assocParam); ?>
 
 <?php if ($useDefList && ($info == 0 || $info == 2)) : ?>
     <?php // Todo: for Joomla4 joomla.content.info_block.block can be changed to joomla.content.info_block ?>

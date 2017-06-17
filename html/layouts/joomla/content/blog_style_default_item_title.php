@@ -18,6 +18,11 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
 <?php if ($displayData->state == 0 || $params->get('show_title') || ($params->get('show_author') && !empty($displayData->author ))) : ?>
 	<div class="page-header">
 		<?php if ($params->get('show_title')) : ?>
+			<?php if ($displayData->params->get('show_publish_date')) : ?>
+				<time datetime="<?php echo JHtml::_('date', $displayData->publish_up, 'c'); ?>" itemprop="datePublished">
+					<?php echo JHtml::_('date', $displayData->publish_up, 'd.m.Y'); ?>
+				</time>
+			<?php endif; ?>
 			<h3 itemprop="name">
 				<?php if ($params->get('link_titles') && ($params->get('access-view') || $params->get('show_noauth', '0') == '1')) : ?>
 					<a href="<?php echo JRoute::_(

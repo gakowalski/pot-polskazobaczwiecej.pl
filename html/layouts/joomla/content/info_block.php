@@ -24,9 +24,9 @@ $blockPosition = $displayData['params']->get('info_block_position', 0);
 				<?php endif; ?>
 			</dt>
 
-			<?php if ($displayData['params']->get('show_author') && !empty($displayData['item']->author )) : ?>
+			<?php /* if ($displayData['params']->get('show_author') && !empty($displayData['item']->author )) : ?>
 				<?php echo $this->sublayout('author', $displayData); ?>
-			<?php endif; ?>
+			<?php endif; */ ?>
 
 			<?php if ($displayData['params']->get('show_parent_category') && !empty($displayData['item']->parent_slug)) : ?>
 				<?php echo $this->sublayout('parent_category', $displayData); ?>
@@ -57,8 +57,8 @@ $blockPosition = $displayData['params']->get('info_block_position', 0);
 				<?php echo $this->sublayout('modify_date', $displayData); ?>
 			<?php endif; ?>
 
-			<?php if ($displayData['params']->get('show_hits')) : ?>
+			<?php /* if ($displayData['params']->get('show_hits')) : ?>
 				<?php echo $this->sublayout('hits', $displayData); ?>
-			<?php endif; ?>
+			<?php endif; */ ?>
 		<?php endif; ?>
 	</dl>
