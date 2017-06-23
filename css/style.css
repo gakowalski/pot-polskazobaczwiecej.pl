@@ -714,3 +714,22 @@ footer {
   width: 100%;
   text-align: center;
 }
+
+@media only screen and (max-width: 77em) {
+  #header-modules {
+    display: none;
+  }
+  
+}
+
+@media only screen and (max-width: 67em) {
+}
+
+@media only screen and (max-width: 48em) {
+}
+
+@media only screen and (max-width: 45em) {
+}
+
+@media only screen and (max-width: 30em) {
+}
