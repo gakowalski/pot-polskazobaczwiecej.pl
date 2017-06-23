@@ -1,8 +1,9 @@
-html, body {
+html,
+body.low-contrast {
   font-family: "Lato",sans-serif;
   font-style: normal;
   font-weight: normal;
-  color: #010101;
+  color: #000;
   text-decoration: none;
   font-size: 0.95em;
   line-height: 1em;
@@ -11,10 +12,28 @@ html, body {
   padding: 0;
 }
 
+body.high-contrast {
+  font-family: Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95em;
+  letter-spacing: 0;
+  margin: 0;
+  padding: 1em;
+  background: #000;
+}
+
 a:link, a:visited {
   font-style: normal;
   color: #000;
   text-decoration: underline;
+}
+
+.high-contrast a:link,
+.high-contrast a:visited {
+  color: #ffff14;
 }
 
 h1 {
@@ -56,8 +75,6 @@ ul li {
 header {
   position: relative;
   display: block;
-  padding: 0;
-  margin: 0;
   height: auto;
   width: auto;
   background: #fbfbfb;
@@ -158,14 +175,12 @@ nav ul {
   padding: 0;
   border: 0;
   list-style: none;
-  text-align: left;
   overflow: hidden;
 }
 
 nav li {
   float: left;
   display: block;
-  margin: 0;
   padding: 0;
   border: 0;
   list-style: none;
@@ -178,7 +193,6 @@ nav a:visited {
   margin: 0;
   border: 0;
   height: auto;
-  font-style: normal;
   color: #fff;
   font-size: 1.2em;
   line-height: 1em;
@@ -198,6 +212,14 @@ nav li.active > a {
   position: relative;
   width: 1200px;
   margin: 0 auto;
+}
+
+.low-contrast #breadcrumbs {
+  display: none;
+}
+
+main .pzw-template-inside {
+  margin: 4em auto;
 }
 
 header .pzw-template-inside {
@@ -240,9 +262,15 @@ header .pzw-template-inside {
 #facebook-logo {
   width: 29px;
   height: 29px;
-  background-image: url(../images/facebook-blue.png);
   background-repeat: no-repeat;
   background-size: 100%;
+}
+
+.low-contrast #facebook-logo {
+  background-image: url(../images/facebook-blue.png);
+}
+.high-contrast #facebook-logo {
+  background-image: url(../images/facebook-white.png);
 }
 
 #banner {
@@ -254,7 +282,8 @@ header .pzw-template-inside {
   padding: 100px;
 }
 
-main .item-page {
+main .item-page,
+form#ju-contact fieldset>div {
   margin: 4em auto;
 
   font-size: 1.1em;
@@ -287,7 +316,8 @@ main .blog > .page-header {
   border-bottom: 1px solid #f3f3f3;
 }
 
-main .page-header h2 {
+main .page-header h2,
+form#ju-contact legend {
   position: relative;
   display: inline-block;
   padding: 0 0 0.5em;
@@ -354,6 +384,10 @@ main .blog .item h3 {
   display: inline-block;
   vertical-align: text-top;
   padding-left: 1em;
+}
+
+main .blog .row-0 h3>a {
+  color: #d42128;
 }
 
 main .blog .item p {
@@ -467,7 +501,6 @@ main .pager
 footer {
   position: relative;
   display: block;
-  padding: 0;
   margin: 0 auto;
   text-align: center;
   width: auto;

@@ -11,6 +11,14 @@ $layout   = $app->input->getCmd('layout', '');
 $task     = $app->input->getCmd('task', '');
 $itemid   = $app->input->getCmd('Itemid', '');
 $sitename = $app->get('sitename');
+$cookie   = $app->input->cookie;
+
+$high_contrast_enabled = $cookie->get($name = 'high_contrast', $defaultValue = false);
+
+if (isset($_GET['toggle_contrast'])) {
+  $high_contrast_enabled = !$high_contrast_enabled;
+  $cookie->set($name = 'high_contrast', $value = $high_contrast_enabled, $expire = 0);
+}
 
 $template_path = $this->baseurl.'/templates/'.$this->template;
 
@@ -29,7 +37,8 @@ $body_classes =
 	. ($layout ? ' layout-' . $layout : ' no-layout')
 	. ($task ? ' task-' . $task : ' no-task')
 	. ($itemid ? ' itemid-' . $itemid : '')
-  . ($this->direction === 'rtl' ? ' rtl' : '');
+  . ($this->direction === 'rtl' ? ' rtl' : '')
+  . ($high_contrast_enabled == true? ' high-contrast' : ' low-contrast');
 
 ?>
 <!DOCTYPE html>
@@ -59,7 +68,7 @@ $body_classes =
         <jdoc:include type="modules" name="header" style="none" />
 
         <div id="contrast">
-          <a href="">Wersja kontrastowa</a>
+          <a href="<?php echo JUri::current(); ?>?toggle_contrast=true">Wersja <?php echo $high_contrast_enabled == true ? 'graficzna' : 'kontrastowa'; ?></a>
         </div>
 
       </div>
@@ -78,13 +87,18 @@ $body_classes =
 
   <?php if ($this->countModules('banner')): ?>
   <section id="banner" role="banner">
-    <jdoc:include type="modules" name="banner" style="xhtml" />
+    <jdoc:include type="modules" name="banner" style="none" />
   </section>
   <?php endif; ?>
 
   <main role="main">
     <jdoc:include type="message" />
     <div class="pzw-template-inside">
+        <?php if ($this->countModules('breadcrumbs')): ?>
+        <div id="breadcrumbs">
+          <jdoc:include type="modules" name="breadcrumbs" style="none" />
+        </div>
+        <?php endif; ?>
 		    <jdoc:include type="component" />
     </div>
   </main>
