@@ -50,7 +50,6 @@ $body_classes =
 <body class="<?php echo $body_classes; ?>">
   <a id="page"></a>
 
-  <?php // if ($this->countModules('header')): ?>
   <header>
     <div class="pzw-template-inside">
       <h1 id="header-logo">
@@ -73,9 +72,7 @@ $body_classes =
 
       </div>
     </div>
-    <!-- <div id="header-separator"></div> -->
   </header>
-  <?php // endif; ?>
 
   <?php if ($this->countModules('nav')): ?>
   <nav role="navigation">
