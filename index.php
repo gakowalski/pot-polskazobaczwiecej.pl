@@ -54,7 +54,7 @@ $body_classes =
   <header>
     <div class="pzw-template-inside">
       <h1 id="header-logo">
-        <a href="/" title="Strona główna"><?php echo $sitename; ?></a>
+        <a href="<?php echo JUri::base(); ?>" title="Strona główna"><?php echo $sitename; ?></a>
       </h1>
       <div id="header-modules">
 

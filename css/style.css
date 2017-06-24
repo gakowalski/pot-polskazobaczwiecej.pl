@@ -98,13 +98,12 @@ header {
 
 #header-logo {
   position: absolute;
-  top: 10px;
   left: 5px;
   display: block;
   padding: 0;
   margin: 0;
   width: 431px;
-  height: 99px;
+  height: 100%;
   z-index: 2;
   border: 0;
   cursor: pointer;
@@ -156,7 +155,7 @@ header {
   display: block;
 }
 
-nav {
+body>nav {
   position: relative;
   display: block;
   padding: 0;
@@ -169,7 +168,7 @@ nav {
   transition-duration: 1s;
 }
 
-nav ul {
+body>nav ul {
   width: auto;
   margin: 0;
   padding: 0;
@@ -178,7 +177,7 @@ nav ul {
   overflow: hidden;
 }
 
-nav li {
+body>nav li {
   float: left;
   display: block;
   padding: 0;
@@ -187,8 +186,8 @@ nav li {
   z-index: 1;
 }
 
-nav a:link,
-nav a:visited {
+body>nav a:link,
+body>nav a:visited {
   display: block;
   margin: 0;
   border: 0;
@@ -203,14 +202,14 @@ nav a:visited {
   font-weight: bold;
 }
 
-nav a:hover,
-nav li.active > a {
+body>nav a:hover,
+body>nav li.active > a {
   border-bottom: 2px solid #fff;
 }
 
 .pzw-template-inside {
   position: relative;
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -279,7 +278,9 @@ header .pzw-template-inside {
 }
 
 #banner img {
-  padding: 100px;
+  margin: 100px auto;
+  max-width: 100%;
+  height: auto;
 }
 
 main .item-page,
@@ -716,20 +717,46 @@ footer {
 }
 
 @media only screen and (max-width: 77em) {
-  #header-modules {
-    display: none;
-  }
-  
+
 }
 
 @media only screen and (max-width: 67em) {
+  #header-modules,
+  #back-to-top a span,
+  body>nav {
+    display: none;
+  }
+
+  #back-to-top {
+    width: 30px;
+    height: 33px;
+  }
+
+  #banner img {
+    padding: 0;
+    margin: 0;
+  }
+
+  main .pzw-template-inside {
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (max-width: 48em) {
+
 }
 
 @media only screen and (max-width: 45em) {
+  header .pzw-template-inside {
+    height: 80px;
+  }
+
+  #footer-content,
+  #footer-right-menu {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 30em) {
+  /* TODO: attachments resize */
 }
