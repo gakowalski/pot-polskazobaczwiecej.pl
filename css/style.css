@@ -155,6 +155,11 @@ header {
   display: block;
 }
 
+#mobile-menu-checkbox,
+#mobile-menu-label {
+  display: none;
+}
+
 body>nav {
   position: relative;
   display: block;
@@ -721,9 +726,33 @@ footer {
 }
 
 @media only screen and (max-width: 67em) {
+  header {
+    border-bottom: 3px solid #d42128;
+  }
+
   #header-modules,
   #back-to-top a span {
     display: none;
+  }
+
+  #mobile-menu-label {
+    display: block;
+    background-image: url(../images/hamburger.png);
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    width: 34px;
+    height: 29px;
+    position: absolute;
+    right: 15px;
+    top: 45px;
+  }
+
+  #mobile-menu-checkbox + #mobile-menu-label + nav {
+    display:block;
+  }
+
+  #mobile-menu-checkbox:checked + #mobile-menu-label + nav {
+    display:none;
   }
 
   body>nav {
@@ -779,6 +808,12 @@ footer {
 @media only screen and (max-width: 45em) {
   header .pzw-template-inside {
     height: 80px;
+  }
+
+  #mobile-menu-label {
+    top: 29px;
+    background-size: 100%;
+    width: 31px;
   }
 
   #footer-content,

@@ -75,6 +75,8 @@ $body_classes =
   </header>
 
   <?php if ($this->countModules('nav')): ?>
+  <input id="mobile-menu-checkbox" type="checkbox">
+  <label id="mobile-menu-label" for="mobile-menu-checkbox">Menu</label>
   <nav role="navigation">
     <div class="pzw-template-inside">
       <jdoc:include type="modules" name="nav" style="none" />
