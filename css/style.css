@@ -488,6 +488,34 @@ main .icons .dropdown-menu > li > a {
   padding: 0.5em 0.3em;
 }
 
+main .pagination ul {
+  text-align: center;
+}
+
+main .pagination li {
+  list-style: none;
+  display: inline;
+}
+
+main .pagination li a {
+  border: 1px solid #d42128;
+  text-decoration: none;
+}
+
+main .pagination li a:hover {
+  background: #d42128;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.2s ease-in;
+}
+
+main .pagination li a,
+main .pagination li span {
+  line-height: 1em;
+  padding: 0.3em 0.5em 0.3em 0.5em;
+  font-size: 1.3em;
+}
+
 main .item-pagefrontpage > .page-header,
 main .item-pagefrontpage > .icons,
 main .item-pagefrontpage > .article-info,
@@ -498,7 +526,10 @@ main .createdby,
 main .category-name,
 main .published,
 main .hits,
-main .pager
+main .pager,
+main .pagination .counter,
+main .pagination .pagination-start,
+main .pagination .pagination-end
 {
   display: none;
 }
