@@ -14,6 +14,8 @@
 		<folder>html</folder>
     <filename>favicon.ico</filename>
 		<filename>index.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
 		<filename>templateDetails.xml</filename>
 	</files>
 	<positions>

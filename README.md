@@ -1,6 +1,8 @@
 # Polska Zobacz Więcej 2017
 Szablon do serwisu [polskazobaczwiecej.pl][1] dla systemu Joomla! 3.7 wykonany na podstawie dotychczasowego szablonu opartego o system WebAdministrator CMS.
 
+![Podgląd szablonu](template_preview.png)
+
 Specyficzne cechy szablonu:
 * Ścisłe dopasowanie do projektu, konkretnych komponentów i rozwiazań (nie jest to uniwersalny szablon):
   * Wyszukiwarka: `mod_search` umieszczony w pozycji `header`.
