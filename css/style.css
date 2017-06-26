@@ -102,7 +102,7 @@ header {
   display: block;
   padding: 0;
   margin: 0;
-  width: 431px;
+  width: 243px;
   height: 100%;
   z-index: 2;
   border: 0;
@@ -168,7 +168,6 @@ body>nav {
   border-top: 5px solid #f2f2f2;
   background: #d42128;
   width: 100%;
-  height: 50px;
   z-index: 2;
   transition-duration: 1s;
 }
@@ -182,9 +181,8 @@ body>nav ul {
   overflow: hidden;
 }
 
-body>nav li {
-  float: left;
-  display: block;
+body>nav .nav li {
+  display: inline-block;
   padding: 0;
   border: 0;
   list-style: none;
@@ -205,6 +203,7 @@ body>nav a:visited {
   text-align: left;
   padding: 0.8em 0.9em;
   font-weight: bold;
+  border-bottom: 2px solid #d42128;
 }
 
 body>nav a:hover,
@@ -627,6 +626,10 @@ footer {
   position: relative;
 }
 
+#footer-right-menu .menu > li {
+  width: 100%;
+}
+
 #footer-bottom-menu .menu > li > a::before,
 #footer-right-menu .menu > li > a::before {
   position: absolute;
@@ -745,14 +748,15 @@ footer {
     position: absolute;
     right: 15px;
     top: 45px;
+    cursor: pointer;
   }
 
   #mobile-menu-checkbox + #mobile-menu-label + nav {
-    display:block;
+    display:none;
   }
 
   #mobile-menu-checkbox:checked + #mobile-menu-label + nav {
-    display:none;
+    display:block;
   }
 
   body>nav {
@@ -780,6 +784,7 @@ footer {
     font-weight: normal;
     text-align: center;
     padding: 2em;
+    border-bottom: 0;
   }
 
   body>nav a:hover {
@@ -808,6 +813,10 @@ footer {
 @media only screen and (max-width: 45em) {
   header .pzw-template-inside {
     height: 80px;
+  }
+
+  #header-logo {
+    width: 162px;
   }
 
   #mobile-menu-label {
