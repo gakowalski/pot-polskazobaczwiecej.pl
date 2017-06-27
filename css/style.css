@@ -306,12 +306,14 @@ main .item-page strong {
   font-weight: 700;
 }
 
-main .page-header a {
+main .page-header a,
+main .blog-featured .item-title a {
   text-decoration: none;
 }
 
 main .item-page > .page-header,
-main .blog > .page-header {
+main .blog > .page-header,
+main .blog-featured > .page-header {
   position: relative;
   margin: 1em 0;
   padding: 0;
@@ -348,7 +350,8 @@ main .page-header h3 {
   border: 0;
 }
 
-main .page-header time {
+main .page-header time,
+main .blog-featured .item time {
   position: relative;
   background: #d42128;
   display: inline-block;
@@ -365,7 +368,8 @@ main .page-header time {
   line-height: 1em;
 }
 
-main .blog .item {
+main .blog .item,
+main .blog-featured .item {
   position: relative;
   padding: 0;
   margin: 0;
@@ -376,7 +380,8 @@ main .blog .item {
   border-bottom: 1px solid #f1f1f1;
 }
 
-main .blog .item h3 {
+main .blog .item h3,
+main .blog-featured .item h3 {
   margin: 0 0 0.3em 0;
   font-family: "Lato",sans-serif !important;
   color: #000;
@@ -391,11 +396,13 @@ main .blog .item h3 {
   padding-left: 1em;
 }
 
-main .blog .row-0 h3>a {
+main .blog .row-0 h3>a,
+main .blog-featured .row-0 h3>a {
   color: #d42128;
 }
 
-main .blog .item p {
+main .blog .item p,
+main .blog-featured .item p {
   display: block;
   font-family: "Lato",sans-serif;
   font-size: 1.2em;
@@ -405,7 +412,9 @@ main .blog .item p {
 }
 
 main .blog .item .readmore a:link,
-main .blog .item .readmore a:visited {
+main .blog .item .readmore a:visited,
+main .blog-featured .item .readmore a:link,
+main .blog-featured .item .readmore a:visited {
   display: block;
   color: #010101;
   text-decoration: none;
@@ -413,7 +422,8 @@ main .blog .item .readmore a:visited {
   font-style: italic;
 }
 
-main .blog .item .readmore-arrow {
+main .blog .item .readmore-arrow,
+main .blog-featured .item .readmore-arrow {
   position: relative;
   display: inline-block;
   float: right;
@@ -424,7 +434,8 @@ main .blog .item .readmore-arrow {
   text-transform: uppercase;
 }
 
-main .blog .item .readmore-arrow::after {
+main .blog .item .readmore-arrow::after,
+main .blog-featured .item .readmore-arrow::after {
   position: relative;
   display: inline-block;
   vertical-align: middle;
