@@ -11,6 +11,7 @@
 	<files>
     <folder>css</folder>
 		<folder>images</folder>
+		<folder>js</folder>
 		<folder>html</folder>
     <filename>favicon.ico</filename>
 		<filename>index.php</filename>

@@ -4,6 +4,7 @@ defined('_JEXEC') or die;
 $app      = JFactory::getApplication();
 $user     = JFactory::getUser();
 $doc      = JFactory::getDocument();
+$lang     = JFactory::getLanguage();
 $menu     = $app->getMenu();
 $option   = $app->input->getCmd('option', '');
 $view     = $app->input->getCmd('view', '');
@@ -12,6 +13,8 @@ $task     = $app->input->getCmd('task', '');
 $itemid   = $app->input->getCmd('Itemid', '');
 $sitename = $app->get('sitename');
 $cookie   = $app->input->cookie;
+
+$frontpage_enabled = ($menu->getActive() == $menu->getDefault($lang->getTag()));
 
 $high_contrast_enabled = $cookie->get($name = 'high_contrast', $defaultValue = false);
 
@@ -25,10 +28,10 @@ $template_path = $this->baseurl.'/templates/'.$this->template;
 $this->setGenerator(null);
 $this->setHtml5(true);
 
-// $doc->addScript($template_path . '/js/.js');
-
 $doc->addStyleSheet($template_path . '/css/normalize.css');
 $doc->addStyleSheet($template_path . '/css/style.css');
+
+$doc->addScript($template_path . '/js/default.js');
 
 $body_classes =
   'site '
@@ -38,7 +41,8 @@ $body_classes =
 	. ($task ? ' task-' . $task : ' no-task')
 	. ($itemid ? ' itemid-' . $itemid : '')
   . ($this->direction === 'rtl' ? ' rtl' : '')
-  . ($high_contrast_enabled == true? ' high-contrast' : ' low-contrast');
+  . ($high_contrast_enabled == true? ' high-contrast' : ' low-contrast')
+  . ($frontpage_enabled == true? ' frontpage' : ' not-frontpage');
 
 ?>
 <!DOCTYPE html>
@@ -52,9 +56,12 @@ $body_classes =
 
   <header>
     <div class="pzw-template-inside">
+      <?php if ($high_contrast_enabled == false): ?>
       <h1 id="header-logo">
         <a href="<?php echo JUri::base(); ?>" title="Strona główna"><?php echo $sitename; ?></a>
       </h1>
+      <?php endif; ?>
+
       <div id="header-modules">
 
         <div>
@@ -63,8 +70,9 @@ $body_classes =
           </a>
         </div>
 
-        <?php /* mod_search */ ?>
+        <?php if ($high_contrast_enabled == false): ?>
         <jdoc:include type="modules" name="header" style="none" />
+        <?php endif; ?>
 
         <div id="contrast">
           <a href="<?php echo JUri::current(); ?>?toggle_contrast=true">Wersja <?php echo $high_contrast_enabled == true ? 'graficzna' : 'kontrastowa'; ?></a>
@@ -72,12 +80,19 @@ $body_classes =
 
       </div>
     </div>
+
+    <?php if ($high_contrast_enabled): ?>
+    <h1><?php echo $sitename; ?></h1>
+    <?php endif; ?>
   </header>
 
   <?php if ($this->countModules('nav')): ?>
   <input id="mobile-menu-checkbox" type="checkbox">
   <label id="mobile-menu-label" for="mobile-menu-checkbox">Menu</label>
   <nav role="navigation">
+    <?php if ($high_contrast_enabled): ?>
+    <jdoc:include type="modules" name="header" style="none" />
+    <?php endif; ?>
     <div class="pzw-template-inside">
       <jdoc:include type="modules" name="nav" style="none" />
     </div>
@@ -93,7 +108,7 @@ $body_classes =
   <main role="main">
     <jdoc:include type="message" />
     <div class="pzw-template-inside">
-        <?php if ($this->countModules('breadcrumbs')): ?>
+        <?php if ($frontpage_enabled == false && $this->countModules('breadcrumbs')): ?>
         <div id="breadcrumbs">
           <jdoc:include type="modules" name="breadcrumbs" style="none" />
         </div>
@@ -120,11 +135,16 @@ $body_classes =
     </div>
     <div id="footer-bottom-menu">
       <jdoc:include type="modules" name="footer-bottom-menu" style="none" />
+      <?php if ($high_contrast_enabled): ?>
+      <span>Polska Organizacja Turystyczna, ul. Chałubińskiego 8, 00-613 Warszawa, tel. 225367053</span>
+      <?php endif; ?>
     </div>
   </footer>
   <?php endif; ?>
 
+  <?php //if ($high_contrast_enabled == false): ?>
   <div id="back-to-top"><a href="#page"><i></i><span>do góry</span></a></div>
+  <?php //endif; ?>
 
   <jdoc:include type="modules" name="debug" style="none" />
 
