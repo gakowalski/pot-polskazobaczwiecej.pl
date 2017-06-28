@@ -99,7 +99,7 @@ $body_classes =
   </nav>
   <?php endif; ?>
 
-  <?php if ($this->countModules('banner')): ?>
+  <?php if ($option != 'com_search' && $this->countModules('banner')): ?>
   <section id="banner" role="banner">
     <jdoc:include type="modules" name="banner" style="none" />
   </section>

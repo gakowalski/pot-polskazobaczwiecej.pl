@@ -1,11 +1,14 @@
-html,
+html {
+    font-size: 10px;
+}
+
 body.low-contrast {
   font-family: "Lato",sans-serif;
   font-style: normal;
   font-weight: normal;
   color: #000;
   text-decoration: none;
-  font-size: 0.95em;
+  font-size: 1.4em;
   line-height: 1em;
   letter-spacing: 0em;
   margin: 0;
@@ -18,7 +21,7 @@ body.high-contrast {
   font-weight: normal;
   color: #ffffff;
   text-decoration: none;
-  font-size: 0.95em;
+  font-size: 1.4em;
   letter-spacing: 0;
   margin: 0;
   padding: 1em;
@@ -227,7 +230,7 @@ body.high-contrast>nav ul {
   clear: both;
 }
 
-body>nav .nav li {
+body>nav li {
   display: inline-block;
   padding: 0;
   border: 0;
@@ -235,7 +238,7 @@ body>nav .nav li {
   z-index: 1;
 }
 
-body.high-contrast>nav .nav li {
+body.high-contrast>nav li {
   display: block;
 }
 
@@ -981,7 +984,7 @@ footer {
 
 .low-contrast #back-to-top a span {
   position: absolute;
-  bottom: 0.6em;
+  bottom: 6px;
   display: block;
   font-size: 0.9em;
   line-height: 0.9em;
@@ -992,10 +995,9 @@ footer {
 #back-to-top a span {
   text-align: left;
   display: block;
-  padding: 1em;
 }
 
-@media only screen and (max-width: 67em) {
+@media only screen and (max-width: 1070px) {
   .low-contrast header {
     border-bottom: 3px solid #d42128;
   }
@@ -1059,7 +1061,7 @@ footer {
     width: 100%;
   }
 
-  body>nav li {
+  body.low-contrast>nav li {
     width: 100%;
     border-bottom: 1px solid #a6b5bc;
   }
@@ -1097,7 +1099,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 45em) {
+@media only screen and (max-width: 720px) {
   .low-contrast header .pzw-template-inside {
     height: 80px;
   }
@@ -1106,7 +1108,7 @@ footer {
     width: 162px;
   }
 
-  #mobile-menu-label {
+  .low-contrast #mobile-menu-label {
     top: 29px;
     background-size: 100%;
     width: 31px;
