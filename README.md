@@ -5,7 +5,7 @@ Szablon do serwisu [polskazobaczwiecej.pl][1] dla systemu Joomla! 3.7 wykonany n
 
 Specyficzne cechy szablonu:
 * Ścisłe dopasowanie do projektu, konkretnych komponentów i rozwiazań (nie jest to uniwersalny szablon):
-  * Moduł wyszukiwarka: `mod_search` umieszczony w pozycji `header`, ustawienia "Search Button" oraz "Search Button Image" ustawione na wartość "Yes", ustawienie "Box text" wypełnione stosowną frazą, ukryty tytuł modułu;
+  * Moduł wyszukiwarka: `mod_search` umieszczony w pozycji `header`, ustawienie "Box text" wypełnione stosowną frazą, ukryty tytuł modułu; ustawienia "Search Button" oraz "Search Button Image" nie mają wpływu na działanie modułu.
   * Komponent wyszukiwarki: `com_search` z ustawieniem "Created Date" na wartośc "Hide"; szablon deaktywuje mozliwosc sterowania tytulem strony, ktory jest na sztywno ustalony jako "Wyniki wyszukiwania";
   * Formularz kontaktowy: rozszerzenie [JU Contact][2].
 * Zmiana stosowanej natywnie w Joomli hierarchii nagłówków celem uzyskania większej dostępności;
