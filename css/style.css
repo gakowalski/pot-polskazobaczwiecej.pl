@@ -173,8 +173,6 @@ header {
 
 #contrast a,
 #contrast a:visited {
-  font-size: 1em;
-  line-height: 1em;
   text-decoration: none;
   font-weight: normal;
   text-transform: uppercase;
@@ -186,9 +184,37 @@ header {
 }
 
 .high-contrast #contrast a,
-.high-contrast #contrast a:visited {
+.high-contrast #contrast a:visited,
+.high-contrast #font-resize>a:link,
+.high-contrast #font-resize>a:visited {
   padding: 0.3em 0.5em;
   border: 1px solid #ffff14;
+}
+
+#font-resize>a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.low-contrast #font-resize>a {
+  float:left;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.low-contrast #font-resize>a::before {
+  content: "A";
+}
+.low-contrast #font-resize>a>span {
+  display: none;
+}
+.low-contrast #font-resize-small {
+  font-size: 1.4rem;
+}
+.low-contrast #font-resize-medium {
+  font-size: 2rem;
+}
+.low-contrast #font-resize-large {
+  font-size: 2.6rem;
 }
 
 #mobile-menu-checkbox,
@@ -608,7 +634,6 @@ main .blog-featured .item p {
   font-family: "Lato",sans-serif;
   font-size: 1.2em;
   line-height: 1.2em;
-  color: #000;
   margin: 1em 0 0.5em;
 }
 

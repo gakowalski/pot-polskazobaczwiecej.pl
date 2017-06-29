@@ -15,12 +15,16 @@ $sitename = $app->get('sitename');
 $cookie   = $app->input->cookie;
 
 $frontpage_enabled = ($menu->getActive() == $menu->getDefault($lang->getTag()));
-
 $high_contrast_enabled = $cookie->get($name = 'high_contrast', $defaultValue = false);
+$font_resized = $cookie->get($name = 'font_resize', $defaultValue = 'small');
 
 if (isset($_GET['toggle_contrast'])) {
   $high_contrast_enabled = !$high_contrast_enabled;
-  $cookie->set($name = 'high_contrast', $value = $high_contrast_enabled, $expire = 0);
+  $cookie->set('high_contrast', $high_contrast_enabled, $expire = 0);
+}
+if (isset($_GET['font_resize'])) {
+  $font_resized = $_GET['font_resize'];
+  $cookie->set('font_resize', $font_resized, $expire = 0);
 }
 
 $template_path = $this->baseurl.'/templates/'.$this->template;
@@ -50,6 +54,9 @@ $body_classes =
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<jdoc:include type="head" />
+  <?php if ($font_resized != 'small'): ?>
+  <style>html { font-size: <?php echo ($font_resized == 'medium' ? 13 : 16); ?>px; }</style>
+  <?php endif; ?>
 </head>
 <body class="<?php echo $body_classes; ?>">
   <a id="page"></a>
@@ -73,6 +80,18 @@ $body_classes =
         <?php if ($high_contrast_enabled == false): ?>
         <jdoc:include type="modules" name="header" style="none" />
         <?php endif; ?>
+
+        <div id="font-resize">
+          <a id="font-resize-small" href="<?php echo JUri::current(); ?>?font_resize=small">
+            <span>Czcionka normalna</span>
+          </a>
+          <a id="font-resize-medium" href="<?php echo JUri::current(); ?>?font_resize=medium">
+            <span>Czcionka średnia</span>
+          </a>
+          <a id="font-resize-large" href="<?php echo JUri::current(); ?>?font_resize=large">
+            <span>Czcionka duża</span>
+          </a>
+        </div>
 
         <div id="contrast">
           <a href="<?php echo JUri::current(); ?>?toggle_contrast=true">Wersja <?php echo $high_contrast_enabled == true ? 'graficzna' : 'kontrastowa'; ?></a>

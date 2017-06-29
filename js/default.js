@@ -1,4 +1,20 @@
 jQuery(document).ready(function(){
+  jQuery('#font-resize-small').click(function() {
+    jQuery('html').css('font-size', '10px');
+    document.cookie = "font_resize=small";
+    return false;
+  });
+  jQuery('#font-resize-medium').click(function() {
+    jQuery('html').css('font-size', '13px');
+    document.cookie = "font_resize=medium";
+    return false;
+  });
+  jQuery('#font-resize-large').click(function() {
+    jQuery('html').css('font-size', '16px');
+    document.cookie = "font_resize=large";
+    return false;
+  });
+
   /* back-to-top scrolling code from Rafał Dragon */
   //Check to see if the window is top if not then display button
   jQuery(window).scroll(function(){
