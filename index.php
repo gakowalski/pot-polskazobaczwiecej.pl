@@ -73,7 +73,8 @@ $body_classes =
 
         <div>
           <a href="https://www.facebook.com/WeekendNizszychCen/">
-            <div id="facebook-logo" alt="Polska Zobacz Więcej na Facebooku"></div>
+            <div id="facebook-logo"></div>
+            <span class="hidden-text">Polska Zobacz Więcej na Facebooku</span>
           </a>
         </div>
 

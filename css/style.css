@@ -26,6 +26,17 @@ body.high-contrast {
   padding: 1em;
 }
 
+/* Hides text from user but leaves it accessible for screen readers. */
+/* Source: http://webaim.org/techniques/css/invisiblecontent/ */
+.hidden-text {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
 a:link, a:visited {
   font-style: normal;
   color: #000;
@@ -548,6 +559,7 @@ form#ju-contact legend {
   text-transform: none;
   font-size: 3em;
   line-height: 1em;
+  color: #000;
 }
 
 .high-contrast main .page-header h2,
@@ -656,7 +668,6 @@ main .blog .item .readmore a:visited,
 main .blog-featured .item .readmore a:link,
 main .blog-featured .item .readmore a:visited {
   display: block;
-  color: #010101;
   text-decoration: none;
   line-height: 1.1em;
   font-style: italic;
