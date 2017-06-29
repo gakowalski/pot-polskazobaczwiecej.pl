@@ -564,6 +564,21 @@ form#ju-contact legend {
   border: 0;
 }
 
+#ju-contact .btn-submit-form {
+  border-radius: 0;
+  background: #d42128;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-color: #d42128;
+}
+
+#ju-contact .btn-submit-form:hover {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+
+
 main .page-header h3 {
   font-family: 'Lato',sans-serif;
   font-size: 1.4em;
