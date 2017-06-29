@@ -37,6 +37,39 @@ body.high-contrast {
   overflow:hidden;
 }
 
+@media only screen and (min-width: 1071px) {
+  body.low-contrast>nav li.default > a > span {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+  }
+
+  body.low-contrast>nav li.default > a {
+    width: 1em;
+  }
+
+  body.low-contrast>nav li.default > a:hover,
+  body.low-contrast>nav li.default.active > a {
+    border: 0;
+    margin-bottom: 2px;
+  }
+
+  body.low-contrast>nav li.default > a > i {
+    background-image: url(../images/home-font-awesome-white.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 2em;
+    height: 2em;
+    display: block;
+    position: absolute;
+    top: 0.6em;
+    left: 0;
+  }
+}
+
 a:link, a:visited {
   font-style: normal;
   color: #000;
@@ -1105,6 +1138,10 @@ footer {
     position: absolute;
     background-color: white;
     height: auto;
+  }
+
+  body.low-contrast>nav li.default > a > i {
+    display: none;
   }
 
   body.high-contrast>nav {

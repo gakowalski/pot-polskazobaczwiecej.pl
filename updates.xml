@@ -159,4 +159,20 @@
         <client>0</client>
         <client_id>0</client_id>
     </update>
+    <update>
+        <name>Polska Zobacz Więcej 2017</name>
+        <description></description>
+        <element>polskazobaczwiecej-2017</element>
+        <type>template</type>
+        <version>0.0.11</version>
+        <infourl title="polskazobaczwiecej-2017"><![CDATA[ ]]></infourl>
+        <downloads>
+            <downloadurl type="full" format="zip"><![CDATA[https://github.com/gakowalski/pot-polskazobaczwiecej.pl/archive/0.0.11.zip]]></downloadurl>
+        </downloads>
+        <maintainer>Grzegorz Kowalski</maintainer>
+        <maintainerurl>http://www.pot.gov.pl</maintainerurl>
+        <targetplatform name="joomla" version="3.[789]"/>
+        <client>0</client>
+        <client_id>0</client_id>
+    </update>
 </updates>
