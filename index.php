@@ -15,16 +15,20 @@ $sitename = $app->get('sitename');
 $cookie   = $app->input->cookie;
 
 $frontpage_enabled = ($menu->getActive() == $menu->getDefault($lang->getTag()));
-$high_contrast_enabled = $cookie->get($name = 'high_contrast', $defaultValue = false);
-$font_resized = $cookie->get($name = 'font_resize', $defaultValue = 'small');
+$high_contrast_enabled = $cookie->get('high_contrast', false);
+$cookie_law_message_enabled = $cookie->get('cookie_law_message', true) == true;
+$font_resized = $cookie->get('font_resize', 'small');
 
 if (isset($_GET['toggle_contrast'])) {
   $high_contrast_enabled = !$high_contrast_enabled;
-  $cookie->set('high_contrast', $high_contrast_enabled, $expire = 0);
+  $cookie->set('high_contrast', $high_contrast_enabled, 0);
 }
 if (isset($_GET['font_resize'])) {
   $font_resized = $_GET['font_resize'];
-  $cookie->set('font_resize', $font_resized, $expire = 0);
+  $cookie->set('font_resize', $font_resized, 0);
+}
+if ($cookie_law_message_enabled) {
+  $cookie->set('cookie_law_message', 0, 0);
 }
 
 $template_path = $this->baseurl.'/templates/'.$this->template;
@@ -158,13 +162,16 @@ $body_classes =
       <?php if ($high_contrast_enabled): ?>
       <span>Polska Organizacja Turystyczna, ul. Chałubińskiego 8, 00-613 Warszawa, tel. 225367053</span>
       <?php endif; ?>
+      <?php if ($cookie_law_message_enabled === true): ?>
+      <p>
+        Strona używa plików cookies, aby ułatwić Tobie korzystanie z serwisu oraz do celów statystycznych. Jeśli nie blokujesz tych plików, to zgadzasz się na ich użycie oraz zapisanie w pamięci urządzenia. Pamiętaj, że możesz samodzielnie zarządzać cookies, zmieniając ustawienia przeglądarki. Brak zmiany ustawienia przeglądarki oznacza wyrażenie zgody.
+      </p>
+      <?php endif; ?>
     </div>
   </footer>
   <?php endif; ?>
 
-  <?php //if ($high_contrast_enabled == false): ?>
   <div id="back-to-top"><a href="#page"><i></i><span>do góry</span></a></div>
-  <?php //endif; ?>
 
   <jdoc:include type="modules" name="debug" style="none" />
 
