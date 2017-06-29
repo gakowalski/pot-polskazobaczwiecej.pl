@@ -30,7 +30,7 @@ else
 		<?php
 			$output = '<label for="mod-search-searchword' . $module->id . '" class="element-invisible">' . $label . '</label> ';
 			$output .= '<input name="searchword" id="mod-search-searchword' . $module->id . '" maxlength="' . $maxlength . '"  class="inputbox search-query input-medium" type="search"' . $width;
-			$output .= ' placeholder="' . $text . '" />';
+			$output .= ' onfocus="this.placeholder = \'\'" onblur="this.placeholder = \'' . $text . '\'" placeholder="' . $text . '" />';
 
 			$btn_output = ' <input type="image" alt="' . $button_text . '" class="button" src="' . $img . '" onclick="this.form.searchword.focus();"/>';
 			$output = $btn_output . $output . ' <button class="button btn btn-primary" onclick="this.form.searchword.focus();">' . $button_text . '</button>';

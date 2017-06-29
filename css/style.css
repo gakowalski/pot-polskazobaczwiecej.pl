@@ -1,31 +1,29 @@
 html {
-    font-size: 10px;
+  /* set to 10px for compatibility with Bootstrap-based components */
+  font-size: 10px;
 }
 
-body.low-contrast {
+body {
   font-family: "Lato",sans-serif;
   font-style: normal;
   font-weight: normal;
-  color: #000;
   text-decoration: none;
   font-size: 1.4em;
+  margin: 0;
+}
+
+body.low-contrast {
+  color: #000;
   line-height: 1em;
   letter-spacing: 0em;
-  margin: 0;
   padding: 0;
 }
 
 body.high-contrast {
-  font-family: Tahoma;
-  font-style: normal;
-  font-weight: normal;
   color: #ffffff;
-  text-decoration: none;
-  font-size: 1.4em;
-  letter-spacing: 0;
-  margin: 0;
-  padding: 1em;
   background: #000;
+  letter-spacing: 0;
+  padding: 1em;
 }
 
 a:link, a:visited {
@@ -189,6 +187,7 @@ header {
 .high-contrast #font-resize>a:visited {
   padding: 0.3em 0.5em;
   border: 1px solid #ffff14;
+  text-transform: none;
 }
 
 #font-resize>a {
@@ -262,6 +261,7 @@ body>nav li {
   border: 0;
   list-style: none;
   z-index: 1;
+  padding-bottom: 4px;
 }
 
 body.high-contrast>nav li {
@@ -281,7 +281,6 @@ body>nav a:visited {
   text-transform: uppercase;
   text-align: left;
   padding: 0.8em 0.9em;
-  font-weight: bold;
   border-bottom: 2px solid #d42128;
 }
 
@@ -805,7 +804,6 @@ footer {
   font-size: 1.1em;
   line-height: 1em;
   color: #000000;
-  font-weight: 600;
   text-align: center;
   display: block;
   margin: 0 0 0.8em 0;
