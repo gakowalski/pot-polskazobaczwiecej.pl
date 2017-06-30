@@ -61,8 +61,8 @@ body.high-contrast {
     background-image: url(../images/home-font-awesome-white.png);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 2em;
-    height: 2em;
+    width: 1.6em;
+    height: 1.6em;
     display: block;
     position: absolute;
     top: 0.6em;
@@ -324,7 +324,7 @@ body>nav a:visited {
   text-decoration: none;
   text-transform: uppercase;
   text-align: left;
-  padding: 0.8em 0.9em;
+  padding: 0.7em 0.7em;
   border-bottom: 2px solid #d42128;
 }
 
@@ -713,32 +713,35 @@ main .blog-featured .item .readmore a:visited {
   font-style: italic;
 }
 
-main .blog .item .readmore-arrow,
-main .blog-featured .item .readmore-arrow {
+main .blog .item .icon-chevron-right,
+main .blog-featured .item .icon-chevron-right {
   position: relative;
   display: inline-block;
   float: right;
   margin: 1em 0 0 0;
   color: #d42128;
   border: 1px solid #d42128;
-  font-size: 1em;
-  text-transform: uppercase;
+  transition: 0.5s;
 }
 
-main .blog .item .readmore-arrow::after,
-main .blog-featured .item .readmore-arrow::after {
+main .blog .item .icon-chevron-right::after,
+main .blog-featured .item .icon-chevron-right::after {
   position: relative;
   display: inline-block;
-  vertical-align: middle;
   float: none;
-  margin: 0 0 0 0.1em;
   padding: 0.3em;
-  overflow: visible;
   content: ">";
-  font-size: 1em;
-  line-height: 1em;
   color: #d42128;
-  text-decoration: none;
+}
+
+main .blog .item .icon-chevron-right:hover,
+main .blog-featured .item .icon-chevron-right:hover {
+  background-color: #d42128;
+}
+
+main .blog .item .icon-chevron-right:hover::after,
+main .blog-featured .item .icon-chevron-right:hover::after {
+  color: #fff;
 }
 
 main .icons {

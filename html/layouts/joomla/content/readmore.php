@@ -33,7 +33,7 @@ $item = $displayData['item'];
 	</a>
 	</u></i>
 </span>
-<a class="btn" href="<?php echo $displayData['link']; ?>" itemprop="url">
-	<span class="readmore-arrow">
-	</span>
-</a>
+<!-- <a class="btn" href="<?php echo $displayData['link']; ?>" itemprop="url">
+	<span class="readmore-arrow"></span>
+	<span class="hidden-text">Czytaj więcej...</span>
+</a> -->
