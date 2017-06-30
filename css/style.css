@@ -630,6 +630,9 @@ form#ju-contact legend {
   border-color: #ac2925;
 }
 
+main img {
+  max-width: 100%;
+}
 
 main .page-header h3 {
   font-family: 'Lato',sans-serif;
@@ -1090,6 +1093,11 @@ footer {
 }
 
 @media only screen and (max-width: 1070px) {
+  #footer-right-menu .menu > li {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .low-contrast header {
     border-bottom: 3px solid #d42128;
   }
@@ -1138,7 +1146,7 @@ footer {
   }
 
   body>nav {
-    position: absolute;
+    position: relative;
     background-color: white;
     height: auto;
   }
