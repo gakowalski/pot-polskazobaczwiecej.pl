@@ -394,7 +394,7 @@ body.high-contrast>nav li.active > a {
   display: none;
 }
 
-main .pzw-template-inside {
+.not-frontpage main .pzw-template-inside {
   margin: 4em auto;
 }
 
@@ -523,7 +523,7 @@ header .pzw-template-inside {
 }
 
 #banner img {
-  margin: 100px auto;
+  margin: 50px auto;
   max-width: 100%;
   height: auto;
 }
