@@ -15,7 +15,7 @@ body {
 body.low-contrast {
   color: #000;
   line-height: 1em;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   padding: 0;
 }
 
@@ -98,7 +98,6 @@ h1 {
 }
 
 .high-contrast header h1 {
-  position: relative;
   display: block;
   padding: 20px;
   margin: 0.1em auto;
@@ -107,13 +106,11 @@ h1 {
   z-index: 1;
 
   font-size: 2.8em;
-  line-height: 1em;
   text-align: center;
   clear: both;
 }
 
 h3 {
-  font-family: 'Lato',sans-serif;
   font-size: 1.4em;
   line-height: 1.3em;
   font-weight: normal;
@@ -208,7 +205,6 @@ header {
 
 #header-modules > div {
   float: right;
-  margin: 0;
   width: auto;
   margin: 0.3em 1em 0 0;
 }
@@ -339,7 +335,7 @@ body.high-contrast>nav li.active > a {
   border: 0;
   font-size: 1.6em;
   line-height: 1.2em;
-  padding: 6px 4px 6px 0px;
+  padding: 6px 4px 6px 0;
   text-transform: none;
 }
 
@@ -380,9 +376,7 @@ body.high-contrast>nav li.active > a {
 #breadcrumbs ul li {
   position: relative;
   float: left;
-  display: block;
   display: inline;
-  margin: 0;
   margin-left: 0.5em;
   padding: 0;
   border: 0;
@@ -545,8 +539,6 @@ header .pzw-template-inside {
 
 main .item-page,
 form#ju-contact fieldset>div {
-  margin: 4em auto;
-
   font-size: 1.1em;
   line-height: 1.6em;
   font-weight: normal;
@@ -557,7 +549,6 @@ form#ju-contact fieldset>div {
 }
 
 main .item-page strong {
-  font-family: 'Lato',sans-serif;
   font-weight: 700;
 }
 
@@ -594,12 +585,10 @@ form#ju-contact legend {
   padding: 0 0 0.5em;
   margin: 0;
   text-align: center;
-  font-family: 'Lato', sans-serif;
   font-weight: 700;
   text-transform: none;
   font-size: 3em;
   line-height: 1em;
-  color: #000;
 }
 
 .high-contrast main .page-header h2,
@@ -635,7 +624,6 @@ main img {
 }
 
 main .page-header h3 {
-  font-family: 'Lato',sans-serif;
   font-size: 1.4em;
   line-height: 1.2em;
   font-weight: normal;
@@ -659,7 +647,6 @@ main .blog-featured .item time {
   font-weight: normal;
   color: #fff;
   text-decoration: none;
-  font-family: "Lato", sans-serif;
   font-size: 0.9em;
   line-height: 1em;
 }
@@ -679,7 +666,6 @@ main .blog-featured .item {
 main .blog .item h3,
 main .blog-featured .item h3 {
   margin: 0 0 0.3em 0;
-  font-family: "Lato",sans-serif !important;
   color: #000;
   font-weight: 700;
   text-align: left;
@@ -700,7 +686,6 @@ main .blog-featured .column-1 h3>a {
 main .blog .item p,
 main .blog-featured .item p {
   display: block;
-  font-family: "Lato",sans-serif;
   font-size: 1.2em;
   line-height: 1.2em;
   margin: 1em 0 0.5em;
@@ -768,9 +753,7 @@ main .icons .dropdown-menu {
 main .icons .dropdown-menu > li {
   position: relative;
   float: left;
-  display: block;
   display: inline;
-  margin: 0;
   margin-right: 0.5em;
   padding: 0;
   border: 0;
@@ -779,11 +762,8 @@ main .icons .dropdown-menu > li {
 }
 
 main .icons .dropdown-menu > li > a {
-  display: inline-block;7
-  margin: 0;
-  padding: 0;
+  display: inline-block;
   border: 1px solid #7d7d7d;
-  font-family: 'Lato',sans-serif;
   font-size: 0.8em;
   line-height: 1em;
   text-decoration: none;
@@ -791,7 +771,6 @@ main .icons .dropdown-menu > li > a {
   transition-duration: 1s;
 
   position: relative;
-  display: inline-block;
   padding: 0.5em 0.3em;
 }
 
@@ -1014,7 +993,6 @@ footer {
 
  .high-contrast #footer-bottom-menu .menu > li > a:link,
  .high-contrast #footer-bottom-menu .menu > li > a:visited {
-   padding: 0;
    text-transform: inherit;
    padding: 0.2em 0.5em;
    border: 1px solid #ffff14;

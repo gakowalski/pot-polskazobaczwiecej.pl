@@ -131,12 +131,12 @@ $body_classes =
 
   <main role="main">
     <jdoc:include type="message" />
+    <?php if ($frontpage_enabled == false && $this->countModules('breadcrumbs')): ?>
+    <div id="breadcrumbs">
+      <jdoc:include type="modules" name="breadcrumbs" style="none" />
+    </div>
+    <?php endif; ?>
     <div class="pzw-template-inside">
-        <?php if ($frontpage_enabled == false && $this->countModules('breadcrumbs')): ?>
-        <div id="breadcrumbs">
-          <jdoc:include type="modules" name="breadcrumbs" style="none" />
-        </div>
-        <?php endif; ?>
 		    <jdoc:include type="component" />
     </div>
   </main>
