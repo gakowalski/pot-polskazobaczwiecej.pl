@@ -76,7 +76,7 @@ $body_classes =
       <div id="header-modules">
 
         <div>
-          <a href="https://www.facebook.com/WeekendNizszychCen/">
+          <a target="_blank" href="https://www.facebook.com/WeekendNizszychCen/">
             <div id="facebook-logo"></div>
             <span class="hidden-text">Polska Zobacz Więcej na Facebooku</span>
           </a>
