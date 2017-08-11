@@ -679,7 +679,7 @@ main .blog-featured .item h3 {
 }
 
 main .blog .row-0 h3>a,
-main .blog-featured .column-1 h3>a {
+main .blog-featured .row-0 h3>a {
   color: #d42128;
 }
 
