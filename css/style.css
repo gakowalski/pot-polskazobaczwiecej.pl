@@ -517,13 +517,127 @@ header .pzw-template-inside {
 }
 
 #banner img {
-  margin: 50px auto;
+  /*margin: 50px auto;*/
   max-width: 100%;
   height: auto;
 }
 
 .high-contrast #banner img {
   margin: 0;
+}
+
+#banner .bannergroup {
+  position: relative;
+}
+
+#banner .banneritem {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+
+#banner .banneritem.item-no-0 {
+  display: block;
+  position: relative;
+  opacity: 1;
+  z-index: 0;
+}
+
+#banner .banneritem.item-no-0.of-total-2 {
+  z-index: 0;
+  animation: item-no-0-of-total-2 10s infinite;
+}
+
+#banner .banneritem.item-no-1.of-total-2 {
+  z-index: 1;
+  animation: item-no-1-of-total-2 10s infinite;
+}
+
+#banner .banneritem.item-no-1.of-total-3 {
+  z-index: 1;
+  animation: item-no-1-of-total-3 15s infinite;
+}
+
+#banner .banneritem.item-no-2.of-total-3 {
+  z-index: 1;
+  animation: item-no-2-of-total-3 15s infinite;
+}
+
+@keyframes item-no-0-of-total-2 {
+    40% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+
+@keyframes item-no-1-of-total-2 {
+    40% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+
+@keyframes item-no-0-of-total-3 {
+    26.66% {
+      opacity: 1;
+    }
+    33.33% {
+      opacity: 0;
+    }
+    93.33% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes item-no-1-of-total-3 {
+    26.66% {
+      opacity: 0;
+    }
+    33.33% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    66.66% {
+      opacity: 0;
+    }
+}
+
+@keyframes item-no-2-of-total-3 {
+    60% {
+      opacity: 0;
+    }
+    66.66% {
+      opacity: 1;
+    }
+    93.33% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
 }
 
 .low-contrast main {
