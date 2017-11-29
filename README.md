@@ -6,7 +6,7 @@ Szablon do serwisu [polskazobaczwiecej.pl][1] dla systemu Joomla! 3.7 wykonany n
 Specyficzne cechy szablonu:
 * Responsywny;
 * Ścisłe dopasowanie do projektu, konkretnych komponentów i rozwiązań (nie jest to uniwersalny szablon):
-  * Natywny moduł obsługi bannerów `com_banners`;
+  * Natywny moduł obsługi bannerów `mod_banners` z automatyczną rotacją typu fade-in-fade-out, gdy wyświetlane są 2-3 bannery w module;
   * Natywne rozszerzenia wyszukiwania: `mod_search` oraz `com_search`;
   * Natywny komponent wyświetlania treści `com_content` (ale tylko widoki `article`, `category`, `featured`);
   * Formularz kontaktowy: rozszerzenie [JU Contact][2].
