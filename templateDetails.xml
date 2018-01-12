@@ -2,8 +2,8 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "https://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="3.7" type="template" client="site" method="upgrade">
 	<name>polskazobaczwiecej-2017</name>
-	<version>0.0.20</version>
-	<creationDate>2018-01-09</creationDate>
+	<version>0.0.21</version>
+	<creationDate>2018-01-12</creationDate>
 	<author>Grzegorz Kowalski</author>
 	<authorEmail>grzegorz.kowalski@pot.gov.pl</authorEmail>
 	<copyright></copyright>
