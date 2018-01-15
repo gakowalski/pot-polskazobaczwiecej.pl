@@ -1354,3 +1354,7 @@ footer {
 [href~="http://www.artio.net"] {
 display: none!important;
 }
+
+.item-111 {
+  font-size: 1.3em;
+}
