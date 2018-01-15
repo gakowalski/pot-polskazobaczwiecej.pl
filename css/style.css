@@ -1350,3 +1350,7 @@ footer {
     margin-top: 1em;
   }
 }
+
+[href~="http://www.artio.net"] {
+display: none!important;
+}
