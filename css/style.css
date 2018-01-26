@@ -926,7 +926,8 @@ footer {
   position: relative;
   margin-top: 1em;
   margin-bottom: 1em;
-  width: 33%;
+  min-width: 50%;
+  width: 100%;
   float: left;
   min-height: 100px;
   z-index: 1;
@@ -935,6 +936,11 @@ footer {
   color: #000000;
   text-align: center;
   display: block;
+}
+#footer-content .custom {
+  display: inline-block;
+  vertical-align: top;
+  width: 33%;
 }
 #footer-content h3 {
   font-size: 1.1em;
@@ -1138,6 +1144,10 @@ footer {
 }
 
 @media only screen and (max-width: 1070px) {
+  #footer-content .custom {
+    width: 45%;
+  }
+
   #footer-right-menu .menu > li {
     margin-left: 0;
     margin-right: 0;
@@ -1299,9 +1309,16 @@ footer {
     margin-bottom: 1em;
     margin-top: 1em;
   }
+  #footer-content .custom {
+    width: 100%;
+  }
 }
 [href~="http://www.artio.net"] {
   display: none !important;
+}
+
+.spinner {
+  margin: 1% auto;
 }
 
 /*# sourceMappingURL=style.css.map */
