@@ -10,17 +10,14 @@
 defined('_JEXEC') or die;
 
 JLoader::register('BannerHelper', JPATH_ROOT . '/components/com_banners/helpers/banner.php');
-
-$n = count($list);
-$current = 0;
 ?>
-<div class="bannergroup<?php echo $moduleclass_sfx; ?> animated">
+<div class="bannergroup<?php echo $moduleclass_sfx; ?> horizontal">
 <?php if ($headerText) : ?>
 	<?php echo $headerText; ?>
 <?php endif; ?>
 
 <?php foreach ($list as $item) : ?>
-	<div class="banneritem item-no-<?php echo $current++; ?> of-total-<?php echo $n; ?>">
+	<div class="banneritem<?php echo $moduleclass_sfx; ?>">
 		<?php $link = JRoute::_('index.php?option=com_banners&task=click&id=' . $item->id); ?>
 		<?php if ($item->type == 1) : ?>
 			<?php // Text based banners ?>
