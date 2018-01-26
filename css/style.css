@@ -517,39 +517,47 @@ header .pzw-template-inside {
 .high-contrast .bannergroup img {
   margin: 0;
 }
-
-.horizontal .banneritem {
-  display: inline;
+.bannergroup.horizontal {
+  display: table;
+  text-align: center;
+  margin: 0 auto;
 }
-.animated .banneritem {
+.bannergroup.horizontal .bannerrow {
+  display: table-row;
+}
+.bannergroup.horizontal .bannerrow .banneritem {
+  display: table-cell;
+  line-height: 0;
+}
+.bannergroup.animated .banneritem {
   position: absolute;
   opacity: 0;
   top: 0;
   left: 0;
 }
-.animated .banneritem.item-no-0 {
+.bannergroup.animated .banneritem.item-no-0 {
   display: block;
   position: relative;
   opacity: 1;
   z-index: 0;
 }
-.animated .banneritem.item-no-0.of-total-2 {
+.bannergroup.animated .banneritem.item-no-0.of-total-2 {
   z-index: 0;
   animation: item-no-0-of-total-2 10s infinite;
 }
-.animated .banneritem.item-no-1.of-total-2 {
+.bannergroup.animated .banneritem.item-no-1.of-total-2 {
   z-index: 1;
   animation: item-no-1-of-total-2 10s infinite;
 }
-.animated .banneritem.item-no-0.of-total-3 {
+.bannergroup.animated .banneritem.item-no-0.of-total-3 {
   z-index: 1;
   animation: item-no-0-of-total-3 15s infinite;
 }
-.animated .banneritem.item-no-1.of-total-3 {
+.bannergroup.animated .banneritem.item-no-1.of-total-3 {
   z-index: 1;
   animation: item-no-1-of-total-3 15s infinite;
 }
-.animated .banneritem.item-no-2.of-total-3 {
+.bannergroup.animated .banneritem.item-no-2.of-total-3 {
   z-index: 1;
   animation: item-no-2-of-total-3 15s infinite;
 }

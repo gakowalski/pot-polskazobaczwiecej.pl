@@ -12,6 +12,7 @@ defined('_JEXEC') or die;
 JLoader::register('BannerHelper', JPATH_ROOT . '/components/com_banners/helpers/banner.php');
 ?>
 <div class="bannergroup<?php echo $moduleclass_sfx; ?> horizontal">
+<div class="bannerrow">
 <?php if ($headerText) : ?>
 	<?php echo $headerText; ?>
 <?php endif; ?>
@@ -111,4 +112,5 @@ JLoader::register('BannerHelper', JPATH_ROOT . '/components/com_banners/helpers/
 		<?php echo $footerText; ?>
 	</div>
 <?php endif; ?>
+</div>
 </div>
