@@ -510,49 +510,44 @@ header .pzw-template-inside {
   float: left;
   width: 75%;
 }
-
 #banner img {
-  /*margin: 50px auto;*/
   max-width: 100%;
   height: auto;
 }
 .high-contrast #banner img {
   margin: 0;
 }
-
 #banner .bannergroup {
   position: relative;
 }
-
 #banner .banneritem {
   position: absolute;
   opacity: 0;
   top: 0;
   left: 0;
 }
-
 #banner .banneritem.item-no-0 {
   display: block;
   position: relative;
   opacity: 1;
   z-index: 0;
 }
-
 #banner .banneritem.item-no-0.of-total-2 {
   z-index: 0;
   animation: item-no-0-of-total-2 10s infinite;
 }
-
 #banner .banneritem.item-no-1.of-total-2 {
   z-index: 1;
   animation: item-no-1-of-total-2 10s infinite;
 }
-
+#banner .banneritem.item-no-0.of-total-3 {
+  z-index: 1;
+  animation: item-no-0-of-total-3 15s infinite;
+}
 #banner .banneritem.item-no-1.of-total-3 {
   z-index: 1;
   animation: item-no-1-of-total-3 15s infinite;
 }
-
 #banner .banneritem.item-no-2.of-total-3 {
   z-index: 1;
   animation: item-no-2-of-total-3 15s infinite;
@@ -632,7 +627,6 @@ header .pzw-template-inside {
   margin-left: 2%;
   margin-right: 2%;
 }
-
 .high-contrast main {
   float: left;
   width: 73%;
@@ -659,9 +653,7 @@ main .blog-featured .item-title a {
   text-decoration: none;
 }
 
-main .item-page > .page-header,
-main .blog > .page-header,
-main .blog-featured > .page-header {
+main .item-page > .page-header, main .blog > .page-header, main .blog-featured > .page-header {
   position: relative;
   margin: 1em 0;
   padding: 0;
@@ -670,7 +662,6 @@ main .blog-featured > .page-header {
   text-align: center;
   border-bottom: 1px solid #f3f3f3;
 }
-
 .high-contrast main .item-page > .page-header,
 .high-contrast main .blog > .page-header,
 .high-contrast main .blog-featured > .page-header {
@@ -680,8 +671,7 @@ main .blog-featured > .page-header {
   min-height: none;
 }
 
-main .page-header h2,
-form#ju-contact legend {
+main .page-header h2, form#ju-contact legend {
   position: relative;
   display: inline-block;
   padding: 0 0 0.5em;
@@ -692,7 +682,6 @@ form#ju-contact legend {
   font-size: 3em;
   line-height: 1em;
 }
-
 .high-contrast main .page-header h2,
 .high-contrast form#ju-contact legend {
   font-size: 1.6em;
@@ -714,7 +703,6 @@ form#ju-contact legend {
   font-size: 14px;
   border-color: #d42128;
 }
-
 #ju-contact .btn-submit-form:hover {
   color: #fff;
   background-color: #c9302c;
@@ -811,7 +799,6 @@ main .blog-featured .item .icon-chevron-right {
   border: 1px solid #d42128;
   transition: 0.5s;
 }
-
 main .blog .item .icon-chevron-right::after,
 main .blog-featured .item .icon-chevron-right::after {
   position: relative;
@@ -821,12 +808,10 @@ main .blog-featured .item .icon-chevron-right::after {
   content: ">";
   color: #d42128;
 }
-
 main .blog .item .icon-chevron-right:hover,
 main .blog-featured .item .icon-chevron-right:hover {
   background-color: #d42128;
 }
-
 main .blog .item .icon-chevron-right:hover::after,
 main .blog-featured .item .icon-chevron-right:hover::after {
   color: #fff;
@@ -869,7 +854,6 @@ main .icons .dropdown-menu > li > a {
   position: relative;
   padding: 0.5em 0.3em;
 }
-
 .high-contrast main .icons .dropdown-menu > li > a {
   border: 1px solid #ffff14;
 }
@@ -1258,8 +1242,7 @@ footer {
     padding: 0;
     margin: 0;
   }
-
-  .high-contrast #banner {
+  .high-contrast #banner img {
     float: left;
     width: 100%;
   }
