@@ -14,8 +14,6 @@ JLoader::register('BannerHelper', JPATH_ROOT . '/components/com_banners/helpers/
 $n = count($list);
 $current = 0;
 ?>
-<div id="banner">
-
 <div class="bannergroup<?php echo $moduleclass_sfx; ?>">
 <?php if ($headerText) : ?>
 	<?php echo $headerText; ?>
@@ -116,6 +114,4 @@ $current = 0;
 		<?php echo $footerText; ?>
 	</div>
 <?php endif; ?>
-</div>
-
 </div>
