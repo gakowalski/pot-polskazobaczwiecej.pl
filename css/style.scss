@@ -11,14 +11,14 @@ body {
   font-size: 1.4em;
   margin: 0;
 
-  .low-contrast {
+  &.low-contrast {
     color: #000;
     line-height: 1em;
     letter-spacing: 0;
     padding: 0;
   }
 
-  .high-contrast {
+  &.high-contrast {
     color: #ffffff;
     background: #000;
     letter-spacing: 0;
@@ -38,35 +38,35 @@ body {
 }
 
 @media only screen and (min-width: 1071px) {
-  body.low-contrast>nav li.default > a > span {
-    position:absolute;
-    left:-10000px;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
-  }
-
   body.low-contrast>nav li.default > a {
     width: 1em;
+
+    & > span {
+      position:absolute;
+      left:-10000px;
+      top:auto;
+      width:1px;
+      height:1px;
+      overflow:hidden;
+    }
+
+    & > i {
+      background-image: url(../images/home-font-awesome-white.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 1.6em;
+      height: 1.6em;
+      display: block;
+      position: absolute;
+      top: 0.6em;
+      left: 0;
+    }
   }
 
   body.low-contrast>nav li.default > a:hover,
   body.low-contrast>nav li.default.active > a {
     border: 0;
     margin-bottom: 2px;
-  }
-
-  body.low-contrast>nav li.default > a > i {
-    background-image: url(../images/home-font-awesome-white.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 1.6em;
-    height: 1.6em;
-    display: block;
-    position: absolute;
-    top: 0.6em;
-    left: 0;
   }
 }
 
@@ -94,19 +94,19 @@ h1 {
   padding: 0;
   margin: 0 0 0.5em 0;
   position: relative;
-}
 
-.high-contrast header h1 {
-  display: block;
-  padding: 20px;
-  margin: 0.1em auto;
-  height: auto;
-  background: #333333;
-  z-index: 1;
+  .high-contrast header & {
+    display: block;
+    padding: 20px;
+    margin: 0.1em auto;
+    height: auto;
+    background: #333333;
+    z-index: 1;
 
-  font-size: 2.8em;
-  text-align: center;
-  clear: both;
+    font-size: 2.8em;
+    text-align: center;
+    clear: both;
+  }
 }
 
 h3 {
@@ -270,6 +270,15 @@ body>nav {
   width: 100%;
   z-index: 2;
   transition-duration: 1s;
+
+  ul {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    overflow: hidden;
+  }
 }
 
 body.high-contrast>nav {
@@ -277,21 +286,12 @@ body.high-contrast>nav {
   width: 25%;
   background: none;
   border: 0;
-}
 
-body>nav ul {
-  width: auto;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  list-style: none;
-  overflow: hidden;
-}
-
-body.high-contrast>nav ul {
-  background-color: #191919;
-  padding: 10px;
-  clear: both;
+  ul {
+    background-color: #191919;
+    padding: 10px;
+    clear: both;
+  }
 }
 
 body>nav li {
@@ -755,6 +755,7 @@ form#ju-contact legend {
 
 main img {
   max-width: 100%;
+  height: auto;
 }
 
 main .page-header h3 {
@@ -973,19 +974,17 @@ footer {
 
 #footer-content {
   position: relative;
-  padding: 1em;
-  margin: 0 auto;
-  width: 50%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 33%;
   float: left;
   min-height: 100px;
   z-index: 1;
-
   font-size: 1.1em;
   line-height: 1em;
   color: #000000;
   text-align: center;
   display: block;
-  margin: 0 0 0.8em 0;
 
   h3 {
     font-size: 1.1em;
@@ -1160,37 +1159,37 @@ footer {
   visibility: visible;
   display: block;
   right: 0;
-}
 
-.low-contrast #back-to-top a {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: #fefefe;
-  color: #000000;
-  text-decoration: none;
-  border: 1px solid #f1f1f1;
-}
+  a {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #fefefe;
+    color: #000000;
+    text-decoration: none;
+    border: 1px solid #f1f1f1;
 
-.low-contrast #back-to-top i {
-  position: absolute;
-  background-image: url(../images/double-arrows-black-up.png);
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  background-position-x: center;
-  background-position-y: 5px;
-}
+    span {
+      position: absolute;
+      bottom: 6px;
+      display: block;
+      font-size: 0.9em;
+      line-height: 0.9em;
+      width: 100%;
+      text-align: center;
+    }
+  }
 
-.low-contrast #back-to-top a span {
-  position: absolute;
-  bottom: 6px;
-  display: block;
-  font-size: 0.9em;
-  line-height: 0.9em;
-  width: 100%;
-  text-align: center;
+  i {
+    position: absolute;
+    background-image: url(../images/double-arrows-black-up.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-position-x: center;
+    background-position-y: 5px;
+  }
 }
 
 #back-to-top a span {
@@ -1366,5 +1365,5 @@ footer {
 }
 
 [href~="http://www.artio.net"] {
-display: none!important;
+  display: none!important;
 }

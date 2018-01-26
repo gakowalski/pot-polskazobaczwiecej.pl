@@ -153,9 +153,11 @@ $body_classes =
       <div id="footer-content">
         <jdoc:include type="modules" name="footer-content" style="none" />
       </div>
+      <?php if ($this->countModules('footer-right-menu')): ?>
       <div id="footer-right-menu">
         <jdoc:include type="modules" name="footer-right-menu" style="none" />
       </div>
+      <?php endif; ?>
     </div>
     <div id="footer-bottom-menu">
       <jdoc:include type="modules" name="footer-bottom-menu" style="none" />

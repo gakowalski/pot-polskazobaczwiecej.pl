@@ -12,13 +12,13 @@ body {
   font-size: 1.4em;
   margin: 0;
 }
-body .low-contrast {
+body.low-contrast {
   color: #000;
   line-height: 1em;
   letter-spacing: 0;
   padding: 0;
 }
-body .high-contrast {
+body.high-contrast {
   color: #ffffff;
   background: #000;
   letter-spacing: 0;
@@ -37,6 +37,9 @@ body .high-contrast {
 }
 
 @media only screen and (min-width: 1071px) {
+  body.low-contrast > nav li.default > a {
+    width: 1em;
+  }
   body.low-contrast > nav li.default > a > span {
     position: absolute;
     left: -10000px;
@@ -45,17 +48,6 @@ body .high-contrast {
     height: 1px;
     overflow: hidden;
   }
-
-  body.low-contrast > nav li.default > a {
-    width: 1em;
-  }
-
-  body.low-contrast > nav li.default > a:hover,
-  body.low-contrast > nav li.default.active > a {
-    border: 0;
-    margin-bottom: 2px;
-  }
-
   body.low-contrast > nav li.default > a > i {
     background-image: url(../images/home-font-awesome-white.png);
     background-repeat: no-repeat;
@@ -66,6 +58,12 @@ body .high-contrast {
     position: absolute;
     top: 0.6em;
     left: 0;
+  }
+
+  body.low-contrast > nav li.default > a:hover,
+  body.low-contrast > nav li.default.active > a {
+    border: 0;
+    margin-bottom: 2px;
   }
 }
 a:link, a:visited {
@@ -92,7 +90,6 @@ h1 {
   margin: 0 0 0.5em 0;
   position: relative;
 }
-
 .high-contrast header h1 {
   display: block;
   padding: 20px;
@@ -269,14 +266,6 @@ body > nav {
   z-index: 2;
   transition-duration: 1s;
 }
-
-body.high-contrast > nav {
-  float: left;
-  width: 25%;
-  background: none;
-  border: 0;
-}
-
 body > nav ul {
   width: auto;
   margin: 0;
@@ -286,6 +275,12 @@ body > nav ul {
   overflow: hidden;
 }
 
+body.high-contrast > nav {
+  float: left;
+  width: 25%;
+  background: none;
+  border: 0;
+}
 body.high-contrast > nav ul {
   background-color: #191919;
   padding: 10px;
@@ -720,6 +715,7 @@ main .page-header h2, form#ju-contact legend {
 
 main img {
   max-width: 100%;
+  height: auto;
 }
 
 main .page-header h3 {
@@ -928,9 +924,9 @@ footer {
 
 #footer-content {
   position: relative;
-  padding: 1em;
-  margin: 0 auto;
-  width: 50%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 33%;
   float: left;
   min-height: 100px;
   z-index: 1;
@@ -939,7 +935,6 @@ footer {
   color: #000000;
   text-align: center;
   display: block;
-  margin: 0 0 0.8em 0;
 }
 #footer-content h3 {
   font-size: 1.1em;
@@ -1108,7 +1103,6 @@ footer {
   display: block;
   right: 0;
 }
-
 .low-contrast #back-to-top a {
   position: absolute;
   display: block;
@@ -1119,17 +1113,6 @@ footer {
   text-decoration: none;
   border: 1px solid #f1f1f1;
 }
-
-.low-contrast #back-to-top i {
-  position: absolute;
-  background-image: url(../images/double-arrows-black-up.png);
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  background-position-x: center;
-  background-position-y: 5px;
-}
-
 .low-contrast #back-to-top a span {
   position: absolute;
   bottom: 6px;
@@ -1138,6 +1121,15 @@ footer {
   line-height: 0.9em;
   width: 100%;
   text-align: center;
+}
+.low-contrast #back-to-top i {
+  position: absolute;
+  background-image: url(../images/double-arrows-black-up.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-position-x: center;
+  background-position-y: 5px;
 }
 
 #back-to-top a span {
