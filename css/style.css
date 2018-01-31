@@ -152,13 +152,11 @@ header {
 }
 
 #header-logo {
-  position: absolute;
-  left: 5px;
-  display: block;
+  float: left;
   padding: 0;
   margin: 0;
   width: 243px;
-  height: 100%;
+  height: 120px;
   z-index: 2;
   border: 0;
   cursor: pointer;
@@ -181,8 +179,6 @@ header {
   position: relative;
   display: block;
   margin: 0 auto;
-  padding: 3em 0 0 0;
-  height: 42px;
   text-align: right;
   z-index: 1;
 }
@@ -195,7 +191,21 @@ header {
 #header-modules > div {
   float: right;
   width: auto;
+  padding: 3em 0 0 0;
   margin: 0.3em 1em 0 0;
+}
+#header-modules > div.float-left {
+  float: left;
+}
+#header-modules > div.float-right {
+  float: right;
+}
+#header-modules > div.subtitle {
+  float: left;
+  padding: 0;
+  color: red;
+  font-weight: bold;
+  line-height: 1.5;
 }
 
 #contrast a,
@@ -336,7 +346,8 @@ body.high-contrast > nav li.active > a {
   color: white;
 }
 
-.pzw-template-inside {
+.pzw-template-inside,
+.not-frontpage .smartcountdown {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
@@ -523,6 +534,19 @@ header .pzw-template-inside {
 .bannergroup.horizontal .bannerrow .banneritem {
   display: table-cell;
   line-height: 0;
+}
+.bannergroup.horizontal.cell-spacing-10 {
+  border-spacing: 10px;
+}
+.bannergroup.horizontal.img-spacing-10 img {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.bannergroup.horizontal.img-spacing-10 .banneritem:first-child img {
+  margin-left: 0;
+}
+.bannergroup.horizontal.img-spacing-10 .banneritem:last-child img {
+  margin-right: 0;
 }
 .bannergroup.animated .banneritem {
   position: absolute;
@@ -1157,9 +1181,13 @@ footer {
     border-bottom: 3px solid #d42128;
   }
 
-  .low-contrast #header-modules,
+  .low-contrast #header-modules > div,
   .low-contrast #back-to-top a span {
     display: none;
+  }
+
+  .low-contrast #header-modules > div.subtitle {
+    display: block;
   }
 
   .low-contrast #mobile-menu-label {
@@ -1286,6 +1314,7 @@ footer {
 
   #header-logo {
     width: 162px;
+    height: 80px;
   }
 
   .high-contrast #font-resize {

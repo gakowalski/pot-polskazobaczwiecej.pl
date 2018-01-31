@@ -67,14 +67,12 @@ $body_classes =
 
   <header>
     <div class="pzw-template-inside">
-      <?php if ($high_contrast_enabled == false): ?>
-      <h1 id="header-logo">
-        <a href="<?php echo JUri::base(); ?>" title="Strona główna"><?php echo $sitename; ?></a>
-      </h1>
-      <?php endif; ?>
-
       <div id="header-modules">
-
+        <?php if ($high_contrast_enabled == false): ?>
+        <h1 id="header-logo">
+          <a href="<?php echo JUri::base(); ?>" title="Strona główna"><?php echo $sitename; ?></a>
+        </h1>
+        <?php endif; ?>
         <div>
           <a target="_blank" href="https://www.facebook.com/WeekendNizszychCen/">
             <div id="facebook-logo"></div>
