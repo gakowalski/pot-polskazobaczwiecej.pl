@@ -39,8 +39,6 @@ body {
 
 @media only screen and (min-width: 1071px) {
   body.low-contrast>nav li.default > a {
-    width: 1em;
-
     & > span {
       position:absolute;
       left:-10000px;
@@ -61,12 +59,6 @@ body {
       top: 0.6em;
       left: 0;
     }
-  }
-
-  body.low-contrast>nav li.default > a:hover,
-  body.low-contrast>nav li.default.active > a {
-    border: 0;
-    margin-bottom: 2px;
   }
 }
 
@@ -204,6 +196,10 @@ header {
   padding: 3em 0 0 0;
   margin: 0.3em 1em 0 0;
 
+  .high-contrast & {
+    padding: 0;
+  }
+
   &.float-left {
     float: left;
   }
@@ -285,12 +281,12 @@ body>nav {
   transition-duration: 1s;
 
   ul {
-    width: auto;
     margin: 0;
     padding: 0;
-    border: 0;
     list-style: none;
-    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -304,6 +300,7 @@ body.high-contrast>nav {
     background-color: #191919;
     padding: 10px;
     clear: both;
+    display: block;
   }
 }
 

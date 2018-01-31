@@ -37,9 +37,6 @@ body.high-contrast {
 }
 
 @media only screen and (min-width: 1071px) {
-  body.low-contrast > nav li.default > a {
-    width: 1em;
-  }
   body.low-contrast > nav li.default > a > span {
     position: absolute;
     left: -10000px;
@@ -58,12 +55,6 @@ body.high-contrast {
     position: absolute;
     top: 0.6em;
     left: 0;
-  }
-
-  body.low-contrast > nav li.default > a:hover,
-  body.low-contrast > nav li.default.active > a {
-    border: 0;
-    margin-bottom: 2px;
   }
 }
 a:link, a:visited {
@@ -194,6 +185,9 @@ header {
   padding: 3em 0 0 0;
   margin: 0.3em 1em 0 0;
 }
+.high-contrast #header-modules > div {
+  padding: 0;
+}
 #header-modules > div.float-left {
   float: left;
 }
@@ -277,12 +271,11 @@ body > nav {
   transition-duration: 1s;
 }
 body > nav ul {
-  width: auto;
   margin: 0;
   padding: 0;
-  border: 0;
   list-style: none;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 body.high-contrast > nav {
@@ -295,6 +288,7 @@ body.high-contrast > nav ul {
   background-color: #191919;
   padding: 10px;
   clear: both;
+  display: block;
 }
 
 body > nav li {

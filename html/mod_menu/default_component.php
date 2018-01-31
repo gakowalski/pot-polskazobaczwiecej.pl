@@ -26,11 +26,7 @@ if ($item->anchor_rel)
 	$attributes['rel'] = $item->anchor_rel;
 }
 
-if ($item->id == $default_id) {
-	$linktype = '<i></i><span>' . $item->title . '</span>';
-} else {
-	$linktype = $item->title;
-}
+$linktype = $item->title;
 
 if ($item->menu_image)
 {
