@@ -518,29 +518,33 @@ header .pzw-template-inside {
   margin: 0;
 }
 .bannergroup.horizontal {
-  display: table;
   text-align: center;
   margin: 0 auto;
 }
-.bannergroup.horizontal .bannerrow {
-  display: table-row;
-}
-.bannergroup.horizontal .bannerrow .banneritem {
-  display: table-cell;
-  line-height: 0;
-}
-.bannergroup.horizontal.cell-spacing-10 {
-  border-spacing: 10px;
-}
-.bannergroup.horizontal.img-spacing-10 img {
-  margin-left: 2px;
-  margin-right: 2px;
-}
-.bannergroup.horizontal.img-spacing-10 .banneritem:first-child img {
-  margin-left: 0;
-}
-.bannergroup.horizontal.img-spacing-10 .banneritem:last-child img {
-  margin-right: 0;
+@media only screen and (min-width: 721px) {
+  .bannergroup.horizontal {
+    display: table;
+  }
+  .bannergroup.horizontal .bannerrow {
+    display: table-row;
+  }
+  .bannergroup.horizontal .bannerrow .banneritem {
+    display: table-cell;
+    line-height: 0;
+  }
+  .bannergroup.horizontal.cell-spacing-10 {
+    border-spacing: 10px;
+  }
+  .bannergroup.horizontal.img-spacing-10 img {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  .bannergroup.horizontal.img-spacing-10 .banneritem:first-child img {
+    margin-left: 0;
+  }
+  .bannergroup.horizontal.img-spacing-10 .banneritem:last-child img {
+    margin-right: 0;
+  }
 }
 .bannergroup.animated .banneritem {
   position: absolute;

@@ -540,33 +540,36 @@ header .pzw-template-inside {
   }
 
   &.horizontal {
-    display: table;
     text-align: center;
     margin: 0 auto;
 
-    .bannerrow {
-      display: table-row;
+    @media only screen and (min-width: 721px) {
+      display: table;
 
-      .banneritem {
-        display: table-cell;
-        line-height: 0;
-      }
-    }
+      .bannerrow {
+        display: table-row;
 
-    &.cell-spacing-10 {
-      border-spacing: 10px;
-    }
+        .banneritem {
+          display: table-cell;
+          line-height: 0;
+        }
+      }
 
-    &.img-spacing-10 {
-      img {
-        margin-left: 2px;
-        margin-right: 2px;
+      &.cell-spacing-10 {
+        border-spacing: 10px;
       }
-      .banneritem:first-child img {
-        margin-left: 0;
-      }
-      .banneritem:last-child img {
-        margin-right: 0;
+
+      &.img-spacing-10 {
+        img {
+          margin-left: 2px;
+          margin-right: 2px;
+        }
+        .banneritem:first-child img {
+          margin-left: 0;
+        }
+        .banneritem:last-child img {
+          margin-right: 0;
+        }
       }
     }
   }
