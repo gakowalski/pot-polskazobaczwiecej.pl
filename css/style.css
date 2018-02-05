@@ -200,6 +200,13 @@ header {
   color: red;
   font-weight: bold;
   line-height: 1.5;
+  text-align: center;
+  margin-left: 2%;
+}
+@media only screen and (min-width: 1071px) {
+  #header-modules > div.subtitle {
+    font-size: 2rem;
+  }
 }
 
 #contrast a,
