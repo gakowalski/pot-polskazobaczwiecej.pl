@@ -281,8 +281,12 @@ body > nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
   justify-content: center;
+}
+@media only screen and (min-width: 1071px) {
+  body > nav ul {
+    display: flex;
+  }
 }
 
 body.high-contrast > nav {

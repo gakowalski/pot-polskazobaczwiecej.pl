@@ -289,9 +289,11 @@ body>nav {
     margin: 0;
     padding: 0;
     list-style: none;
-
-    display: flex;
     justify-content: center;
+
+    @media only screen and (min-width: 1071px) {
+      display: flex;
+    }
   }
 }
 
