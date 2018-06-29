@@ -1417,6 +1417,12 @@ footer {
     margin: 0;
     margin-bottom: 1em;
     margin-top: 1em;
+    font-size: 1.2rem;
+
+    img {
+      width: 50%;
+      height: 50%;
+    }
 
     .custom {
       width: 100%;
@@ -1433,4 +1439,16 @@ footer {
 
 .spinner {
   margin: 1% auto;
+}
+
+@media only screen and (max-width: 720px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 721px) {
+  .mobile-only {
+    display: none !important;
+  }
 }
