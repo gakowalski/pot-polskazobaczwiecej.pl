@@ -71,16 +71,16 @@ $body_classes =
           <a href="<?php echo JUri::base(); ?>" title="Strona główna"><?php echo $sitename; ?></a>
         </h1>
         <?php endif; ?>
-        <div>
-          <a target="_blank" href="https://www.facebook.com/WeekendNizszychCen/">
-            <div id="facebook-logo"></div>
-            <span class="hidden-text">Polska Zobacz Więcej na Facebooku</span>
-          </a>
-        </div>
 
-        <?php if ($high_contrast_enabled == false): ?>
-        <jdoc:include type="modules" name="header" style="none" />
+        <?php if ($this->countModules('nav')): ?>
+        <input id="mobile-menu-checkbox" type="checkbox">
+        <label id="mobile-menu-label" for="mobile-menu-checkbox">Menu</label>
+        <nav role="navigation">
+            <jdoc:include type="modules" name="nav" style="none" />
+        </nav>
         <?php endif; ?>
+
+        <jdoc:include type="modules" name="header" style="none" />
 
         <div id="font-resize">
           <a id="font-resize-small" href="<?php echo JUri::current(); ?>?font_resize=small">
@@ -100,6 +100,13 @@ $body_classes =
           </a>
         </div>
 
+        <div>
+          <a target="_blank" href="https://www.facebook.com/WeekendNizszychCen/">
+            <div id="facebook-logo"></div>
+            <span class="hidden-text">Polska Zobacz Więcej na Facebooku</span>
+          </a>
+        </div>
+
       </div>
     </div>
 
@@ -109,15 +116,11 @@ $body_classes =
   </header>
 
   <?php if ($this->countModules('nav')): ?>
-  <input id="mobile-menu-checkbox" type="checkbox">
-  <label id="mobile-menu-label" for="mobile-menu-checkbox">Menu</label>
+
   <nav role="navigation">
     <?php if ($high_contrast_enabled): ?>
     <jdoc:include type="modules" name="header" style="none" />
     <?php endif; ?>
-    <div class="pzw-template-inside">
-      <jdoc:include type="modules" name="nav" style="none" />
-    </div>
   </nav>
   <?php endif; ?>
 

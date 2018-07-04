@@ -31,24 +31,9 @@ body {
   height: 1px;
   overflow: hidden; }
 
-@media only screen and (min-width: 1071px) {
-  body.low-contrast > nav li.default > a > span {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden; }
-  body.low-contrast > nav li.default > a > i {
-    background-image: url(../images/home-font-awesome-white.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 1.6em;
-    height: 1.6em;
-    display: block;
-    position: absolute;
-    top: 0.6em;
-    left: 0; } }
+nav li.default {
+  display: none; }
+
 a:link, a:visited {
   font-style: normal;
   color: #000;
@@ -67,7 +52,7 @@ h1 {
   text-align: left;
   text-transform: none;
   padding: 0;
-  margin: 0 0 0.5em 0;
+  margin: 0;
   position: relative; }
   .high-contrast header h1 {
     display: block;
@@ -103,7 +88,7 @@ header {
   display: block;
   height: auto;
   width: auto;
-  background: #fbfbfb; }
+  background-color: #d42128; }
   .high-contrast header {
     background: #191919;
     text-align: center; }
@@ -124,13 +109,8 @@ header {
   transition-duration: 1s; }
 
 #header-logo {
-  float: left;
-  padding: 0;
-  margin: 0;
   width: 243px;
   height: 120px;
-  z-index: 2;
-  border: 0;
   cursor: pointer; }
 
 #header-logo a {
@@ -146,38 +126,16 @@ header {
   white-space: nowrap; }
 
 #header-modules {
-  position: relative;
-  display: block;
-  margin: 0 auto;
-  text-align: right;
-  z-index: 1; }
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
   .high-contrast #header-modules {
     padding: 1em;
     height: auto;
     display: inline-block; }
 
-#header-modules > div {
-  float: right;
-  width: auto;
-  padding: 3em 0 0 0;
-  margin: 0.3em 1em 0 0; }
-  .high-contrast #header-modules > div {
-    padding: 0; }
-  #header-modules > div.float-left {
-    float: left; }
-  #header-modules > div.float-right {
-    float: right; }
-  #header-modules > div.subtitle {
-    float: left;
-    padding: 0;
-    color: red;
-    font-weight: bold;
-    line-height: 1.5;
-    text-align: center;
-    margin-left: 2%; }
-    @media only screen and (min-width: 1071px) {
-      #header-modules > div.subtitle {
-        font-size: 2rem; } }
+.high-contrast #header-modules > div {
+  padding: 0; }
 
 #contrast a,
 #contrast a:visited {
@@ -230,24 +188,17 @@ header {
 #mobile-menu-label {
   display: none; }
 
-body > nav {
-  position: relative;
-  display: block;
-  padding: 0;
-  margin: 0 auto;
-  border-top: 5px solid #f2f2f2;
-  background: #d42128;
-  width: 100%;
-  z-index: 2;
-  transition-duration: 1s; }
-  body > nav ul {
+nav {
+  display: flex; }
+  nav ul {
     margin: 0;
     padding: 0;
-    list-style: none;
-    justify-content: center; }
+    list-style: none; }
     @media only screen and (min-width: 1071px) {
-      body > nav ul {
-        display: flex; } }
+      nav ul {
+        display: flex;
+        align-items: flex-end;
+        text-align: center; } }
 
 body.high-contrast > nav {
   float: left;
@@ -260,34 +211,22 @@ body.high-contrast > nav {
     clear: both;
     display: block; }
 
-body > nav li {
-  display: inline-block;
-  padding: 0;
-  border: 0;
-  list-style: none;
-  z-index: 1;
-  padding-bottom: 4px; }
-
 body.high-contrast > nav li {
   display: block; }
 
-body > nav a:link,
-body > nav a:visited {
+body nav a:link,
+body nav a:visited {
   display: block;
-  margin: 0;
-  border: 0;
-  height: auto;
   color: #fff;
   font-size: 1.2em;
   line-height: 1em;
   text-decoration: none;
   text-transform: uppercase;
-  text-align: left;
   padding: 0.7em 0.7em;
   border-bottom: 2px solid #d42128; }
 
-body > nav a:hover,
-body > nav li.active > a {
+body nav a:hover,
+body nav li.active > a {
   border-bottom: 2px solid #fff; }
 
 body.high-contrast > nav a:link,
@@ -343,91 +282,12 @@ body.high-contrast > nav li.active > a {
 .not-frontpage main .pzw-template-inside {
   margin: 4em auto; }
 
-header .pzw-template-inside {
-  height: 120px; }
-
 .high-contrast .pzw-template-inside {
   margin: 0;
   max-width: none; }
 
 .high-contrast header .pzw-template-inside {
   height: auto; }
-
-/* mod_search */
-.search input[type=image] {
-  float: left;
-  padding-right: 5px;
-  position: relative;
-  top: -6px; }
-  .high-contrast .search input[type=image] {
-    display: none; }
-
-.low-contrast .search input[type=search] {
-  float: left;
-  border: 0;
-  border-bottom: 1px Solid black;
-  background-color: transparent;
-  font-family: Arial;
-  font-size: 80%;
-  padding-bottom: 10px; }
-.high-contrast .search input[type=search] {
-  font-size: 1em;
-  font-weight: normal;
-  text-align: left;
-  border: 1px solid #fff;
-  width: 90%;
-  margin: 0;
-  padding: 0.7em;
-  box-sizing: border-box;
-  background: #000;
-  color: #fff; }
-
-.search .form-inline button,
-.search .only,
-.search .form-limit {
-  display: none; }
-
-.high-contrast .search button {
-  display: block;
-  font-size: 1.2em;
-  color: #000;
-  font-weight: normal;
-  text-align: center;
-  text-transform: uppercase;
-  width: auto;
-  height: auto;
-  margin: 0.2em;
-  padding: 0.3em 1em 0.3em 1em;
-  border: 0;
-  overflow: hidden;
-  background: #ffff14;
-  cursor: pointer; }
-
-.search input::-webkit-input-placeholder {
-  /* WebKit, Blink, Edge */
-  color: #000; }
-  .high-contrast .search input::-webkit-input-placeholder {
-    color: white; }
-
-.search input::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: #000;
-  opacity: 1; }
-  .high-contrast .search input::-moz-placeholder {
-    color: white;
-    opacity: 1; }
-
-.search input:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #000; }
-  .high-contrast .search input:-ms-input-placeholder {
-    color: white; }
-
-.search input::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: #000; }
-  .high-contrast .search input::-ms-input-placeholder {
-    color: white; }
 
 #facebook-logo {
   width: 29px;
@@ -1049,9 +909,6 @@ footer {
     position: relative;
     background-color: white;
     height: auto; }
-
-  body.low-contrast > nav li.default > a > i {
-    display: none; }
 
   body.high-contrast > nav {
     background-color: inherit;
