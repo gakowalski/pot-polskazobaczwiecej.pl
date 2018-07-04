@@ -188,7 +188,14 @@ header {
   position: relative;
   padding: 0;
   margin: 0;
-  display: block; }
+  display: block;
+  background-image: url(https://polska.travel/templates/jm-trips/images/contrast.png);
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+  padding: 1px; }
 
 .high-contrast #contrast a,
 .high-contrast #contrast a:visited,
@@ -209,9 +216,6 @@ header {
 
 .low-contrast #font-resize > a::before {
   content: "A"; }
-
-.low-contrast #font-resize > a > span {
-  display: none; }
 
 .low-contrast #font-resize-small {
   font-size: 1.4rem; }

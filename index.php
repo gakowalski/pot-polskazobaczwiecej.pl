@@ -42,9 +42,7 @@ $doc->addStyleSheet($template_path . '/css/style.css');
 $doc->addScript($template_path . '/js/default.js');
 
 $body_classes =
-  'site '
-  . $option
-	. ' view-' . $view
+  "site $option view-$view"
 	. ($layout ? ' layout-' . $layout : ' no-layout')
 	. ($task ? ' task-' . $task : ' no-task')
 	. ($itemid ? ' itemid-' . $itemid : '')
@@ -86,18 +84,20 @@ $body_classes =
 
         <div id="font-resize">
           <a id="font-resize-small" href="<?php echo JUri::current(); ?>?font_resize=small">
-            <span>Czcionka normalna</span>
+            <span class="hidden-text">Czcionka normalna</span>
           </a>
           <a id="font-resize-medium" href="<?php echo JUri::current(); ?>?font_resize=medium">
-            <span>Czcionka średnia</span>
+            <span class="hidden-text">Czcionka średnia</span>
           </a>
           <a id="font-resize-large" href="<?php echo JUri::current(); ?>?font_resize=large">
-            <span>Czcionka duża</span>
+            <span class="hidden-text">Czcionka duża</span>
           </a>
         </div>
 
         <div id="contrast">
-          <a href="<?php echo JUri::current(); ?>?toggle_contrast=true">Wersja <?php echo $high_contrast_enabled == true ? 'graficzna' : 'kontrastowa'; ?></a>
+          <a href="<?php echo JUri::current(); ?>?toggle_contrast=true">
+            <span class="hidden-text">Wersja <?php echo $high_contrast_enabled == true ? 'graficzna' : 'kontrastowa'; ?><span>
+          </a>
         </div>
 
       </div>
