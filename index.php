@@ -57,7 +57,7 @@ $body_classes =
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<jdoc:include type="head" />
   <?php if ($font_resized != 'small'): ?>
-  <style>html { font-size: <?php echo ($font_resized == 'medium' ? 13 : 16); ?>px; }</style>
+  <style>html { font-size: <?php echo ($font_resized == 'medium' ? 12 : 14); ?>px; }</style>
   <?php endif; ?>
 </head>
 <body class="<?php echo $body_classes; ?>">
@@ -127,6 +127,17 @@ $body_classes =
   <?php if ($option != 'com_search' && $this->countModules('banner')): ?>
   <section id="banner" role="banner">
     <jdoc:include type="modules" name="banner" style="none" />
+    <div id="overlay">
+      <div class="pzw-template-inside">
+        <p class="subtitle">Ogólnopolska akcja zniżkowa</p>
+        <p class="title">Polska Zobacz Więcej - Weekend za pół ceny</p>
+        <p class="description">5 – 7 października 2018</p>
+        <p class="description">
+          <a class="btn btn-primary" href="/o-akcji">Dowiedz się więcej</a>
+          <a class="btn btn-secondary" href="/formularz-dodawania-obiektow">Dodaj ofertę</a>
+        </p>
+      </div>
+    </div>
   </section>
   <?php endif; ?>
 

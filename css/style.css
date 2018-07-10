@@ -123,7 +123,15 @@ header {
   background-image: url(../images/pzw-logo-2018.png);
   background-repeat: no-repeat;
   background-size: contain;
-  white-space: nowrap; }
+  white-space: nowrap;
+  /*
+    position: absolute;
+    top: -20px;
+    width: 240px;
+    height: 120px;
+    background-color: #d42128;
+    border-radius: 2px;
+    */ }
 
 #header-modules {
   display: flex;
@@ -1010,5 +1018,46 @@ footer {
 @media only screen and (min-width: 721px) {
   .mobile-only {
     display: none !important; } }
+/* overlay */
+#overlay {
+  position: relative;
+  color: #fff;
+  top: -60vh;
+  height: 0; }
+
+#overlay .subtitle {
+  font-size: 1.4rem; }
+
+#overlay .title {
+  text-transform: uppercase;
+  font-size: 3rem;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000; }
+
+#overlay .description {
+  font-size: 2rem; }
+  #overlay .description a:link, #overlay .description a:visited {
+    display: inline-block;
+    background-color: #d42128;
+    padding: 1.5rem;
+    border-radius: 2px;
+    border: 2px solid #d42128;
+    margin-right: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    transition: background-color .3s ease,color .3s ease; }
+  #overlay .description a:hover {
+    background-color: transparent; }
+
+/* mod_frontvideo fixes */
+.tv {
+  margin-top: -56px !important;
+  margin-bottom: 0 !important; }
+
+.cover {
+  position: relative !important;
+  top: 0 !important;
+  margin-bottom: 0 !important; }
 
 /*# sourceMappingURL=style.css.map */
