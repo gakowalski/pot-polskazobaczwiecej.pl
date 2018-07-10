@@ -1060,4 +1060,49 @@ footer {
   top: 0 !important;
   margin-bottom: 0 !important; }
 
+/* split-choice */
+#split-choice {
+  margin-top: -10vh;
+  text-align: center; }
+  #split-choice .tab {
+    display: inline-block;
+    text-align: left;
+    width: 300px;
+    padding: 50px; }
+    #split-choice .tab.left {
+      background-color: aliceblue;
+      margin-right: 2%; }
+    #split-choice .tab.right {
+      background-color: antiquewhite;
+      margin-left: 2%; }
+    #split-choice .tab p {
+      font-size: 2rem;
+      line-height: 1.5; }
+    #split-choice .tab a:link, #split-choice .tab a:visited {
+      display: inline-block;
+      background-color: #d42128;
+      padding: 1.5rem;
+      border-radius: 2px;
+      border: 2px solid #d42128;
+      text-decoration: none;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      transition: background-color .3s ease,color .3s ease;
+      float: right; }
+    #split-choice .tab a:hover {
+      background-color: transparent;
+      color: #d42128; }
+  #split-choice .zoomable-image {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    display: inline-block; }
+    #split-choice .zoomable-image img {
+      max-width: 100%;
+      transition: all 0.3s; }
+    #split-choice .zoomable-image:hover img {
+      transform: scale(1.1); }
+
 /*# sourceMappingURL=style.css.map */
