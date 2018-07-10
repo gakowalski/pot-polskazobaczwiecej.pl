@@ -127,17 +127,6 @@ $body_classes =
   <?php if ($option != 'com_search' && $this->countModules('banner')): ?>
   <section id="banner" role="banner">
     <jdoc:include type="modules" name="banner" style="none" />
-    <div id="overlay">
-      <div class="pzw-template-inside">
-        <p class="subtitle">Ogólnopolska akcja zniżkowa</p>
-        <p class="title">Polska Zobacz Więcej - Weekend za pół ceny</p>
-        <p class="description">5 – 7 października 2018</p>
-        <p class="description">
-          <a class="btn btn-primary" href="/o-akcji">Dowiedz się więcej</a>
-          <a class="btn btn-secondary" href="/formularz-dodawania-obiektow">Dodaj ofertę</a>
-        </p>
-      </div>
-    </div>
   </section>
   <?php endif; ?>
 
