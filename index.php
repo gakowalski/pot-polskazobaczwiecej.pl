@@ -131,14 +131,14 @@ $body_classes =
       <div class="pzw-template-inside">
         <div class="left tab">
           <div class="zoomable-image">
-            <img src="https://placeimg.com/300/300/nature">
+            <img width="300" height="300" src="https://placeimg.com/300/300/nature">
           </div>
           <p>Chcę dołączyć do akcji oferując swoje usługi</p>
           <a href="">Dołącz</a>
         </div>
         <div class="right tab">
           <div class="zoomable-image">
-            <img src="https://placeimg.com/300/300/people">
+            <img width="300" height="300" src="https://placeimg.com/300/300/people">
           </div>
           <p>Chcę skorzystać z ofert promocyjnych</p>
           <a href="">Więcej</a>
