@@ -41,6 +41,8 @@ $doc->addStyleSheet($template_path . '/css/normalize.css');
 //$doc->addStyleSheet('/components/com_jucontact/assets/bootstrap3/css/bootstrap-theme.min.css');
 $doc->addStyleSheet($template_path . '/css/style.css');
 
+$doc->addScript($template_path . '/js/countUp.js');
+$doc->addScript($template_path . '/js/countUp-jquery.js');
 $doc->addScript($template_path . '/js/default.js');
 
 $body_classes =

@@ -37,4 +37,8 @@ jQuery(document).ready(function(){
     jQuery('html, body').animate({scrollTop : 0},800);
     return false;
   });
+
+  jQuery('span.countUp').each(function () {
+    jQuery(this).countup(jQuery(this).text() / 1);
+  });
 });

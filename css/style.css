@@ -658,7 +658,8 @@ footer {
   text-align: left; }
   #organizers > div {
     display: flex;
-    align-items: flex-end; }
+    align-items: flex-end;
+    margin-bottom: 2rem; }
   #organizers img {
     height: 70px; }
 
@@ -1121,6 +1122,8 @@ footer {
   text-align: center;
   background-color: #f49e06;
   padding-bottom: 3rem; }
+  body.high-contrast .juct-container {
+    background-color: unset; }
   .juct-container fieldset {
     border: 0;
     font-size: 1.6rem;
@@ -1219,25 +1222,75 @@ footer {
 
 /* strefa partnera */
 #strefa-partnera {
-  text-align: center; }
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #strefa-partnera .button {
+    background-color: #e52728;
+    padding: 1.5rem;
+    border-radius: 2px;
+    border: 2px solid #e52728;
+    color: #fff;
+    text-transform: uppercase;
+    transition: background-color .3s ease,color .3s ease;
+    text-decoration: none;
+    font-size: 3rem; }
+    #strefa-partnera .button:hover {
+      background-color: transparent;
+      color: #e52728; }
+  #strefa-partnera .mosaic {
+    display: flex;
+    margin-top: 3rem; }
+    #strefa-partnera .mosaic .left,
+    #strefa-partnera .mosaic .right {
+      display: flex;
+      flex-direction: column; }
+      #strefa-partnera .mosaic .left .area,
+      #strefa-partnera .mosaic .right .area {
+        position: relative;
+        overflow: hidden;
+        margin: 10px; }
+        #strefa-partnera .mosaic .left .area img,
+        #strefa-partnera .mosaic .right .area img {
+          max-width: 100%;
+          transition: all 0.3s; }
+        #strefa-partnera .mosaic .left .area:hover img,
+        #strefa-partnera .mosaic .right .area:hover img {
+          transform: scale(1.1); }
+      #strefa-partnera .mosaic .left a,
+      #strefa-partnera .mosaic .right a {
+        display: block;
+        color: #fff;
+        font-size: 3rem;
+        line-height: 1.5;
+        text-decoration: none; }
+      #strefa-partnera .mosaic .left span,
+      #strefa-partnera .mosaic .right span {
+        position: absolute;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.5);
+        left: 0;
+        right: 0; }
+    #strefa-partnera .mosaic .left span {
+      top: 0; }
+    #strefa-partnera .mosaic .right span {
+      bottom: 0; }
 
-#areas {
-  position: relative;
-  width: 900px;
-  display: inline-block; }
-  #areas .area {
-    float: left;
-    margin: 10px;
-    position: relative; }
-    #areas .area .title {
-      background-color: rgba(0, 0, 0, 0.5);
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      color: #f49e06;
-      font-size: 3rem;
-      line-height: 1.5;
-      padding: 3rem; }
+#area1 {
+  width: 500px;
+  height: 400px; }
+
+#area3 {
+  width: 500px;
+  height: 200px; }
+
+#area2 {
+  width: 300px;
+  height: 150px; }
+
+#area4 {
+  width: 300px;
+  height: 450px; }
 
 /*# sourceMappingURL=style.css.map */

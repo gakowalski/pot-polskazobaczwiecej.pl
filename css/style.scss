@@ -850,6 +850,7 @@ footer {
   & > div {
     display: flex;
     align-items: flex-end;
+    margin-bottom: 2rem;
   }
 
   img {
@@ -1450,6 +1451,10 @@ footer {
   background-color: $primary;
   padding-bottom: 3rem;
 
+  body.high-contrast & {
+    background-color: unset;
+  }
+
   fieldset {
     border: 0;
     font-size: 1.6rem;
@@ -1596,28 +1601,95 @@ footer {
 
 #strefa-partnera {
   text-align: center;
-}
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-#areas {
-  position: relative;
-  width: 900px;
-  display: inline-block;
+  .button {
+    background-color: #e52728;
+    padding: 1.5rem;
+    border-radius: 2px;
+    border: 2px solid #e52728;
+    color: #fff;
+    text-transform: uppercase;
+    transition: background-color .3s ease,color .3s ease;
+    text-decoration: none;
+    font-size: 3rem;
 
-  .area {
-    float: left;
-    margin: 10px;
-    position: relative;
-
-    .title {
-      background-color: rgba(0, 0, 0, 0.5);
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      color: $primary;
-      font-size: 3rem;
-      line-height: 1.5;
-      padding: 3rem;
+    &:hover {
+      background-color: transparent;
+      color: $secondary;
     }
   }
+
+  .mosaic {
+    display: flex;
+    margin-top: 3rem;
+
+    .left,
+    .right {
+      display: flex;
+      flex-direction: column;
+
+      .area {
+        position: relative;
+        overflow: hidden;
+        margin: 10px;
+
+        img {
+          max-width: 100%;
+          transition: all 0.3s;
+        }
+
+        &:hover img{
+          transform: scale(1.1);
+        }
+      }
+
+      a {
+        display: block;
+        color: #fff;
+        font-size: 3rem;
+        line-height: 1.5;
+        text-decoration: none;
+      }
+
+      span {
+        position: absolute;
+        z-index: 1;
+        background-color: rgba(0,0,0,0.5);
+        left: 0;
+        right: 0;
+      }
+    }
+
+    .left {
+      span {
+        top: 0;
+      }
+    }
+
+    .right {
+      span {
+        bottom: 0;
+      }
+    }
+  }
+}
+
+#area1 {
+  width: 500px;
+  height: 400px;
+}
+#area3 {
+  width: 500px;
+  height: 200px;
+}
+#area2 {
+  width: 300px;
+  height: 150px;
+}
+#area4 {
+  width: 300px;
+  height: 450px;
 }
