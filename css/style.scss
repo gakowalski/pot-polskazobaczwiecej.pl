@@ -1,3 +1,7 @@
+$primary: #f49e06;
+$secondary: #e52728;
+$text: #fff;
+
 html {
   /* set to 10px for compatibility with Bootstrap-based components */
   font-size: 10px;
@@ -107,7 +111,7 @@ header {
   display: block;
   height: auto;
   width: auto;
-  background-color: #d42128;
+  background-color: $primary;
 
   .high-contrast & {
     background: #191919;
@@ -133,7 +137,7 @@ header {
 
 #header-logo {
   width: 243px;
-  height: 120px;
+  /*height: 120px;*/
   cursor: pointer;
 }
 
@@ -149,14 +153,13 @@ header {
   background-size: contain;
   white-space: nowrap;
 
-/*
+/* alternative logo positioning */
   position: absolute;
   top: -20px;
   width: 240px;
   height: 120px;
-  background-color: #d42128;
+  background-color: $primary;
   border-radius: 2px;
-  */
 }
 
 #header-modules {
@@ -188,13 +191,11 @@ header {
   margin: 0;
   display: block;
 
-  background-image: url(https://polska.travel/templates/jm-trips/images/contrast.png);
-  width: 20px;
-  height: 20px;
+  background-image: url(../images/contrast.png);
+  width: 30px;
+  height: 30px;
   background-repeat: no-repeat;
-  background-position: center;
-  background-color: black;
-  padding: 1px;
+  background-size: contain;
 }
 
 .high-contrast #contrast a,
@@ -277,7 +278,8 @@ body nav a:visited {
   text-decoration: none;
   text-transform: uppercase;
   padding: 0.7em 0.7em;
-  border-bottom: 2px solid #d42128;
+  border-bottom: 2px solid $primary;
+  border-top: 2px solid $primary;
 }
 
 body nav a:hover,
@@ -557,8 +559,7 @@ main {
   }
 }
 
-main .item-page,
-form#ju-contact fieldset>div {
+main .item-page {
   font-size: 1.1em;
   line-height: 1.6em;
   font-weight: normal;
@@ -596,8 +597,7 @@ main .blog-featured > .page-header {
   }
 }
 
-main .page-header h2,
-form#ju-contact legend {
+main .page-header h2 {
   position: relative;
   display: inline-block;
   padding: 0 0 0.5em;
@@ -614,25 +614,6 @@ form#ju-contact legend {
     font-weight: bold;
     text-align: left;
     padding: 0;
-  }
-}
-
-.high-contrast .jubootstrap legend {
-  color: white;
-  border: 0;
-}
-
-#ju-contact .btn-submit-form {
-  border-radius: 0;
-  background: #d42128;
-  padding: 6px 12px;
-  font-size: 14px;
-  border-color: #d42128;
-
-  &:hover {
-    color: #fff;
-    background-color: #c9302c;
-    border-color: #ac2925;
   }
 }
 
@@ -655,7 +636,7 @@ main .page-header h3 {
 main .page-header time,
 main .blog-featured .item time {
   position: relative;
-  background: #d42128;
+  background: $primary;
   display: inline-block;
   width: auto;
   text-align: left;
@@ -697,7 +678,7 @@ main .blog-featured .item {
 
 main .blog .row-0 h3>a,
 main .blog-featured .row-0 h3>a {
-  color: #d42128;
+  color: $primary;
 }
 
 main .blog .item p,
@@ -724,8 +705,8 @@ main .blog-featured .item .icon-chevron-right {
   display: inline-block;
   float: right;
   margin: 1em 0 0 0;
-  color: #d42128;
-  border: 1px solid #d42128;
+  color: $primary;
+  border: 1px solid $primary;
   transition: 0.5s;
 
   &::after {
@@ -734,11 +715,11 @@ main .blog-featured .item .icon-chevron-right {
     float: none;
     padding: 0.3em;
     content: ">";
-    color: #d42128;
+    color: $primary;
   }
 
   &:hover {
-    background-color: #d42128;
+    background-color: $primary;
 
     &::after{
       color: #fff;
@@ -801,11 +782,11 @@ main .pagination li {
   display: inline;
 
   a {
-    border: 1px solid #d42128;
+    border: 1px solid $primary;
     text-decoration: none;
 
     &:hover {
-      background: #d42128;
+      background: $primary;
       color: #ffffff;
       text-decoration: none;
       transition: all 0.2s ease-in;
@@ -845,8 +826,7 @@ footer {
   margin: 0 auto;
   text-align: center;
   width: auto;
-  background: #eee;
-  border-top: 6px solid #d42128;
+  border-top: 2px solid $primary;
   clear: both;
 
   .high-contrast & {
@@ -918,7 +898,7 @@ footer {
   position: relative;
   padding: 0.5em;
   margin: 0;
-  border-top: 3px solid #d42128;
+  border-top: 3px solid $primary;
   text-align: center;
   z-index: 1;
   background: #fff;
@@ -1023,7 +1003,7 @@ footer {
 
  .low-contrast #footer-bottom-menu .menu > li > a:hover,
  .low-contrast #footer-bottom-menu .menu > li > a:active {
-  color: #d42128;
+  color: $primary;
   text-decoration: underline;
   transition-duration: 0.6s;
  }
@@ -1100,7 +1080,7 @@ footer {
   }
 
   .low-contrast header {
-    border-bottom: 3px solid #d42128;
+    border-bottom: 3px solid $primary;
   }
 
   .low-contrast #header-modules > div,
@@ -1318,10 +1298,10 @@ footer {
 
   a:link, a:visited {
     display: inline-block;
-    background-color: #d42128;
+    background-color: $primary;
     padding: 1.5rem;
     border-radius: 2px;
-    border: 2px solid #d42128;
+    border: 2px solid $primary;
     margin-right: 1.5rem;
     text-decoration: none;
     color: #fff;
@@ -1361,13 +1341,35 @@ footer {
     padding: 50px;
 
     &.left {
-      background-color: aliceblue;
+      background-color: $secondary;
       margin-right: 2%;
+
+      a:link, a:visited {
+        background-color: $primary;
+        border: 2px solid $primary;
+        color: #fff;
+      }
+
+      a:hover {
+        background-color: transparent;
+        color: $primary;
+      }
     }
 
     &.right {
-      background-color: antiquewhite;
+      background-color: $primary;
       margin-left: 2%;
+
+      a:link, a:visited {
+        background-color: $secondary;
+        border: 2px solid $secondary;
+        color: #fff;
+      }
+
+      a:hover {
+        background-color: transparent;
+        color: $secondary;
+      }
     }
 
     p {
@@ -1377,12 +1379,9 @@ footer {
 
     a:link, a:visited {
       display: inline-block;
-      background-color: #d42128;
       padding: 1.5rem;
       border-radius: 2px;
-      border: 2px solid #d42128;
       text-decoration: none;
-      color: #fff;
       text-transform: uppercase;
       font-size: 1.4rem;
       transition: background-color .3s ease,color .3s ease;
@@ -1390,9 +1389,8 @@ footer {
       float: right;
     }
 
-    a:hover {
-      background-color: transparent;
-      color: #d42128;
+    &:hover img {
+      transform: scale(1.1);
     }
   }
 
@@ -1411,6 +1409,66 @@ footer {
 
     &:hover img {
       transform: scale(1.1);
+    }
+  }
+}
+
+/* JU Contact */
+.juct-container {
+  margin-top: 2rem;
+  text-align: center;
+  background-color: $primary;
+
+  fieldset {
+    border: 0;
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  legend {
+    font-size: 3rem;
+    padding-top: 30px;
+  }
+
+  .field-group {
+    display: inline-block;
+    text-align: left;
+    margin: 1em;
+  }
+
+  .field-text {
+    text-align: left;
+  }
+
+  input[type=text],
+  textarea {
+    padding: 0.5em;
+  }
+
+  input[type=text] {
+
+  }
+
+  textarea {
+
+  }
+
+  .g-recaptcha {
+    display: inline-block;
+  }
+
+  .btn-submit-form {
+    background-color: $secondary;
+    padding: 1.5rem;
+    border-radius: 2px;
+    border: 2px solid $secondary;
+    color: #fff;
+    text-transform: uppercase;
+    transition: background-color .3s ease,color .3s ease;
+
+    &:hover {
+      background-color: transparent;
+      color: $secondary;
     }
   }
 }

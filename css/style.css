@@ -88,7 +88,7 @@ header {
   display: block;
   height: auto;
   width: auto;
-  background-color: #d42128; }
+  background-color: #f49e06; }
   .high-contrast header {
     background: #191919;
     text-align: center; }
@@ -110,7 +110,7 @@ header {
 
 #header-logo {
   width: 243px;
-  height: 120px;
+  /*height: 120px;*/
   cursor: pointer; }
 
 #header-logo a {
@@ -124,14 +124,13 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
   white-space: nowrap;
-  /*
-    position: absolute;
-    top: -20px;
-    width: 240px;
-    height: 120px;
-    background-color: #d42128;
-    border-radius: 2px;
-    */ }
+  /* alternative logo positioning */
+  position: absolute;
+  top: -20px;
+  width: 240px;
+  height: 120px;
+  background-color: #f49e06;
+  border-radius: 2px; }
 
 #header-modules {
   display: flex;
@@ -155,13 +154,11 @@ header {
   padding: 0;
   margin: 0;
   display: block;
-  background-image: url(https://polska.travel/templates/jm-trips/images/contrast.png);
-  width: 20px;
-  height: 20px;
+  background-image: url(../images/contrast.png);
+  width: 30px;
+  height: 30px;
   background-repeat: no-repeat;
-  background-position: center;
-  background-color: black;
-  padding: 1px; }
+  background-size: contain; }
 
 .high-contrast #contrast a,
 .high-contrast #contrast a:visited,
@@ -231,7 +228,8 @@ body nav a:visited {
   text-decoration: none;
   text-transform: uppercase;
   padding: 0.7em 0.7em;
-  border-bottom: 2px solid #d42128; }
+  border-bottom: 2px solid #f49e06;
+  border-top: 2px solid #f49e06; }
 
 body nav a:hover,
 body nav li.active > a {
@@ -417,8 +415,7 @@ body.high-contrast > nav li.active > a {
   width: 73%;
   margin-left: 1%; }
 
-main .item-page,
-form#ju-contact fieldset > div {
+main .item-page {
   font-size: 1.1em;
   line-height: 1.6em;
   font-weight: normal;
@@ -450,7 +447,7 @@ main .item-page > .page-header, main .blog > .page-header, main .blog-featured >
     text-align: left;
     min-height: none; }
 
-main .page-header h2, form#ju-contact legend {
+main .page-header h2 {
   position: relative;
   display: inline-block;
   padding: 0 0 0.5em;
@@ -460,28 +457,12 @@ main .page-header h2, form#ju-contact legend {
   text-transform: none;
   font-size: 3em;
   line-height: 1em; }
-  .high-contrast main .page-header h2,
-  .high-contrast form#ju-contact legend {
+  .high-contrast main .page-header h2 {
     font-size: 1.6em;
     line-height: 1em;
     font-weight: bold;
     text-align: left;
     padding: 0; }
-
-.high-contrast .jubootstrap legend {
-  color: white;
-  border: 0; }
-
-#ju-contact .btn-submit-form {
-  border-radius: 0;
-  background: #d42128;
-  padding: 6px 12px;
-  font-size: 14px;
-  border-color: #d42128; }
-  #ju-contact .btn-submit-form:hover {
-    color: #fff;
-    background-color: #c9302c;
-    border-color: #ac2925; }
 
 main img {
   max-width: 100%;
@@ -500,7 +481,7 @@ main .page-header h3 {
 main .page-header time,
 main .blog-featured .item time {
   position: relative;
-  background: #d42128;
+  background: #f49e06;
   display: inline-block;
   width: auto;
   text-align: left;
@@ -538,7 +519,7 @@ main .blog-featured .item {
 
 main .blog .row-0 h3 > a,
 main .blog-featured .row-0 h3 > a {
-  color: #d42128; }
+  color: #f49e06; }
 
 main .blog .item p,
 main .blog-featured .item p {
@@ -562,8 +543,8 @@ main .blog-featured .item .icon-chevron-right {
   display: inline-block;
   float: right;
   margin: 1em 0 0 0;
-  color: #d42128;
-  border: 1px solid #d42128;
+  color: #f49e06;
+  border: 1px solid #f49e06;
   transition: 0.5s; }
   main .blog .item .icon-chevron-right::after,
   main .blog-featured .item .icon-chevron-right::after {
@@ -572,10 +553,10 @@ main .blog-featured .item .icon-chevron-right {
     float: none;
     padding: 0.3em;
     content: ">";
-    color: #d42128; }
+    color: #f49e06; }
   main .blog .item .icon-chevron-right:hover,
   main .blog-featured .item .icon-chevron-right:hover {
-    background-color: #d42128; }
+    background-color: #f49e06; }
     main .blog .item .icon-chevron-right:hover::after,
     main .blog-featured .item .icon-chevron-right:hover::after {
       color: #fff; }
@@ -623,10 +604,10 @@ main .pagination li {
   list-style: none;
   display: inline; }
   main .pagination li a {
-    border: 1px solid #d42128;
+    border: 1px solid #f49e06;
     text-decoration: none; }
     main .pagination li a:hover {
-      background: #d42128;
+      background: #f49e06;
       color: #ffffff;
       text-decoration: none;
       transition: all 0.2s ease-in; }
@@ -660,8 +641,7 @@ footer {
   margin: 0 auto;
   text-align: center;
   width: auto;
-  background: #eee;
-  border-top: 6px solid #d42128;
+  border-top: 2px solid #f49e06;
   clear: both; }
   .high-contrast footer {
     background: inherit;
@@ -719,7 +699,7 @@ footer {
   position: relative;
   padding: 0.5em;
   margin: 0;
-  border-top: 3px solid #d42128;
+  border-top: 3px solid #f49e06;
   text-align: center;
   z-index: 1;
   background: #fff; }
@@ -809,7 +789,7 @@ footer {
 
 .low-contrast #footer-bottom-menu .menu > li > a:hover,
 .low-contrast #footer-bottom-menu .menu > li > a:active {
-  color: #d42128;
+  color: #f49e06;
   text-decoration: underline;
   transition-duration: 0.6s; }
 
@@ -871,7 +851,7 @@ footer {
     margin-right: 0; }
 
   .low-contrast header {
-    border-bottom: 3px solid #d42128; }
+    border-bottom: 3px solid #f49e06; }
 
   .low-contrast #header-modules > div,
   .low-contrast #back-to-top a span {
@@ -1037,10 +1017,10 @@ footer {
   font-size: 2rem; }
   #overlay .description a:link, #overlay .description a:visited {
     display: inline-block;
-    background-color: #d42128;
+    background-color: #f49e06;
     padding: 1.5rem;
     border-radius: 2px;
-    border: 2px solid #d42128;
+    border: 2px solid #f49e06;
     margin-right: 1.5rem;
     text-decoration: none;
     color: #fff;
@@ -1070,29 +1050,39 @@ footer {
     width: 300px;
     padding: 50px; }
     #split-choice .tab.left {
-      background-color: aliceblue;
+      background-color: #e52728;
       margin-right: 2%; }
+      #split-choice .tab.left a:link, #split-choice .tab.left a:visited {
+        background-color: #f49e06;
+        border: 2px solid #f49e06;
+        color: #fff; }
+      #split-choice .tab.left a:hover {
+        background-color: transparent;
+        color: #f49e06; }
     #split-choice .tab.right {
-      background-color: antiquewhite;
+      background-color: #f49e06;
       margin-left: 2%; }
+      #split-choice .tab.right a:link, #split-choice .tab.right a:visited {
+        background-color: #e52728;
+        border: 2px solid #e52728;
+        color: #fff; }
+      #split-choice .tab.right a:hover {
+        background-color: transparent;
+        color: #e52728; }
     #split-choice .tab p {
       font-size: 2rem;
       line-height: 1.5; }
     #split-choice .tab a:link, #split-choice .tab a:visited {
       display: inline-block;
-      background-color: #d42128;
       padding: 1.5rem;
       border-radius: 2px;
-      border: 2px solid #d42128;
       text-decoration: none;
-      color: #fff;
       text-transform: uppercase;
       font-size: 1.4rem;
       transition: background-color .3s ease,color .3s ease;
       float: right; }
-    #split-choice .tab a:hover {
-      background-color: transparent;
-      color: #d42128; }
+    #split-choice .tab:hover img {
+      transform: scale(1.1); }
   #split-choice .zoomable-image {
     position: relative;
     overflow: hidden;
@@ -1104,5 +1094,40 @@ footer {
       transition: all 0.3s; }
     #split-choice .zoomable-image:hover img {
       transform: scale(1.1); }
+
+/* JU Contact */
+.juct-container {
+  margin-top: 2rem;
+  text-align: center;
+  background-color: #f49e06; }
+  .juct-container fieldset {
+    border: 0;
+    font-size: 1.6rem;
+    line-height: 1.5; }
+  .juct-container legend {
+    font-size: 3rem;
+    padding-top: 30px; }
+  .juct-container .field-group {
+    display: inline-block;
+    text-align: left;
+    margin: 1em; }
+  .juct-container .field-text {
+    text-align: left; }
+  .juct-container input[type=text],
+  .juct-container textarea {
+    padding: 0.5em; }
+  .juct-container .g-recaptcha {
+    display: inline-block; }
+  .juct-container .btn-submit-form {
+    background-color: #e52728;
+    padding: 1.5rem;
+    border-radius: 2px;
+    border: 2px solid #e52728;
+    color: #fff;
+    text-transform: uppercase;
+    transition: background-color .3s ease,color .3s ease; }
+    .juct-container .btn-submit-form:hover {
+      background-color: transparent;
+      color: #e52728; }
 
 /*# sourceMappingURL=style.css.map */
