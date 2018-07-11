@@ -41,4 +41,8 @@ jQuery(document).ready(function(){
   jQuery('span.countUp').each(function () {
     jQuery(this).countup(jQuery(this).text() / 1);
   });
+
+  jQuery("span.js-rotating").Morphext({
+      animation: "bounceIn",
+  });
 });

@@ -1293,4 +1293,9 @@ footer {
   width: 300px;
   height: 450px; }
 
+/* special, used in "Dlaczego warto" */
+.big-text {
+  font-size: 3rem;
+  color: #e52728; }
+
 /*# sourceMappingURL=style.css.map */
