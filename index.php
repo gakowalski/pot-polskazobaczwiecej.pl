@@ -155,6 +155,19 @@ $body_classes =
     <div class="pzw-template-inside">
       <div id="footer-content">
         <jdoc:include type="modules" name="footer-content" style="none" />
+        <div id="organizers">
+          <div>
+            <div><h2>Organizatorzy</h2><img src="https://polskazobaczwiecej.pl/images/pot-logo.png"></div>
+            <div><img src="<?php echo $template_path; ?>/images/logo-msit.jpg"></div>
+          </div>
+          <div>
+            <div><h2>Partner Strategiczny</h2><img src="<?php echo $template_path; ?>/images/logo-lot.jpg"></div>
+          </div>
+          <div>
+            <div><h2>Partnerzy Promocyjni</h2><img src="<?php echo $template_path; ?>/images/logo-intercity.png"></div>
+            <div><img src="<?php echo $template_path; ?>/images/logo-polonus.png"></div>
+          </div>
+        </div>
       </div>
       <?php if ($this->countModules('footer-right-menu')): ?>
       <div id="footer-right-menu">

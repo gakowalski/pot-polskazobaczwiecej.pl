@@ -650,6 +650,18 @@ footer {
     background: inherit;
     border: 0; }
 
+#organizers {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: left; }
+  #organizers > div {
+    display: flex;
+    align-items: flex-end; }
+  #organizers img {
+    height: 70px; }
+
 #footer-content {
   position: relative;
   margin-top: 1em;
@@ -667,7 +679,7 @@ footer {
   #footer-content .custom {
     display: inline-block;
     vertical-align: top;
-    width: 33%; }
+    width: 25%; }
   #footer-content h3 {
     font-size: 1.1em;
     line-height: 1em;
@@ -1029,7 +1041,8 @@ footer {
     color: #fff;
     text-transform: uppercase;
     font-size: 1.4rem;
-    transition: background-color .3s ease,color .3s ease; }
+    transition: background-color .3s ease,color .3s ease;
+    transform: skew(-5deg); }
   #overlay .description a:hover {
     background-color: transparent; }
 
@@ -1047,6 +1060,9 @@ footer {
 #split-choice {
   margin-top: -10vh;
   text-align: center; }
+  #split-choice > div {
+    display: flex;
+    justify-content: center; }
   #split-choice .tab {
     display: inline-block;
     text-align: left;
@@ -1103,7 +1119,8 @@ footer {
 .juct-container {
   margin-top: 2rem;
   text-align: center;
-  background-color: #f49e06; }
+  background-color: #f49e06;
+  padding-bottom: 3rem; }
   .juct-container fieldset {
     border: 0;
     font-size: 1.6rem;
@@ -1121,7 +1138,8 @@ footer {
   .juct-container textarea {
     padding: 0.5em; }
   .juct-container .g-recaptcha {
-    display: inline-block; }
+    display: inline-block;
+    margin: 3rem; }
   .juct-container .btn-submit-form {
     background-color: #e52728;
     padding: 1.5rem;
@@ -1137,5 +1155,89 @@ footer {
 /* mod_smartcountdown3 */
 .scd-title p {
   font-size: 2rem; }
+
+/* testimonials */
+.jmm-testimonials.default {
+  font-size: 1.6rem;
+  margin-top: 3rem;
+  border-top: 2px solid #e52728;
+  padding-top: 3rem;
+  border-top-style: dashed; }
+  .jmm-testimonials.default .jmm-row {
+    display: none; }
+    .jmm-testimonials.default .jmm-row.active {
+      display: flex;
+      justify-content: center; }
+  .jmm-testimonials.default.indicators {
+    padding-bottom: 80px !important; }
+  .jmm-testimonials.default .carousel-indicators {
+    position: absolute;
+    display: flex;
+    list-style: none;
+    margin: 0; }
+    .jmm-testimonials.default .carousel-indicators li {
+      width: 30px !important;
+      height: 30px !important;
+      border: 1px solid #e52728 !important;
+      transform: skew(-15deg); }
+    .jmm-testimonials.default .carousel-indicators li:hover,
+    .jmm-testimonials.default .carousel-indicators .active {
+      background-color: #e52728 !important; }
+
+.jmm-comment {
+  background-color: #ddd;
+  padding: 1em;
+  font-style: italic;
+  transform: skew(-5deg); }
+  .jmm-comment::before {
+    display: inline-block;
+    content: ' ';
+    width: 40px;
+    height: 30px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/3d/Cquote1_black.svg);
+    float: left;
+    margin-right: 1em; }
+
+.jmm-author,
+.jmm-profession {
+  text-align: center;
+  line-height: 1.5; }
+
+.jmm-author::before {
+  content: ' ';
+  width: 50px;
+  height: 50px;
+  background-color: #ddd;
+  display: inline-block;
+  transform: rotate(45deg);
+  position: absolute;
+  top: -70px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: -1; }
+
+/* strefa partnera */
+#strefa-partnera {
+  text-align: center; }
+
+#areas {
+  position: relative;
+  width: 900px;
+  display: inline-block; }
+  #areas .area {
+    float: left;
+    margin: 10px;
+    position: relative; }
+    #areas .area .title {
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      color: #f49e06;
+      font-size: 3rem;
+      line-height: 1.5;
+      padding: 3rem; }
 
 /*# sourceMappingURL=style.css.map */
