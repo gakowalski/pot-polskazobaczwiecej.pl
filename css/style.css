@@ -250,8 +250,7 @@ body.high-contrast > nav a:hover,
 body.high-contrast > nav li.active > a {
   color: white; }
 
-.pzw-template-inside,
-.not-frontpage .smartcountdown {
+.pzw-template-inside {
   position: relative;
   max-width: 1200px;
   margin: 0 auto; }
@@ -1174,8 +1173,25 @@ body.not-frontpage footer {
       color: #e52728; }
 
 /* mod_smartcountdown3 */
-.scd-title p {
-  font-size: 2rem; }
+.smartcountdown {
+  position: absolute;
+  top: 60vh; }
+  .smartcountdown .scd-counter {
+    color: #f49e06;
+    float: right;
+    background-color: white;
+    padding: 2rem;
+    padding-right: 8vw;
+    border-radius: 10px 0 0 10px; }
+  .smartcountdown .scd-title p {
+    color: #e52728;
+    display: block;
+    float: right;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2rem;
+    padding-right: 8vw;
+    border-radius: 10px 0 0 10px;
+    width: 50%; }
 
 /* testimonials */
 .jmm-testimonials.default {
@@ -1237,85 +1253,6 @@ body.not-frontpage footer {
   right: 0;
   margin: auto;
   z-index: -1; }
-
-/* strefa partnera */
-#strefa-partnera {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgba(244, 158, 6, 0.6);
-  transform: skew(0deg, -4deg);
-  background-color: unset;
-  border-radius: 25px;
-  border-radius: unset; }
-  #strefa-partnera .button {
-    background-color: #e52728;
-    padding: 1.5rem;
-    border-radius: 2px;
-    border: 2px solid #e52728;
-    color: #fff;
-    transition: background-color .3s ease,color .3s ease;
-    text-decoration: none;
-    font-size: 3rem;
-    display: inline-block;
-    width: 788px; }
-    #strefa-partnera .button:hover {
-      background-color: transparent;
-      color: #e52728; }
-  #strefa-partnera .mosaic {
-    display: flex;
-    margin-top: 3rem; }
-    #strefa-partnera .mosaic .left,
-    #strefa-partnera .mosaic .right {
-      display: flex;
-      flex-direction: column; }
-      #strefa-partnera .mosaic .left .area,
-      #strefa-partnera .mosaic .right .area {
-        position: relative;
-        overflow: hidden;
-        margin: 10px; }
-        #strefa-partnera .mosaic .left .area img,
-        #strefa-partnera .mosaic .right .area img {
-          max-width: 100%;
-          transition: all 0.3s; }
-        #strefa-partnera .mosaic .left .area:hover img,
-        #strefa-partnera .mosaic .right .area:hover img {
-          transform: scale(1.1); }
-      #strefa-partnera .mosaic .left a,
-      #strefa-partnera .mosaic .right a {
-        display: block;
-        color: #fff;
-        font-size: 3rem;
-        line-height: 1.5;
-        text-decoration: none; }
-      #strefa-partnera .mosaic .left span,
-      #strefa-partnera .mosaic .right span {
-        position: absolute;
-        z-index: 1;
-        background-color: rgba(0, 0, 0, 0.5);
-        left: 0;
-        right: 0; }
-    #strefa-partnera .mosaic .left span {
-      top: 0; }
-    #strefa-partnera .mosaic .right span {
-      bottom: 0; }
-
-#area1 {
-  width: 500px;
-  height: 400px; }
-
-#area3 {
-  width: 500px;
-  height: 200px; }
-
-#area2 {
-  width: 300px;
-  height: 150px; }
-
-#area4 {
-  width: 300px;
-  height: 450px; }
 
 /* special, used in "Dlaczego warto" */
 .big-text {

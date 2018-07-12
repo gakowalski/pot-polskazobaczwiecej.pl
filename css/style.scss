@@ -309,8 +309,7 @@ body.high-contrast>nav li.active > a {
   color: white;
 }
 
-.pzw-template-inside,
-.not-frontpage .smartcountdown {
+.pzw-template-inside {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
@@ -1471,7 +1470,6 @@ body.not-frontpage footer {
 .juct-container {
   margin-top: 2rem;
   text-align: center;
-  //background-color: $primary;
   background-color: transparentize($primary, 0.5);
   transform: skew(0deg, -1deg);
 
@@ -1516,14 +1514,6 @@ body.not-frontpage footer {
     padding: 0.5em;
   }
 
-  input[type=text] {
-
-  }
-
-  textarea {
-
-  }
-
   .g-recaptcha {
     display: inline-block;
     margin: 3rem;
@@ -1547,8 +1537,29 @@ body.not-frontpage footer {
 
 /* mod_smartcountdown3 */
 
-.scd-title p {
-  font-size: 2rem;
+.smartcountdown {
+  position: absolute;
+  top: 60vh;
+
+  .scd-counter {
+    color: $primary;
+    float: right;
+    background-color: rgba(255,255,255,1);
+    padding: 2rem;
+    padding-right: 8vw;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .scd-title p {
+    color: $secondary;
+    display: block;
+    float: right;
+    background-color: rgba(255,255,255,0.7);
+    padding: 2rem;
+    padding-right: 8vw;
+    border-radius: 10px 0 0 10px;
+    width: 50%;
+  }
 }
 
 /* testimonials */
@@ -1630,112 +1641,6 @@ body.not-frontpage footer {
   right: 0;
   margin: auto;
   z-index: -1;
-}
-
-/* strefa partnera */
-
-#strefa-partnera {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  background-color: transparentize($primary, 0.4);
-  transform: skew(0deg, -4deg);
-  background-color: unset;
-  border-radius: 25px;
-  border-radius: unset;
-
-  .button {
-    background-color: #e52728;
-    padding: 1.5rem;
-    border-radius: 2px;
-    border: 2px solid #e52728;
-    color: #fff;
-    //text-transform: uppercase;
-    transition: background-color .3s ease,color .3s ease;
-    text-decoration: none;
-    font-size: 3rem;
-
-    display: inline-block;
-    width: 788px;
-
-    &:hover {
-      background-color: transparent;
-      color: $secondary;
-    }
-  }
-
-  .mosaic {
-    display: flex;
-    margin-top: 3rem;
-
-    .left,
-    .right {
-      display: flex;
-      flex-direction: column;
-
-      .area {
-        position: relative;
-        overflow: hidden;
-        margin: 10px;
-
-        img {
-          max-width: 100%;
-          transition: all 0.3s;
-        }
-
-        &:hover img{
-          transform: scale(1.1);
-        }
-      }
-
-      a {
-        display: block;
-        color: #fff;
-        font-size: 3rem;
-        line-height: 1.5;
-        text-decoration: none;
-      }
-
-      span {
-        position: absolute;
-        z-index: 1;
-        background-color: rgba(0,0,0,0.5);
-        left: 0;
-        right: 0;
-      }
-    }
-
-    .left {
-      span {
-        top: 0;
-      }
-    }
-
-    .right {
-      span {
-        bottom: 0;
-      }
-    }
-  }
-}
-
-#area1 {
-  width: 500px;
-  height: 400px;
-}
-#area3 {
-  width: 500px;
-  height: 200px;
-}
-#area2 {
-  width: 300px;
-  height: 150px;
-}
-#area4 {
-  width: 300px;
-  height: 450px;
 }
 
 /* special, used in "Dlaczego warto" */

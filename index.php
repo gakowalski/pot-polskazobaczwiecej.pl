@@ -137,10 +137,6 @@ $body_classes =
 
   <?php if ($option != 'com_search' && $this->countModules('banner')): ?>
   <section id="banner" role="banner">
-    <div id="overlay">
-      <p class="title"><strong>5-7</strong> października <strong>2018</strong></p>
-      <p class="description"><a class="left" href="/formularz-dodawania-obiektow">Zgłoś ofertę</a> <a class="right" href="/sprawdz-oferty">Sprawdź oferty</a></p>
-    </div>
     <jdoc:include type="modules" name="banner" style="none" />
   </section>
   <?php endif; ?>
