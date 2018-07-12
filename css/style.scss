@@ -159,6 +159,8 @@ header {
     height: 121px;
     background-color: $primary;
     border-radius: 2px;
+
+    z-index: 2;
   }
 }
 
@@ -831,13 +833,16 @@ footer {
   margin: 0 auto;
   text-align: center;
   width: auto;
-  border-top: 2px solid $primary;
   clear: both;
 
   .high-contrast & {
     background: inherit;
     border: 0;
   }
+}
+
+body.not-frontpage footer {
+  border-top: 2px solid $primary;
 }
 
 #organizers {
@@ -854,7 +859,8 @@ footer {
   }
 
   img {
-    height: 70px;
+    height: 4rem;
+    margin-right: 1.5rem;
   }
 }
 
@@ -1370,9 +1376,10 @@ footer {
     width: 300px;
     padding: 50px;
     color: #fff;
+    transition: background-color .3s ease;
 
     &.left {
-      background-color: $secondary;
+      background-color: transparentize($secondary, 0.3);
       margin-right: 2%;
 
       a:link, a:visited {
@@ -1385,10 +1392,14 @@ footer {
         background-color: transparent;
         color: $primary;
       }
+
+      &:hover {
+        background-color: transparentize($secondary, 0);
+      }
     }
 
     &.right {
-      background-color: $primary;
+      background-color: transparentize($primary, 0.3);
       margin-left: 2%;
 
       a:link, a:visited {
@@ -1400,6 +1411,10 @@ footer {
       a:hover {
         background-color: transparent;
         color: $secondary;
+      }
+
+      &:hover {
+        background-color: transparentize($primary, 0);
       }
     }
 
@@ -1448,8 +1463,15 @@ footer {
 .juct-container {
   margin-top: 2rem;
   text-align: center;
-  background-color: $primary;
-  padding-bottom: 3rem;
+  //background-color: $primary;
+  background-color: transparentize($primary, 0.5);
+  transform: skew(0deg, -1deg);
+
+  form {
+    padding-bottom: 3rem;
+    background-color: transparentize($primary, 0.5);
+    transform: skew(0deg, 2deg);
+  }
 
   body.high-contrast & {
     background-color: unset;
@@ -1459,11 +1481,15 @@ footer {
     border: 0;
     font-size: 1.6rem;
     line-height: 1.5;
+
+    transform: skew(0deg, -1deg);
   }
 
   legend {
     font-size: 3rem;
     padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .field-group {
@@ -1474,6 +1500,7 @@ footer {
 
   .field-text {
     text-align: left;
+    font-size: 0.8em;
   }
 
   input[type=text],
@@ -1605,16 +1632,25 @@ footer {
   flex-direction: column;
   align-items: center;
 
+  background-color: transparentize($primary, 0.4);
+  transform: skew(0deg, -4deg);
+  background-color: unset;
+  border-radius: 25px;
+  border-radius: unset;
+
   .button {
     background-color: #e52728;
     padding: 1.5rem;
     border-radius: 2px;
     border: 2px solid #e52728;
     color: #fff;
-    text-transform: uppercase;
+    //text-transform: uppercase;
     transition: background-color .3s ease,color .3s ease;
     text-decoration: none;
     font-size: 3rem;
+
+    display: inline-block;
+    width: 788px;
 
     &:hover {
       background-color: transparent;

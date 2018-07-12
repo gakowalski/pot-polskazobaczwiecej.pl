@@ -101,7 +101,10 @@ JHtml::_('behavior.caption');
 	<div itemprop="articleBody">
 
 		<div id="strefa-partnera" class="pzw-template-inside">
-			<p><a class="button" href="formularz-dodawania-obiektow">Dołącz</a></p>
+
+			<div id="background-skew1"><div id="background-skew2"><div id="background-skew3">
+
+			<p><a class="button" href="formularz-dodawania-obiektow">Wypełnij formularz zgłoszeniowy</a></p>
 			<div class="mosaic">
 				<div class="left">
 					<a id="area1" href="/dlaczego-warto" class="area">
@@ -124,6 +127,9 @@ JHtml::_('behavior.caption');
 					</a>
 				</div>
 			</div>
+
+			</div></div></div>
+
 		</div>
 
 		<?php echo $this->item->text; ?>
