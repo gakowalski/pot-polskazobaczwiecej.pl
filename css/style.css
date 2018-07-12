@@ -129,7 +129,8 @@ header {
     width: 241px;
     height: 121px;
     background-color: #f49e06;
-    border-radius: 2px; }
+    border-radius: 2px;
+    z-index: 2; }
 
 #header-modules {
   display: flex;
@@ -644,11 +645,13 @@ footer {
   margin: 0 auto;
   text-align: center;
   width: auto;
-  border-top: 2px solid #f49e06;
   clear: both; }
   .high-contrast footer {
     background: inherit;
     border: 0; }
+
+body.not-frontpage footer {
+  border-top: 2px solid #f49e06; }
 
 #organizers {
   display: flex;
@@ -661,7 +664,8 @@ footer {
     align-items: flex-end;
     margin-bottom: 2rem; }
   #organizers img {
-    height: 70px; }
+    height: 4rem;
+    margin-right: 1.5rem; }
 
 #footer-content {
   position: relative;
@@ -1069,9 +1073,10 @@ footer {
     text-align: left;
     width: 300px;
     padding: 50px;
-    color: #fff; }
+    color: #fff;
+    transition: background-color .3s ease; }
     #split-choice .tab.left {
-      background-color: #e52728;
+      background-color: rgba(229, 39, 40, 0.7);
       margin-right: 2%; }
       #split-choice .tab.left a:link, #split-choice .tab.left a:visited {
         background-color: #f49e06;
@@ -1080,8 +1085,10 @@ footer {
       #split-choice .tab.left a:hover {
         background-color: transparent;
         color: #f49e06; }
+      #split-choice .tab.left:hover {
+        background-color: #e52728; }
     #split-choice .tab.right {
-      background-color: #f49e06;
+      background-color: rgba(244, 158, 6, 0.7);
       margin-left: 2%; }
       #split-choice .tab.right a:link, #split-choice .tab.right a:visited {
         background-color: #e52728;
@@ -1090,6 +1097,8 @@ footer {
       #split-choice .tab.right a:hover {
         background-color: transparent;
         color: #e52728; }
+      #split-choice .tab.right:hover {
+        background-color: #f49e06; }
     #split-choice .tab p {
       font-size: 2rem;
       line-height: 1.5; }
@@ -1120,23 +1129,31 @@ footer {
 .juct-container {
   margin-top: 2rem;
   text-align: center;
-  background-color: #f49e06;
-  padding-bottom: 3rem; }
+  background-color: rgba(244, 158, 6, 0.5);
+  transform: skew(0deg, -1deg); }
+  .juct-container form {
+    padding-bottom: 3rem;
+    background-color: rgba(244, 158, 6, 0.5);
+    transform: skew(0deg, 2deg); }
   body.high-contrast .juct-container {
     background-color: unset; }
   .juct-container fieldset {
     border: 0;
     font-size: 1.6rem;
-    line-height: 1.5; }
+    line-height: 1.5;
+    transform: skew(0deg, -1deg); }
   .juct-container legend {
     font-size: 3rem;
-    padding-top: 30px; }
+    padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto; }
   .juct-container .field-group {
     display: inline-block;
     text-align: left;
     margin: 1em; }
   .juct-container .field-text {
-    text-align: left; }
+    text-align: left;
+    font-size: 0.8em; }
   .juct-container input[type=text],
   .juct-container textarea {
     padding: 0.5em; }
@@ -1225,17 +1242,23 @@ footer {
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  background-color: rgba(244, 158, 6, 0.6);
+  transform: skew(0deg, -4deg);
+  background-color: unset;
+  border-radius: 25px;
+  border-radius: unset; }
   #strefa-partnera .button {
     background-color: #e52728;
     padding: 1.5rem;
     border-radius: 2px;
     border: 2px solid #e52728;
     color: #fff;
-    text-transform: uppercase;
     transition: background-color .3s ease,color .3s ease;
     text-decoration: none;
-    font-size: 3rem; }
+    font-size: 3rem;
+    display: inline-block;
+    width: 788px; }
     #strefa-partnera .button:hover {
       background-color: transparent;
       color: #e52728; }
@@ -1277,6 +1300,9 @@ footer {
     #strefa-partnera .mosaic .right span {
       bottom: 0; }
 
+#background-skew3 {
+  transform: skew(0deg, 4deg); }
+
 #area1 {
   width: 500px;
   height: 400px; }
@@ -1292,5 +1318,10 @@ footer {
 #area4 {
   width: 300px;
   height: 450px; }
+
+/* special, used in "Dlaczego warto" */
+.big-text {
+  font-size: 3rem;
+  color: #e52728; }
 
 /*# sourceMappingURL=style.css.map */

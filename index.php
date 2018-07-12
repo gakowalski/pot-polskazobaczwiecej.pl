@@ -37,12 +37,12 @@ $this->setGenerator(null);
 $this->setHtml5(true);
 
 $doc->addStyleSheet($template_path . '/css/normalize.css');
-//$doc->addStyleSheet('/components/com_jucontact/assets/bootstrap3/css/bootstrap.min.css');
-//$doc->addStyleSheet('/components/com_jucontact/assets/bootstrap3/css/bootstrap-theme.min.css');
 $doc->addStyleSheet($template_path . '/css/style.css');
+$doc->addStyleSheet($template_path . '/css/animate.min.css');
 
 $doc->addScript($template_path . '/js/countUp.js');
 $doc->addScript($template_path . '/js/countUp-jquery.js');
+$doc->addScript($template_path . '/js/morphext.min.js');
 $doc->addScript($template_path . '/js/default.js');
 
 $body_classes =
@@ -67,7 +67,7 @@ $body_classes =
 <body class="<?php echo $body_classes; ?>">
   <a id="page"></a>
 
-  <header>
+  <header><div id="header-wrapper">
     <div class="pzw-template-inside">
       <div id="header-modules">
         <?php if ($high_contrast_enabled == false): ?>
@@ -117,7 +117,7 @@ $body_classes =
     <?php if ($high_contrast_enabled): ?>
     <h1><?php echo $sitename; ?></h1>
     <?php endif; ?>
-  </header>
+  </div></header>
 
   <?php if ($this->countModules('nav')): ?>
 
@@ -159,7 +159,7 @@ $body_classes =
         <jdoc:include type="modules" name="footer-content" style="none" />
         <div id="organizers">
           <div>
-            <div><h2>Organizatorzy</h2><img src="https://polskazobaczwiecej.pl/images/pot-logo.png"></div>
+            <div><h2>Organizatorzy</h2><img src="<?php echo $template_path; ?>/images/logo-pot-borderless.png"></div>
             <div><img src="<?php echo $template_path; ?>/images/logo-msit.jpg"></div>
           </div>
           <div>
