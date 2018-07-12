@@ -2,13 +2,15 @@ $primary: #f49e06;
 $secondary: #e52728;
 $text: #fff;
 
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400&subset=latin,latin-ext);
+
 html {
   /* set to 10px for compatibility with Bootstrap-based components */
   font-size: 10px;
 }
 
 body {
-  font-family: "Lato",sans-serif;
+  font-family: "Roboto Condensed",sans-serif;
   font-style: normal;
   font-weight: normal;
   text-decoration: none;
@@ -28,6 +30,11 @@ body {
     letter-spacing: 0;
     padding: 1em;
   }
+}
+
+.custom p {
+  line-height: 1.5;
+  font-size: 1.6rem;
 }
 
 /* Hides text from user but leaves it accessible for screen readers. */
@@ -136,8 +143,7 @@ header {
 }
 
 #header-logo {
-  width: 243px;
-  /*height: 120px;*/
+  width: 369px;
   cursor: pointer;
 
   a {
@@ -146,19 +152,13 @@ header {
     text-indent: -1000em;
     text-decoration: none;
     width: 100%;
-    height: 100%;
-    background-image: url(../images/pzw-logo-2018.png);
+    background-image: url(../images/logo-pzw-borderless-resized-400.png);
     background-repeat: no-repeat;
     background-size: contain;
     white-space: nowrap;
 
-  /* alternative logo positioning */
     position: absolute;
-    top: -20px;
-    width: 241px;
-    height: 121px;
-    background-color: $primary;
-    border-radius: 2px;
+    height: 400px;
 
     z-index: 2;
   }
@@ -846,7 +846,8 @@ body.not-frontpage footer {
 }
 
 #organizers {
-  display: flex;
+  display: none;
+  //display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -867,12 +868,9 @@ body.not-frontpage footer {
 
 #footer-content {
   position: relative;
-  margin-top: 1em;
-  margin-bottom: 1em;
   min-width: 50%;
   width: 100%;
   float: left;
-  min-height: 100px;
   z-index: 1;
   font-size: 1.1em;
   line-height: 1em;
@@ -1338,7 +1336,6 @@ body.not-frontpage footer {
     text-transform: uppercase;
     font-size: 1.4rem;
     transition: background-color .3s ease,color .3s ease;
-    transform: skew(-5deg);
   }
 
   a:hover {
@@ -1576,7 +1573,7 @@ body.not-frontpage footer {
       width: 30px !important;
       height: 30px !important;
       border: 1px solid $secondary !important;
-      transform: skew(-15deg);
+      border-radius: 100%;
     }
 
     li:hover,
@@ -1590,7 +1587,7 @@ body.not-frontpage footer {
   background-color: #ddd;
   padding: 1em;
   font-style: italic;
-  transform: skew(-5deg);
+  border-radius: 25px;
 
   &::before {
     display: inline-block;
@@ -1735,4 +1732,19 @@ body.not-frontpage footer {
 .big-text {
   font-size: 3rem;
   color: $secondary;
+}
+
+#sponsors {
+  max-width: 100%;
+  height: auto;
+}
+
+#header-organizers {
+  &>div {
+    display: flex;
+  }
+
+  img {
+    max-height: 30px;
+  }
 }

@@ -76,15 +76,12 @@ $body_classes =
         </h1>
         <?php endif; ?>
 
-        <?php if ($this->countModules('nav')): ?>
-        <input id="mobile-menu-checkbox" type="checkbox">
-        <label id="mobile-menu-label" for="mobile-menu-checkbox">Menu</label>
-        <nav role="navigation">
-            <jdoc:include type="modules" name="nav" style="none" />
-        </nav>
-        <?php endif; ?>
-
-        <jdoc:include type="modules" name="header" style="none" />
+        <div>
+          <a target="_blank" href="https://www.facebook.com/WeekendNizszychCen/">
+            <div id="facebook-logo"></div>
+            <span class="hidden-text">Polska Zobacz Więcej na Facebooku</span>
+          </a>
+        </div>
 
         <div id="font-resize">
           <a id="font-resize-small" href="<?php echo JUri::current(); ?>?font_resize=small">
@@ -104,11 +101,21 @@ $body_classes =
           </a>
         </div>
 
-        <div>
-          <a target="_blank" href="https://www.facebook.com/WeekendNizszychCen/">
-            <div id="facebook-logo"></div>
-            <span class="hidden-text">Polska Zobacz Więcej na Facebooku</span>
-          </a>
+        <?php if ($this->countModules('nav')): ?>
+        <input id="mobile-menu-checkbox" type="checkbox">
+        <label id="mobile-menu-label" for="mobile-menu-checkbox">Menu</label>
+        <nav role="navigation">
+            <jdoc:include type="modules" name="nav" style="none" />
+        </nav>
+        <?php endif; ?>
+
+        <jdoc:include type="modules" name="header" style="none" />
+
+        <div id="header-organizers">
+          <div>
+            <a href="https://www.msit.gov.pl/"><img src="<?php echo $template_path; ?>/images/logo-msit.png"></a>
+            <a href="https://www.polska.travel/pl"><img src="<?php echo $template_path; ?>/images/logo-pot.png"></a>
+          <div>
         </div>
 
       </div>
@@ -154,6 +161,7 @@ $body_classes =
 
   <?php if ($this->countModules('footer-content') + $this->countModules('footer-right-menu') + $this->countModules('footer-bottom-menu')): ?>
   <footer role="contentinfo">
+    <img id="sponsors" src="<?php echo $template_path; ?>/images/logos-sponsors.png">
     <div class="pzw-template-inside">
       <div id="footer-content">
         <jdoc:include type="modules" name="footer-content" style="none" />
