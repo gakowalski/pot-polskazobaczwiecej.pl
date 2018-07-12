@@ -1305,20 +1305,20 @@ body.not-frontpage footer {
 /* overlay */
 
 #overlay {
-  position: relative;
-  color: #fff;
-  top: -60vh;
+  position: absolute;
+  color: #f49e06;
+  top: 60vh;
   height: 0;
-}
-
-#overlay .subtitle {
-  font-size: 1.4rem;
+  right: 0;
 }
 
 #overlay .title {
   text-transform: uppercase;
   font-size: 3rem;
-  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  background-color: rgba(255,255,255,1);
+  padding: 3rem;
+  padding-right: 8vw;
+  border-radius: 10px 0 0 10px;
 }
 
 #overlay .description {
@@ -1326,20 +1326,31 @@ body.not-frontpage footer {
 
   a:link, a:visited {
     display: inline-block;
-    background-color: $primary;
+
     padding: 1.5rem;
-    border-radius: 2px;
-    border: 2px solid $primary;
+    border-radius: 10px;
+
     margin-right: 1.5rem;
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     transition: background-color .3s ease,color .3s ease;
-  }
 
-  a:hover {
-    background-color: transparent;
+    &.left {
+      background-color: transparentize($secondary,0.5);
+      border: 2px solid $secondary;
+      &:hover {
+        background-color: $secondary;
+      }
+    }
+    &.right {
+      background-color: transparentize($primary,0.5);;
+      border: 2px solid $primary;
+      &:hover {
+        background-color: $primary;
+      }
+    }
   }
 }
 
