@@ -1,4 +1,5 @@
 $primary: #f49e06;
+//$primary: #e77a07;
 $secondary: #e52728;
 $text: #fff;
 
@@ -34,7 +35,7 @@ body {
 
 .custom p {
   line-height: 1.5;
-  font-size: 1.6rem;
+  font-size: 1.9rem;
 }
 
 /* Hides text from user but leaves it accessible for screen readers. */
@@ -119,6 +120,7 @@ header {
   height: auto;
   width: auto;
   background-color: $primary;
+  z-index: 5;
 
   .high-contrast & {
     background: #191919;
@@ -143,26 +145,38 @@ header {
 }
 
 #header-logo {
-  width: 369px;
-  cursor: pointer;
+  z-index: 2;
 
   a {
-    display: block;
-    padding: 0;
+    cursor: pointer;
+    margin-left: 5%;
     text-indent: -1000em;
     text-decoration: none;
-    width: 100%;
-    background-image: url(../images/logo-pzw-borderless-resized-400.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    white-space: nowrap;
-
     position: absolute;
-    height: 400px;
+  }
 
-    z-index: 2;
+  img {
+    height: 600px;
+    display: block;
+
+    body.not-frontpage & {
+      display: none;
+    }
+
+    body.itemid-123 & {
+      height: 200px;
+      display: block;
+    }
+
+    body.itemid-224 &,
+    body.itemid-111 & {
+      height: 600px;
+      display: block;
+    }
   }
 }
+
+
 
 #header-modules {
   display: flex;
@@ -1314,8 +1328,8 @@ body.not-frontpage footer {
 #overlay .title {
   text-transform: uppercase;
   font-size: 3rem;
-  background-color: rgba(255,255,255,1);
-  padding: 3rem;
+  background-color: rgba(255,255,255,0.8);
+  padding: 2rem;
   padding-right: 8vw;
   border-radius: 10px 0 0 10px;
 }
@@ -1512,6 +1526,8 @@ body.not-frontpage footer {
   input[type=text],
   textarea {
     padding: 0.5em;
+    border-radius: 20px;
+    border: 0;
   }
 
   .g-recaptcha {
@@ -1522,7 +1538,7 @@ body.not-frontpage footer {
   .btn-submit-form {
     background-color: $secondary;
     padding: 1.5rem;
-    border-radius: 2px;
+    border-radius: 10px;
     border: 2px solid $secondary;
     color: #fff;
     text-transform: uppercase;
@@ -1533,6 +1549,17 @@ body.not-frontpage footer {
       color: $secondary;
     }
   }
+
+  .error {
+    color: $secondary;
+    margin-left: 1rem;
+    border-left: 2px solid $secondary;
+    padding-left: 1rem;
+  }
+}
+
+.recaptcha-checkbox-border {
+  border-radius: 100%;
 }
 
 /* mod_smartcountdown3 */
@@ -1559,6 +1586,7 @@ body.not-frontpage footer {
     padding-right: 8vw;
     border-radius: 10px 0 0 10px;
     width: 50%;
+    text-align: left;
   }
 }
 

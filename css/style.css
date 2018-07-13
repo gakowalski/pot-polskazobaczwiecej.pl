@@ -24,7 +24,7 @@ body {
 
 .custom p {
   line-height: 1.5;
-  font-size: 1.6rem; }
+  font-size: 1.9rem; }
 
 /* Hides text from user but leaves it accessible for screen readers. */
 /* Source: http://webaim.org/techniques/css/invisiblecontent/ */
@@ -93,7 +93,8 @@ header {
   display: block;
   height: auto;
   width: auto;
-  background-color: #f49e06; }
+  background-color: #f49e06;
+  z-index: 5; }
   .high-contrast header {
     background: #191919;
     text-align: center; }
@@ -114,21 +115,24 @@ header {
   transition-duration: 1s; }
 
 #header-logo {
-  width: 369px;
-  cursor: pointer; }
+  z-index: 2; }
   #header-logo a {
-    display: block;
-    padding: 0;
+    cursor: pointer;
+    margin-left: 5%;
     text-indent: -1000em;
     text-decoration: none;
-    width: 100%;
-    background-image: url(../images/logo-pzw-borderless-resized-400.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    white-space: nowrap;
-    position: absolute;
-    height: 400px;
-    z-index: 2; }
+    position: absolute; }
+  #header-logo img {
+    height: 600px;
+    display: block; }
+    body.not-frontpage #header-logo img {
+      display: none; }
+    body.itemid-123 #header-logo img {
+      height: 200px;
+      display: block; }
+    body.itemid-224 #header-logo img, body.itemid-111 #header-logo img {
+      height: 600px;
+      display: block; }
 
 #header-modules {
   display: flex;
@@ -1023,8 +1027,8 @@ body.not-frontpage footer {
 #overlay .title {
   text-transform: uppercase;
   font-size: 3rem;
-  background-color: white;
-  padding: 3rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
   padding-right: 8vw;
   border-radius: 10px 0 0 10px; }
 
@@ -1156,14 +1160,16 @@ body.not-frontpage footer {
     font-size: 0.8em; }
   .juct-container input[type=text],
   .juct-container textarea {
-    padding: 0.5em; }
+    padding: 0.5em;
+    border-radius: 20px;
+    border: 0; }
   .juct-container .g-recaptcha {
     display: inline-block;
     margin: 3rem; }
   .juct-container .btn-submit-form {
     background-color: #e52728;
     padding: 1.5rem;
-    border-radius: 2px;
+    border-radius: 10px;
     border: 2px solid #e52728;
     color: #fff;
     text-transform: uppercase;
@@ -1171,6 +1177,14 @@ body.not-frontpage footer {
     .juct-container .btn-submit-form:hover {
       background-color: transparent;
       color: #e52728; }
+  .juct-container .error {
+    color: #e52728;
+    margin-left: 1rem;
+    border-left: 2px solid #e52728;
+    padding-left: 1rem; }
+
+.recaptcha-checkbox-border {
+  border-radius: 100%; }
 
 /* mod_smartcountdown3 */
 .smartcountdown {
@@ -1191,7 +1205,8 @@ body.not-frontpage footer {
     padding: 2rem;
     padding-right: 8vw;
     border-radius: 10px 0 0 10px;
-    width: 50%; }
+    width: 50%;
+    text-align: left; }
 
 /* testimonials */
 .jmm-testimonials.default {

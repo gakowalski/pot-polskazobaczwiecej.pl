@@ -67,15 +67,14 @@ $body_classes =
 <body class="<?php echo $body_classes; ?>">
   <a id="page"></a>
 
+  <h1 id="header-logo">
+    <a href="<?php echo JUri::base(); ?>" title="Strona główna"><img src="<?php echo $template_path; ?>/images/logo-pzw-srgb.png">
+      <span class="hidden-text"><?php echo $sitename; ?></span></a>
+  </h1>
+
   <header><div id="header-wrapper">
     <div class="pzw-template-inside">
       <div id="header-modules">
-        <?php if ($high_contrast_enabled == false): ?>
-        <h1 id="header-logo">
-          <a href="<?php echo JUri::base(); ?>" title="Strona główna"><?php echo $sitename; ?></a>
-        </h1>
-        <?php endif; ?>
-
         <div>
           <a target="_blank" href="https://www.facebook.com/WeekendNizszychCen/">
             <div id="facebook-logo"></div>
