@@ -100,8 +100,6 @@ $body_classes =
       </div>
 
       <?php if ($this->countModules('nav')): ?>
-      <input id="mobile-menu-checkbox" type="checkbox">
-      <label id="mobile-menu-label" for="mobile-menu-checkbox">Menu</label>
       <nav role="navigation">
           <jdoc:include type="modules" name="nav" style="none" />
       </nav>
@@ -123,15 +121,6 @@ $body_classes =
     <?php endif; ?>
   </header>
 
-  <?php if ($this->countModules('nav')): ?>
-
-  <nav role="navigation">
-    <?php if ($high_contrast_enabled): ?>
-    <jdoc:include type="modules" name="header" style="none" />
-    <?php endif; ?>
-  </nav>
-  <?php endif; ?>
-
   <?php if ($option != 'com_search' && $this->countModules('banner')): ?>
   <section id="banner" role="banner">
     <jdoc:include type="modules" name="banner" style="none" />
@@ -140,21 +129,10 @@ $body_classes =
 
   <main role="main">
     <jdoc:include type="message" />
-    <?php if ($frontpage_enabled == false && $this->countModules('breadcrumbs')): ?>
-    <div id="breadcrumbs">
-      <jdoc:include type="modules" name="breadcrumbs" style="none" />
-    </div>
-    <?php endif; ?>
     <div class="pzw-template-inside">
 		    <jdoc:include type="component" />
     </div>
   </main>
-
-  <?php if ($this->countModules('aside')): ?>
-  <aside>
-    <jdoc:include type="modules" name="aside" style="none" />
-  </aside>
-  <?php endif; ?>
 
   <?php if ($this->countModules('footer-content') + $this->countModules('footer-right-menu') + $this->countModules('footer-bottom-menu')): ?>
   <footer role="contentinfo">
@@ -164,23 +142,18 @@ $body_classes =
         <jdoc:include type="modules" name="footer-content" style="none" />
         <div id="organizers">
           <div>
-            <div><h2>Organizatorzy</h2><img src="<?php echo $template_path; ?>/images/logo-pot-borderless.png"></div>
-            <div><img src="<?php echo $template_path; ?>/images/logo-msit.jpg"></div>
+            <h2>Organizatorzy</h2><img src="<?php echo $template_path; ?>/images/logo-pot-borderless.png">
+            <img src="<?php echo $template_path; ?>/images/logo-msit.jpg">
           </div>
           <div>
-            <div><h2>Partner Strategiczny</h2><img src="<?php echo $template_path; ?>/images/logo-lot.jpg"></div>
+            <h2>Partner Strategiczny</h2><img src="<?php echo $template_path; ?>/images/logo-lot.jpg">
           </div>
           <div>
-            <div><h2>Partnerzy Promocyjni</h2><img src="<?php echo $template_path; ?>/images/logo-intercity.png"></div>
-            <div><img src="<?php echo $template_path; ?>/images/logo-polonus.png"></div>
+            <h2>Partnerzy Promocyjni</h2><img src="<?php echo $template_path; ?>/images/logo-intercity.png">
+            <img src="<?php echo $template_path; ?>/images/logo-polonus.png">
           </div>
         </div>
       </div>
-      <?php if ($this->countModules('footer-right-menu')): ?>
-      <div id="footer-right-menu">
-        <jdoc:include type="modules" name="footer-right-menu" style="none" />
-      </div>
-      <?php endif; ?>
     </div>
     <div id="footer-bottom-menu">
       <jdoc:include type="modules" name="footer-bottom-menu" style="none" />
