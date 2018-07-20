@@ -260,7 +260,7 @@ body nav a:hover {
 }
 
 #banner {
-  &>div {
+  div.custom {
     margin-top: 3rem;
   }
 }

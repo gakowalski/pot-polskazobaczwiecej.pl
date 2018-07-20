@@ -37,7 +37,7 @@ $this->setGenerator(null);
 $this->setHtml5(true);
 
 $doc->addStyleSheet($template_path . '/css/normalize.css');
-$doc->addStyleSheet($template_path . '/css/style.css?ver=201807201416');
+$doc->addStyleSheet($template_path . '/css/style.css?ver=201807201646');
 $doc->addStyleSheet($template_path . '/css/animate.min.css');
 
 $doc->addScript($template_path . '/js/countUp.js');

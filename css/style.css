@@ -199,7 +199,7 @@ body nav a:hover {
   .high-contrast #facebook-logo {
     background-image: url(../images/facebook-white.png); }
 
-#banner > div {
+#banner div.custom {
   margin-top: 3rem; }
 
 .bannergroup {
