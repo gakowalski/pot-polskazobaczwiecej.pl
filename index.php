@@ -37,7 +37,7 @@ $this->setGenerator(null);
 $this->setHtml5(true);
 
 $doc->addStyleSheet($template_path . '/css/normalize.css');
-$doc->addStyleSheet($template_path . '/css/style.css');
+$doc->addStyleSheet($template_path . '/css/style.css?ver=201807201416');
 $doc->addStyleSheet($template_path . '/css/animate.min.css');
 
 $doc->addScript($template_path . '/js/countUp.js');
@@ -109,9 +109,9 @@ $body_classes =
 
       <div id="header-organizers">
         <div>
-          <a href="https://www.msit.gov.pl/" class="left"><img src="<?php echo $template_path; ?>/images/logo-msit.png"></a>
-          <a href="https://www.polska.travel/pl" class="right"><img src="<?php echo $template_path; ?>/images/logo-pot.png"></a>
-        <div>
+          <a href="https://www.msit.gov.pl/"><img src="<?php echo $template_path; ?>/images/logo-msit.png"></a>
+          <a href="https://www.polska.travel/pl"><img src="<?php echo $template_path; ?>/images/logo-pot.png"></a>
+        </div>
       </div>
 
     </div>

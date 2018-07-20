@@ -50,10 +50,6 @@ body {
   overflow:hidden;
 }
 
-nav li.default {
-  display: none;
-}
-
 a:link, a:visited {
   font-style: normal;
   color: #000;
@@ -124,7 +120,7 @@ header {
   }
 
   img {
-    height: 50vw;
+    height: 40vw;
     display: block;
 
     body.not-frontpage & {
@@ -132,8 +128,8 @@ header {
     }
 
     body.itemid-224 &,
+    body.itemid-225 &,
     body.itemid-111 & {
-      height: 40vw;
       display: block;
     }
   }
@@ -207,6 +203,10 @@ nav {
     display: flex;
     align-items: flex-end;
     text-align: center;
+
+    li {
+      padding: 0;
+    }
   }
 }
 
@@ -259,6 +259,12 @@ body nav a:hover {
   }
 }
 
+#banner {
+  &>div {
+    margin-top: 3rem;
+  }
+}
+
 .bannergroup {
   position: relative;
   text-align: center;
@@ -270,24 +276,29 @@ body nav a:hover {
 }
 
 main {
+  img {
+    max-width: 980px;
+    height: auto;
+  }
+
   .low-contrast & {
     margin-left: 2%;
     margin-right: 2%;
   }
-}
 
-main .item-page {
-  font-size: 1.1em;
-  line-height: 1.6em;
-  font-weight: normal;
-  text-align: left;
-  padding: 0;
-  margin: 0;
-  position: relative;
-}
+  .item-page {
+    font-size: 1.1em;
+    line-height: 1.6em;
+    font-weight: normal;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    position: relative;
 
-main .item-page strong {
-  font-weight: 700;
+    strong {
+      font-weight: 700;
+    }
+  }
 }
 
 main .page-header a,
@@ -317,11 +328,6 @@ main .page-header h2 {
   text-transform: none;
   font-size: 3em;
   line-height: 1em;
-}
-
-main img {
-  max-width: 100%;
-  height: auto;
 }
 
 main .page-header h3 {
@@ -823,7 +829,7 @@ body.not-frontpage footer {
 /* mod_frontvideo fixes */
 
 .tv {
-  margin-top: -56px!important;
+  margin-top: -135px !important;
   margin-bottom: 0 !important;
 }
 
@@ -922,7 +928,7 @@ body.not-frontpage footer {
     float: right;
     background-color: rgba(255,255,255,1);
     padding: 2rem;
-    padding-right: 8vw;
+    padding-right: 4vw;
     border-radius: 10px 0 0 10px;
   }
 
@@ -936,7 +942,7 @@ body.not-frontpage footer {
       background-color: rgba(255,255,255,0.7);
       padding: 2rem;
       border-radius: 10px 0 0 10px;
-      width: 80%;
+      width: 76%;
       text-align: left;
     }
   }
@@ -1045,29 +1051,19 @@ body.not-frontpage footer {
 }
 
 #header-organizers {
+  background-color: #fff;
+  padding-left: 4vw;
+
   &>div {
     display: flex;
   }
 
-  a.left {
-    margin-right: 5px;
-  }
-
-  a.right {
-    &::before {
-      content: ' ';
-      position: absolute;
-      border-right: 1px solid #f49e06;
-      right: 77px;
-      top: 0;
-      display: block;
-      height: 50px;
-    }
+  a {
+    margin-right: 1vw;
   }
 
   img {
     max-height: 40px;
-    background-color: #fff;
     padding: 5px;
   }
 }
@@ -1132,9 +1128,11 @@ body.not-frontpage footer {
     }
   }
 
-  #banner img {
-    padding: 0;
-    margin: 0;
+  #banner {
+    img {
+      padding: 0;
+      margin: 0;
+    }
   }
 
   main {

@@ -38,9 +38,6 @@ body {
   height: 1px;
   overflow: hidden; }
 
-nav li.default {
-  display: none; }
-
 a:link, a:visited {
   font-style: normal;
   color: #000;
@@ -98,12 +95,11 @@ header {
     text-decoration: none;
     position: absolute; }
   #header-logo img {
-    height: 50vw;
+    height: 40vw;
     display: block; }
     body.not-frontpage #header-logo img {
       display: none; }
-    body.itemid-224 #header-logo img, body.itemid-111 #header-logo img {
-      height: 40vw;
+    body.itemid-224 #header-logo img, body.itemid-225 #header-logo img, body.itemid-111 #header-logo img {
       display: block; }
 
 #header-modules {
@@ -161,6 +157,8 @@ nav {
     display: flex;
     align-items: flex-end;
     text-align: center; }
+    nav ul li {
+      padding: 0; }
 
 body nav a:link,
 body nav a:visited {
@@ -201,6 +199,9 @@ body nav a:hover {
   .high-contrast #facebook-logo {
     background-image: url(../images/facebook-white.png); }
 
+#banner > div {
+  margin-top: 3rem; }
+
 .bannergroup {
   position: relative;
   text-align: center; }
@@ -208,10 +209,12 @@ body nav a:hover {
     max-width: 100%;
     height: auto; }
 
+main img {
+  max-width: 980px;
+  height: auto; }
 .low-contrast main {
   margin-left: 2%;
   margin-right: 2%; }
-
 main .item-page {
   font-size: 1.1em;
   line-height: 1.6em;
@@ -220,9 +223,8 @@ main .item-page {
   padding: 0;
   margin: 0;
   position: relative; }
-
-main .item-page strong {
-  font-weight: 700; }
+  main .item-page strong {
+    font-weight: 700; }
 
 main .page-header a,
 main .blog-featured .item-title a {
@@ -249,10 +251,6 @@ main .page-header h2 {
   text-transform: none;
   font-size: 3em;
   line-height: 1em; }
-
-main img {
-  max-width: 100%;
-  height: auto; }
 
 main .page-header h3 {
   font-size: 1.4em;
@@ -661,7 +659,7 @@ body.not-frontpage footer {
 
 /* mod_frontvideo fixes */
 .tv {
-  margin-top: -56px !important;
+  margin-top: -135px !important;
   margin-bottom: 0 !important; }
 
 .cover {
@@ -733,7 +731,7 @@ body.not-frontpage footer {
     float: right;
     background-color: white;
     padding: 2rem;
-    padding-right: 8vw;
+    padding-right: 4vw;
     border-radius: 10px 0 0 10px; }
   .smartcountdown .scd-title {
     font-size: 1.5vw !important; }
@@ -744,7 +742,7 @@ body.not-frontpage footer {
       background-color: rgba(255, 255, 255, 0.7);
       padding: 2rem;
       border-radius: 10px 0 0 10px;
-      width: 80%;
+      width: 76%;
       text-align: left; }
   .smartcountdown .scd-digit {
     font-size: 5vw !important; }
@@ -822,22 +820,16 @@ body.not-frontpage footer {
   max-width: 100%;
   height: auto; }
 
-#header-organizers > div {
-  display: flex; }
-#header-organizers a.left {
-  margin-right: 5px; }
-#header-organizers a.right::before {
-  content: ' ';
-  position: absolute;
-  border-right: 1px solid #f49e06;
-  right: 77px;
-  top: 0;
-  display: block;
-  height: 50px; }
-#header-organizers img {
-  max-height: 40px;
+#header-organizers {
   background-color: #fff;
-  padding: 5px; }
+  padding-left: 4vw; }
+  #header-organizers > div {
+    display: flex; }
+  #header-organizers a {
+    margin-right: 1vw; }
+  #header-organizers img {
+    max-height: 40px;
+    padding: 5px; }
 
 #menu-nad-formularzem {
   margin: 0;
