@@ -120,8 +120,9 @@ header {
   }
 
   img {
-    height: 40vw;
+    height: 30vw;
     display: block;
+    margin-top: 6vw;
 
     body.not-frontpage & {
       display: none;
@@ -780,7 +781,7 @@ body.not-frontpage footer {
 #overlay {
   position: absolute;
   color: #f49e06;
-  top: 60vh;
+  top: 30vw;
   height: 0;
   right: 0;
 }
@@ -885,6 +886,16 @@ body.not-frontpage footer {
     border: 0;
   }
 
+  input[type=text] {
+    width: 30vw;
+    max-width: 400px;
+  }
+
+  textarea {
+    width: 75vw !important;
+    max-width: 852px;
+  }
+
   .g-recaptcha {
     display: inline-block;
     margin: 3rem;
@@ -921,7 +932,7 @@ body.not-frontpage footer {
 
 .smartcountdown {
   position: absolute;
-  top: 60vh;
+  top: 35vw;
 
   .scd-counter {
     color: $primary;
@@ -1119,7 +1130,6 @@ body.not-frontpage footer {
   }
 
   #overlay {
-    top: 45vh;
     .title {
       font-size: 2rem;
     }
@@ -1145,8 +1155,6 @@ body.not-frontpage footer {
   }
 
   .smartcountdown {
-    top: 40vh;
-
     .scd-counter {
       color: $primary;
       float: right;
@@ -1184,7 +1192,6 @@ body.not-frontpage footer {
 
   .smartcountdown {
     position: absolute;
-    top: 30vh;
   }
 
   #back-to-top,
@@ -1195,7 +1202,6 @@ body.not-frontpage footer {
   }
 
   #overlay {
-    top: 45vh;
     .title {
       font-size: 2rem;
     }
@@ -1212,10 +1218,6 @@ body.not-frontpage footer {
   .jmm-testimonials.default .jmm-row.active {
     flex-direction: column;
     padding: 2%;
-  }
-
-  .juct-container textarea {
-    width: auto !important;
   }
 
   #menu-nad-formularzem {
