@@ -660,7 +660,7 @@ body.not-frontpage footer {
 
 /* mod_frontvideo fixes */
 .tv {
-  margin-top: -135px !important;
+  margin-top: -9vw !important;
   margin-bottom: 0 !important; }
 
 .cover {
@@ -828,15 +828,17 @@ body.not-frontpage footer {
   height: auto; }
 
 #header-organizers {
-  background-color: #fff;
   padding-left: 4vw; }
   #header-organizers > div {
     display: flex; }
   #header-organizers a {
-    margin-right: 1vw; }
-  #header-organizers img {
-    max-height: 40px;
-    padding: 5px; }
+    margin-left: 3px; }
+    #header-organizers a.logo.msit img {
+      height: 4vw;
+      padding: 1vw;
+      background-color: #fff; }
+    #header-organizers a.logo.pot img {
+      height: 6vw; }
 
 #menu-nad-formularzem {
   margin: 0;

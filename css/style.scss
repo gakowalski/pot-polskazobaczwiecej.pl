@@ -830,7 +830,7 @@ body.not-frontpage footer {
 /* mod_frontvideo fixes */
 
 .tv {
-  margin-top: -135px !important;
+  margin-top: -9vw !important;
   margin-bottom: 0 !important;
 }
 
@@ -1062,7 +1062,6 @@ body.not-frontpage footer {
 }
 
 #header-organizers {
-  background-color: #fff;
   padding-left: 4vw;
 
   &>div {
@@ -1070,12 +1069,18 @@ body.not-frontpage footer {
   }
 
   a {
-    margin-right: 1vw;
-  }
+    margin-left: 3px;
 
-  img {
-    max-height: 40px;
-    padding: 5px;
+    &.logo {
+      &.msit img {
+        height: 4vw;
+        padding: 1vw;
+        background-color: #fff;
+      }
+      &.pot img {
+        height: 6vw;
+      }
+    }
   }
 }
 
