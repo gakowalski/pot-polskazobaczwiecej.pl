@@ -464,15 +464,20 @@ main .icons {
 
       & > a {
         display: inline-block;
-        border: 1px solid #7d7d7d;
-        font-size: 0.8em;
-        line-height: 1em;
         text-decoration: none;
         text-transform: uppercase;
-        transition-duration: 1s;
+        transition: background-color .3s ease,color .3s ease;
+        color: #fff;
 
         position: relative;
-        padding: 0.5em 0.3em;
+        padding: 0.5em;
+
+        background-color: transparentize($primary,0.7);
+        border: 2px solid $primary;
+        border-radius: 10px;
+        &:hover {
+          background-color: $primary;
+        }
 
         .high-contrast & {
           border: 1px solid #ffff14;
@@ -818,7 +823,7 @@ body.not-frontpage footer {
       }
     }
     &.right {
-      background-color: transparentize($primary,0.5);;
+      background-color: transparentize($primary,0.5);
       border: 2px solid $primary;
       &:hover {
         background-color: $primary;
@@ -1062,8 +1067,6 @@ body.not-frontpage footer {
 }
 
 #header-organizers {
-  padding-left: 4vw;
-
   &>div {
     display: flex;
   }
@@ -1076,6 +1079,7 @@ body.not-frontpage footer {
         height: 4vw;
         padding: 1vw;
         background-color: #fff;
+        box-sizing: initial;
       }
       &.pot img {
         height: 6vw;
@@ -1227,5 +1231,14 @@ body.not-frontpage footer {
 
   #menu-nad-formularzem {
     top: 35vw;
+  }
+}
+
+/* custom page CSS */
+
+body.itemid-123,
+body.itemid-226 {
+  header {
+    box-shadow: 0px 1px 1px 1px #f49e06;
   }
 }
