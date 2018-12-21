@@ -1,4 +1,4 @@
-# Polska Zobacz Więcej 2017
+# Polska Zobacz Więcej
 Szablon do serwisu [polskazobaczwiecej.pl][1] dla systemu Joomla! 3.7 wykonany na podstawie dotychczasowego szablonu opartego o system WebAdministrator CMS.
 
 ![Podgląd szablonu](template_preview.png)

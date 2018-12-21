@@ -1,4 +1,4 @@
-$primary: #f49e06;
+$primary: rgb(103,147,64);
 $secondary: #e52728;
 $text: #fff;
 
@@ -548,12 +548,16 @@ body.not-frontpage footer {
 }
 
 #organizers {
-  display: none;
-  //display: flex;
+  //display: none;
+  display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
   justify-content: space-evenly;
   text-align: left;
+
+  // 2018-21-12
+  align-items: center;
+  padding: 5vh;
 
   & > div {
     display: flex;
@@ -785,8 +789,8 @@ body.not-frontpage footer {
 
 #overlay {
   position: absolute;
-  color: #f49e06;
-  top: 30vw;
+  color: $primary;
+  top: 25vw;
   height: 0;
   right: 0;
 }
@@ -1239,6 +1243,6 @@ body.not-frontpage footer {
 body.itemid-123,
 body.itemid-226 {
   header {
-    box-shadow: 0px 1px 1px 1px #f49e06;
+    box-shadow: 0px 1px 1px 1px $primary;
   }
 }

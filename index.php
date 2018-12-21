@@ -68,7 +68,7 @@ $body_classes =
   <a id="page"></a>
 
   <h1 id="header-logo">
-    <a href="<?php echo JUri::base(); ?>" title="Strona główna"><img src="<?php echo $template_path; ?>/images/logo-pzw-srgb-no-shadow.png">
+    <a href="<?php echo JUri::base(); ?>" title="Strona główna"><img src="<?php echo $template_path; ?>/images/logo_pzw_1038_1090.png">
       <span class="hidden-text"><?php echo $sitename; ?></span></a>
   </h1>
 
@@ -136,15 +136,16 @@ $body_classes =
 
   <?php if ($this->countModules('footer-content') + $this->countModules('footer-right-menu') + $this->countModules('footer-bottom-menu')): ?>
   <footer role="contentinfo">
-    <img id="sponsors" src="<?php echo $template_path; ?>/images/logos-sponsors.png">
+    <!-- <img id="sponsors" src="<?php echo $template_path; ?>/images/logos-sponsors.png"> -->
     <div class="pzw-template-inside">
       <div id="footer-content">
         <jdoc:include type="modules" name="footer-content" style="none" />
         <div id="organizers">
-          <div>
-            <h2>Organizatorzy</h2><img src="<?php echo $template_path; ?>/images/logo-pot-borderless.png">
+          <!--<div>-->
+            <h2>Organizatorzy Akcji:</h2><img src="<?php echo $template_path; ?>/images/logo-pot-borderless.png">
             <img src="<?php echo $template_path; ?>/images/logo-msit.jpg">
-          </div>
+          <!--</div>-->
+          <!--
           <div>
             <h2>Partner Strategiczny</h2><img src="<?php echo $template_path; ?>/images/logo-lot.jpg">
           </div>
@@ -152,6 +153,7 @@ $body_classes =
             <h2>Partnerzy Promocyjni</h2><img src="<?php echo $template_path; ?>/images/logo-intercity.png">
             <img src="<?php echo $template_path; ?>/images/logo-polonus.png">
           </div>
+          -->
         </div>
       </div>
     </div>
