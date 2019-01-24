@@ -472,7 +472,7 @@ main .icons {
         position: relative;
         padding: 0.5em;
 
-        background-color: transparentize($primary,0.7);
+        background-color: transparentize($primary,0);
         border: 2px solid $primary;
         border-radius: 10px;
         &:hover {
