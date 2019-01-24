@@ -636,7 +636,8 @@ body.not-frontpage footer {
 #overlay .title {
   text-transform: uppercase;
   font-size: 3rem;
-  background-color: rgba(255, 255, 255, 0.8);
+  color: #fff;
+  background-color: #679340;
   padding: 2rem;
   padding-right: 8vw;
   border-radius: 10px 0 0 10px; }
@@ -848,10 +849,10 @@ body.not-frontpage footer {
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 30vw;
-  display: flex;
-  width: 100%;
-  justify-content: flex-end; }
+  top: 25vw;
+  right: 0;
+  display: block;
+  width: 35vw; }
   #menu-nad-formularzem li {
     display: block;
     margin-right: 2%; }
@@ -941,7 +942,7 @@ body.not-frontpage footer {
     padding: 2%; }
 
   #menu-nad-formularzem {
-    top: 35vw; } }
+    top: 23vw; } }
 /* custom page CSS */
 body.itemid-123 header,
 body.itemid-226 header {

@@ -798,7 +798,8 @@ body.not-frontpage footer {
 #overlay .title {
   text-transform: uppercase;
   font-size: 3rem;
-  background-color: rgba(255,255,255,0.8);
+  color: #fff;
+  background-color: $primary;
   padding: 2rem;
   padding-right: 8vw;
   border-radius: 10px 0 0 10px;
@@ -1096,10 +1097,10 @@ body.not-frontpage footer {
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 30vw;
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
+  top: 25vw;
+  right: 0;
+  display: block;
+  width: 35vw;
 
   li {
     display: block;
@@ -1234,7 +1235,7 @@ body.not-frontpage footer {
   }
 
   #menu-nad-formularzem {
-    top: 35vw;
+    top: 23vw;
   }
 }
 
