@@ -629,7 +629,7 @@ body.not-frontpage footer {
 #overlay {
   position: absolute;
   color: #679340;
-  top: 25vw;
+  top: 21vw;
   height: 0;
   right: 0; }
 
@@ -643,7 +643,8 @@ body.not-frontpage footer {
   border-radius: 10px 0 0 10px; }
 
 #overlay .description {
-  font-size: 1.8rem; }
+  font-size: 1.8rem;
+  padding-left: 0; }
   #overlay .description a:link, #overlay .description a:visited {
     display: inline-block;
     padding: 1.5rem;
@@ -652,17 +653,21 @@ body.not-frontpage footer {
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
-    transition: background-color .3s ease,color .3s ease; }
-    #overlay .description a:link.left, #overlay .description a:visited.left {
-      background-color: rgba(229, 39, 40, 0.5);
-      border: 2px solid #e52728; }
-      #overlay .description a:link.left:hover, #overlay .description a:visited.left:hover {
-        background-color: #e52728; }
-    #overlay .description a:link.right, #overlay .description a:visited.right {
-      background-color: rgba(103, 147, 64, 0.5);
+    transition: background-color .3s ease,color .3s ease;
+    /*
+        &.left {
+          background-color: transparentize($secondary,0.5);
+          border: 2px solid $secondary;
+          &:hover {
+            background-color: $secondary;
+          }
+        }
+    */ }
+    #overlay .description a:link.left, #overlay .description a:link.right, #overlay .description a:visited.left, #overlay .description a:visited.right {
+      background-color: #679340;
       border: 2px solid #679340; }
-      #overlay .description a:link.right:hover, #overlay .description a:visited.right:hover {
-        background-color: #679340; }
+      #overlay .description a:link.left:hover, #overlay .description a:link.right:hover, #overlay .description a:visited.left:hover, #overlay .description a:visited.right:hover {
+        background-color: rgba(103, 147, 64, 0.7); }
 
 /* mod_frontvideo fixes */
 .tv {
@@ -738,7 +743,7 @@ body.not-frontpage footer {
 /* mod_smartcountdown3 */
 .smartcountdown {
   position: absolute;
-  top: 35vw; }
+  top: 7vw; }
   .smartcountdown .scd-counter {
     color: #679340;
     float: right;
@@ -755,7 +760,7 @@ body.not-frontpage footer {
       background-color: rgba(255, 255, 255, 0.7);
       padding: 2rem;
       border-radius: 10px 0 0 10px;
-      width: 76%;
+      width: 53%;
       text-align: left; }
   .smartcountdown .scd-digit {
     font-size: 5vw !important; }
@@ -947,5 +952,14 @@ body.not-frontpage footer {
 body.itemid-123 header,
 body.itemid-226 header {
   box-shadow: 0px 1px 1px 1px #679340; }
+
+/* offer form */
+#skad2 {
+  background-color: #679340;
+  padding: 10px; }
+  #skad2 label {
+    padding-top: 3px; }
+  #skad2 .help-block {
+    margin: 0; }
 
 /*# sourceMappingURL=style.css.map */
