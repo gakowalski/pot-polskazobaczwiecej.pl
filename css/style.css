@@ -100,7 +100,7 @@ header {
     margin-top: 6vw; }
     body.not-frontpage #header-logo img {
       display: none; }
-    body.itemid-224 #header-logo img, body.itemid-225 #header-logo img, body.itemid-111 #header-logo img {
+    body.itemid-224 #header-logo img, body.itemid-225 #header-logo img {
       display: block; }
 
 #header-modules {
@@ -754,10 +754,9 @@ body.not-frontpage footer {
   .smartcountdown .scd-title {
     font-size: 1.5vw !important; }
     .smartcountdown .scd-title p {
-      color: #e52728;
+      color: #679340;
       display: block;
       float: right;
-      background-color: rgba(255, 255, 255, 0.7);
       padding: 2rem;
       border-radius: 10px 0 0 10px;
       width: 53%;
@@ -851,26 +850,29 @@ body.not-frontpage footer {
     height: 6vw; }
 
 #menu-nad-formularzem {
-  margin: 0;
+  display: flex;
   padding: 0;
-  position: absolute;
-  top: 25vw;
-  right: 0;
-  display: block;
-  width: 35vw; }
+  margin: 0;
+  background-color: #f5f5f5;
+  justify-content: center;
+  flex-wrap: wrap; }
   #menu-nad-formularzem li {
     display: block;
-    margin-right: 2%; }
-    #menu-nad-formularzem li a {
+    padding: 0; }
+    #menu-nad-formularzem li a, #menu-nad-formularzem li span {
       display: block;
-      background-color: rgba(255, 255, 255, 0.5);
-      font-size: 3vw;
-      padding: 3vw;
+      background-color: white;
+      border: 1px solid #679340;
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-family: 'Roboto';
+      font-weight: 900;
+      padding: 2.5rem;
+      margin: 2vw;
       border-radius: 10px;
-      color: #e52728;
       text-decoration: none;
       transition: background-color .3s ease,color .3s ease; }
-      #menu-nad-formularzem li a:hover {
+      #menu-nad-formularzem li a:hover, #menu-nad-formularzem li span:hover {
         background-color: white;
         color: #679340; }
 
@@ -909,14 +911,11 @@ body.not-frontpage footer {
     padding-right: 2vw;
     border-radius: 10px 0 0 10px; }
   .smartcountdown .scd-title p {
-    color: #e52728;
     display: block;
     float: right;
-    background-color: rgba(255, 255, 255, 0.7);
     padding: 2rem;
     padding-right: 2vw;
     border-radius: 10px 0 0 10px;
-    width: 85%;
     text-align: left; } }
 @media only screen and (max-width: 800px) {
   #header-logo a {
@@ -944,10 +943,7 @@ body.not-frontpage footer {
 
   .jmm-testimonials.default .jmm-row.active {
     flex-direction: column;
-    padding: 2%; }
-
-  #menu-nad-formularzem {
-    top: 23vw; } }
+    padding: 2%; } }
 /* custom page CSS */
 body.itemid-123 header,
 body.itemid-226 header {

@@ -129,8 +129,7 @@ header {
     }
 
     body.itemid-224 &,
-    body.itemid-225 &,
-    body.itemid-111 & {
+    body.itemid-225 & {
       display: block;
     }
   }
@@ -960,10 +959,9 @@ body.not-frontpage footer {
     font-size: 1.5vw !important;
 
       p {
-      color: $secondary;
+      color: $primary;
       display: block;
       float: right;
-      background-color: rgba(255,255,255,0.7);
       padding: 2rem;
       border-radius: 10px 0 0 10px;
       width: 53%;
@@ -1097,25 +1095,28 @@ body.not-frontpage footer {
 }
 
 #menu-nad-formularzem {
-  margin: 0;
+  display: flex;
   padding: 0;
-  position: absolute;
-  top: 25vw;
-  right: 0;
-  display: block;
-  width: 35vw;
+  margin: 0;
+  background-color: #f5f5f5;
+  justify-content: center;
+  flex-wrap: wrap;
 
   li {
     display: block;
-    margin-right: 2%;
+    padding: 0;
 
-    a {
+    a, span {
       display: block;
-      background-color: rgba(255,255,255,0.5);
-      font-size: 3vw;
-      padding: 3vw;
+      background-color: rgba(255,255,255,1);
+      border: 1px solid $primary;
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-family: 'Roboto';
+      font-weight: 900;
+      padding: 2.5rem;
+      margin: 2vw;
       border-radius: 10px;
-      color: $secondary;
       text-decoration: none;
       transition: background-color .3s ease,color .3s ease;
 
@@ -1182,14 +1183,11 @@ body.not-frontpage footer {
     }
 
     .scd-title p {
-      color: $secondary;
       display: block;
       float: right;
-      background-color: rgba(255,255,255,0.7);
       padding: 2rem;
       padding-right: 2vw;
       border-radius: 10px 0 0 10px;
-      width: 85%;
       text-align: left;
     }
   }
@@ -1235,10 +1233,6 @@ body.not-frontpage footer {
   .jmm-testimonials.default .jmm-row.active {
     flex-direction: column;
     padding: 2%;
-  }
-
-  #menu-nad-formularzem {
-    top: 23vw;
   }
 }
 
