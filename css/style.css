@@ -859,22 +859,25 @@ body.not-frontpage footer {
   #menu-nad-formularzem li {
     display: block;
     padding: 0; }
+    #menu-nad-formularzem li.item-225 a {
+      background-image: url(../images/btn_dlaczego1.png); }
+    #menu-nad-formularzem li.item-225:hover a {
+      background-image: url(../images/btn_dlaczego2.png); }
+    #menu-nad-formularzem li.item-226 a {
+      background-image: url(../images/btn_poradnik1.png); }
+    #menu-nad-formularzem li.item-226:hover a {
+      background-image: url(../images/btn_poradnik2.png); }
+    #menu-nad-formularzem li.item-229 span {
+      background-image: url(../images/btn_telefony.png); }
     #menu-nad-formularzem li a, #menu-nad-formularzem li span {
       display: block;
-      background-color: white;
-      border: 1px solid #679340;
+      background-color: transparent;
+      background-size: cover;
       font-size: 2rem;
-      text-transform: uppercase;
-      font-family: 'Roboto';
-      font-weight: 900;
-      padding: 2.5rem;
-      margin: 2vw;
-      border-radius: 10px;
-      text-decoration: none;
-      transition: background-color .3s ease,color .3s ease; }
-      #menu-nad-formularzem li a:hover, #menu-nad-formularzem li span:hover {
-        background-color: white;
-        color: #679340; }
+      margin: 2vw 1vw;
+      width: 336px;
+      height: 104px;
+      text-indent: -10000px; }
 
 @media only screen and (max-width: 1070px) {
   #facebook-logo {

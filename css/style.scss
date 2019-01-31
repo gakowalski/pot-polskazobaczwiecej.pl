@@ -1106,24 +1106,45 @@ body.not-frontpage footer {
     display: block;
     padding: 0;
 
-    a, span {
-      display: block;
-      background-color: rgba(255,255,255,1);
-      border: 1px solid $primary;
-      font-size: 2rem;
-      text-transform: uppercase;
-      font-family: 'Roboto';
-      font-weight: 900;
-      padding: 2.5rem;
-      margin: 2vw;
-      border-radius: 10px;
-      text-decoration: none;
-      transition: background-color .3s ease,color .3s ease;
+    &.item-225 {
+      a {
+        background-image: url(../images/btn_dlaczego1.png);
+      }
 
       &:hover {
-        background-color: rgba(255,255,255,1);
-        color: $primary;
+        a {
+          background-image: url(../images/btn_dlaczego2.png);
+        }
       }
+    }
+
+    &.item-226 {
+      a {
+        background-image: url(../images/btn_poradnik1.png);
+      }
+
+      &:hover {
+        a {
+        background-image: url(../images/btn_poradnik2.png);
+        }
+      }
+    }
+
+    &.item-229 {
+      span {
+        background-image: url(../images/btn_telefony.png);
+      }
+    }
+
+    a, span {
+      display: block;
+      background-color: transparent;
+      background-size: cover;
+      font-size: 2rem;
+      margin: 2vw 1vw;
+      width: 336px;
+      height: 104px;
+      text-indent: -10000px;
     }
   }
 }
