@@ -959,7 +959,7 @@ body.not-frontpage footer {
     font-size: 1.5vw !important;
 
       p {
-      color: $primary;
+      color: darken(desaturate(adjust-hue($primary, 40), 16.95), 15.10);
       display: block;
       float: right;
       padding: 2rem;
