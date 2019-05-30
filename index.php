@@ -37,7 +37,7 @@ $this->setGenerator(null);
 $this->setHtml5(true);
 
 $doc->addStyleSheet($template_path . '/css/normalize.css');
-$doc->addStyleSheet($template_path . '/css/style.css?ver=201901311601');
+$doc->addStyleSheet($template_path . '/css/style.css?ver=' . filemtime('templates/'.$this->template.'/css/style.css'));
 $doc->addStyleSheet($template_path . '/css/animate.min.css');
 
 $doc->addScript($template_path . '/js/countUp.js');
@@ -68,7 +68,7 @@ $body_classes =
   <a id="page"></a>
 
   <h1 id="header-logo">
-    <a href="<?php echo JUri::base(); ?>" title="Strona główna"><img src="<?php echo $template_path; ?>/images/logo_pzw_wiosna_2019.png">
+    <a href="<?php echo JUri::base(); ?>" title="Strona główna"><img src="<?php echo $template_path; ?>/images/logo-pzw-jesien-2019.png">
       <span class="hidden-text"><?php echo $sitename; ?></span></a>
   </h1>
 
