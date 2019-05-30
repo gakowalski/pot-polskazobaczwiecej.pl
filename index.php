@@ -68,7 +68,7 @@ $body_classes =
   <a id="page"></a>
 
   <h1 id="header-logo">
-    <a href="<?php echo JUri::base(); ?>" title="Strona główna"><img src="<?php echo $template_path; ?>/images/logo-pzw-jesien-2019.png">
+    <a href="<?php echo JUri::base(); ?>" title="Strona główna"><img src="<?php echo $template_path; ?>/images/pzw-logo-jesien-2019.png">
       <span class="hidden-text"><?php echo $sitename; ?></span></a>
   </h1>
 
